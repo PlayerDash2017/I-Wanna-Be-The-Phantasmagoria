@@ -64,6 +64,7 @@ Dir = 0;</string>
         var a = instance_create_battle(irandom(battle_width),irandom_range(50,100),objCherryBullet);
         a.vspeed = -3;
         a.gravity = 0.1;
+        a.sprite_index = sprite_index;
                 
         alarm[0] = 8;
     break;
@@ -117,6 +118,89 @@ Dir = 0;</string>
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (extraPhase){
+    if (!place_free(x, y+vspeed)) vspeed = -vspeed;
+} else {
+    vspeed = 0;
+    y = lerp(y,ystart,0.2);
+}</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="13">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>event_inherited();
+
+extraHP = 5;
+sprite_index = sprCherryGray;
+vspeed = choose(-2,2);
+
+repeat(5){
+    var a = instance_create(x,y,objCherryBulletBounce);
+    a.speed = random_range(1,2);
+    a.direction = irandom(360);
+}</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="12">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Level 2
+
+instance_create_battle(600, 0, objCherryBulletWall);</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="10">
       <action>
         <libid>1</libid>
@@ -135,6 +219,15 @@ Dir = 0;</string>
           <argument>
             <kind>1</kind>
             <string>///Next Attack
+
+//End
+if (extraPhase){
+    var A = scrGetPlayerID();
+    with (objCherryBulletBounce) {
+        if (A == scrGetPlayerID())
+            { instance_destroy(); }
+    }
+}
 
 switch (HP)
 {

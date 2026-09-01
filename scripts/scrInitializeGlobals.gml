@@ -34,10 +34,14 @@ for (var i = global.bossItemTotal - 1; i >= 0; i--)
 global.gameClear = false;
 
 //Phantasmagoria
-global.playerHP[0] = 5;
-global.playerHP[1] = 5;
-global.playerMagic[0] = 0;
-global.playerMagic[1] = 0;
+for (var i = 0; i < 2; i ++) {
+    global.playerHP[i] = 5;
+    global.playerMagic[i] = 0;
+    global.playerCharge[i] = 0;
+    global.charSelect[i] = 0;
+}
+global.pX = 0;
+global.pY = 0;
 
 global.trigger = ds_map_create();
 

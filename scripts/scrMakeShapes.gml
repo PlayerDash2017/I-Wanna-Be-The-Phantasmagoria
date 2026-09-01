@@ -8,8 +8,9 @@ var spawnEdges = argument3; //3 = triangle, 4 = square, etc.
 var spawnNum = argument4; //Projectiles per edge
 var spawnSpeed = argument5;
 var spawnObj = argument6;
-var th, xx, yy, ddx, ddy, dx, dy, a;
+var th, xx, yy, ddx, ddy, dx, dy, a, idxNum;
 
+idxNum = 0;
 th = degtorad(spawnAngle);
 
 for (var i = 0; i < spawnEdges; i += 1)
@@ -31,8 +32,12 @@ for (var i = 0; i < spawnEdges; i += 1)
         dx = xx[i] + ddx*j / spawnNum;
         dy = yy[i] + ddy*j / spawnNum;
         
-        a = instance_create(spawnX+dx, spawnY+dy, spawnObj);
-        a.direction = point_direction(0, 0, dx, dy);
-        a.speed = spawnSpeed * point_distance(0, 0, dx, dy);
+        a[idxNum] = instance_create(spawnX+dx, spawnY+dy, spawnObj);
+        a[idxNum].direction = point_direction(0, 0, dx, dy);
+        a[idxNum].speed = spawnSpeed * point_distance(0, 0, dx, dy);
+
+        idxNum ++;
     }
 }
+
+return a;

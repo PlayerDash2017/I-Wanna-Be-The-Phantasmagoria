@@ -83,7 +83,7 @@
       <sound>sound\musOnDeath</sound>
     </sounds>
   </sounds>
-                                  <sprites name="sprites">
+                                              <sprites name="sprites">
     <sprites name="World">
       <sprite>sprites\sprCamera</sprite>
       <sprite>sprites\sprPlayMusic</sprite>
@@ -183,9 +183,13 @@
     <sprites name="Phantasmagoria">
       <sprite>sprites\sprHUDHP</sprite>
       <sprite>sprites\sprMagicField</sprite>
+      <sprites name="Miku">
+        <sprite>sprites\sprLeek</sprite>
+        <sprite>sprites\sprMikuHachume</sprite>
+      </sprites>
     </sprites>
   </sprites>
-        <backgrounds name="backgrounds">
+                <backgrounds name="backgrounds">
     <background>background\bAllTiles</background>
     <background>background\bMegaman</background>
     <background>background\bJumpThrough</background>
@@ -193,11 +197,13 @@
     <background>background\bStars</background>
     <background>background\bPhantasmagoria</background>
     <background>background\bBossBigCherry</background>
+    <background>background\bBossTestPlace</background>
+    <background>background\bBossMiku</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\pathExample</path>
   </paths>
-                                  <scripts name="scripts">
+                                                            <scripts name="scripts">
     <scripts name="World">
       <script>scripts\scrInitializeGlobals.gml</script>
       <script>scripts\scrSetGlobalOptions.gml</script>
@@ -247,6 +253,7 @@
       <script>scripts\scrKillPlayer.gml</script>
       <script>scripts\scrFlipGrav.gml</script>
       <script>scripts\scrHitPlayer.gml</script>
+      <script>scripts\scrPlayerMagic.gml</script>
     </scripts>
     <scripts name="Trigger">
       <script>scripts\scrMakeTrigger.gml</script>
@@ -289,6 +296,14 @@
         <script>scripts\tile_add_battle.gml</script>
         <script>scripts\scrGetPlayerID.gml</script>
         <script>scripts\scrEnemyBullet.gml</script>
+        <script>scripts\scrPX.gml</script>
+        <script>scripts\scrPY.gml</script>
+        <script>scripts\draw_sprite_fog.gml</script>
+        <script>scripts\draw_sprite_neg.gml</script>
+      </scripts>
+      <scripts name="Bosses Setup">
+        <script>scripts\bossBigCherry.gml</script>
+        <script>scripts\bossHatsuneMku.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -298,7 +313,7 @@
     <font>fonts\fDefault18</font>
     <font>fonts\fDefault12</font>
   </fonts>
-                                                                        <objects name="objects">
+                                                                                                                                          <objects name="objects">
     <objects name="World">
       <object>objects\objWorld</object>
       <object>objects\objCamera</object>
@@ -416,14 +431,29 @@
       <object>objects\objEnemyBulletSpawn</object>
       <object>objects\objPhantasmagoriaSystem</object>
       <object>objects\objSpawnBoss</object>
+      <object>objects\objMagicField</object>
+      <object>objects\objCopyRoom</object>
       <object>objects\objDangerScreen</object>
+      <object>objects\objCharacterMenu</object>
+      <object>objects\objKillZone</object>
       <objects name="Big Cherry">
         <object>objects\objCherryBossMain</object>
         <object>objects\objCherryBullet</object>
         <object>objects\objCherryBulletYellow</object>
+        <object>objects\objCherryBulletWall</object>
+        <object>objects\objCherryBulletBounce</object>
       </objects>
-      <object>objects\objCopyRoom</object>
-      <object>objects\objMagicField</object>
+      <objects name="Hatsune Miku">
+        <object>objects\objMikuBossMain</object>
+        <object>objects\objMikuBlock</object>
+        <object>objects\objMikuBullet</object>
+        <object>objects\objMikuBulletCircle</object>
+        <object>objects\objMikuBulletLeek</object>
+        <object>objects\objMikuBulletWave</object>
+        <object>objects\objMikuHachume</object>
+        <object>objects\objMikuNegativeEff</object>
+        <object>objects\objMikuBulletBig</object>
+      </objects>
     </objects>
   </objects>
                 <rooms name="rooms">

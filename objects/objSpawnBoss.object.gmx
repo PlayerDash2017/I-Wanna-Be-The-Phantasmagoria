@@ -25,8 +25,20 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create_battle(528, 368, objCherryBossMain);
+            <string>var tile = tile_layer_find(1000000, scrGetPlayerID() * 1280, 800);
+tile_delete(tile);
+//show_debug_message(tile)
 
+switch (global.charSelect[scrGetPlayerID()]) {
+    case 0:
+        bossScr = bossBigCherry;
+    break;
+    case 1:
+        bossScr = bossHatsuneMku;
+    break;
+}
+
+script_execute(bossScr);
 instance_destroy();</string>
           </argument>
         </arguments>

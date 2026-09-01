@@ -331,6 +331,13 @@ if (!frozen)
         scrPlayerJump();
     if (scrButtonCheckReleased(KEY.JUMP,PlayerID))
         scrPlayerReleaseJump();
+    
+    // Magic
+    if (scrButtonCheck(KEY.SKIP, PlayerID)){
+        global.playerCharge[PlayerID] = min(global.playerCharge[PlayerID] + 1,global.playerMagic[PlayerID]);
+    } else {
+        scrPlayerMagic();
+    }
     if (scrButtonCheckPressed(KEY.SUICIDE,PlayerID))
         scrKillPlayer();
 }

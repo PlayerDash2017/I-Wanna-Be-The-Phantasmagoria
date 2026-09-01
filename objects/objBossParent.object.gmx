@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>HP = 5;
 preHP = HP;
+extraPhase = false;
+extraHP = 0;
 
 BossType = &quot;Undefined&quot;; //Id del boss para los ataques basuras
 enemyRepeat = 1;//Cantidad de balas para los golpes normales
@@ -56,10 +58,17 @@ iframeMax = 100;//La duracion de los iframes</string>
             <string>iframes = max(iframes - 1,0);
 HP = global.playerHP[!scrGetPlayerID()];
 
-if (HP != preHP)
-{
-    event_user(0);
+if (!extraPhase) {
+    if (HP != preHP)
+        { event_user(0); }
+} else {
+    if (extraHP &lt;= 0) {
+        event_user(0);
+        
+        extraPhase = false;
+    }
 }
+
 
 preHP = HP;</string>
           </argument>
@@ -85,11 +94,105 @@ preHP = HP;</string>
             <kind>1</kind>
             <string>if (iframes == 0){
     iframes = iframeMax;
+
+    extraHP = max(extraHP - 1,0);
     audio_play_sound(sndBossHit,0,false);
     scrEnemyBullet(BossType, enemyRepeat);
+
+    event_user(1);
 }
 
 instance_destroy(other);</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="13">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Fase extra del jefe
+
+extraPhase = true;</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="12">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Ataque nuevo invocado por el rival</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="11">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Una acción del jefe cuando recibe daño</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Cambio de fase</string>
           </argument>
         </arguments>
       </action>
