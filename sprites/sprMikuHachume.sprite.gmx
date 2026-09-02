@@ -20,6 +20,7 @@
   <width>64</width>
   <height>64</height>
   <frames>
-    <frame index="0">images\sprMikuHachume_0.png</frame>
+    <frame index="0">images\sprMikuHachume_strip0_0.png</frame>
+    <frame index="1">images\sprMikuHachume_strip0_1.png</frame>
   </frames>
 </sprite>

@@ -56,6 +56,7 @@ for (var i = 0; i &lt; 360; i += 360/6) {
     a = instance_create(x,y,objMikuBullet);
     a.speed = 5;
     a.direction = i + Ran;
+    a.sprite_index = sprite_index;
 }</string>
           </argument>
         </arguments>

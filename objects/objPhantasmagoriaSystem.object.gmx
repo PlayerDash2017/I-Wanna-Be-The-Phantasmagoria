@@ -108,7 +108,7 @@ repeat(2)
 
     //Magic Bar
     var Magic = global.playerMagic[i];
-    var Color = merge_colour(c_black,c_aqua,1 - (Magic &lt;= 50) * 0.5);
+    var Color = merge_colour(c_black,c_blue,1 - (Magic &lt;= 50) * 0.5);
     if (Magic == 100) Color = c_orange;
     draw_healthbar(640 * i,0,(640 * i) + 100,20,Magic,c_black,Color,Color,0,true,true);
 

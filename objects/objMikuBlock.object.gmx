@@ -3,7 +3,7 @@
   <spriteName>sprSaveBlocker</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>10</depth>
   <persistent>0</persistent>
   <parentName>objBlock</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,11 +26,36 @@
           <argument>
             <kind>1</kind>
             <string>var tile = tile_layer_find(1000000, x, y);
+
+Back = tile_get_background(tile);
+xBack = tile_get_left(tile);
+yBack = tile_get_top(tile);
+
 tile_delete(tile);
 
-instance_destroy();</string>
+solid = false;
+depth = 1000000;
+vspeed = -random_range(1,3);
+gravity = 0.2;</string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments/>
       </action>
     </event>
     <event eventtype="8" enumb="0">
@@ -50,10 +75,15 @@ instance_destroy();</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var drawAlpha = 0;
-if (alarm[0] != -1) drawAlpha = floor(alarm[0]/10) mod 2;
+            <string>if (y == ystart){
+    var drawAlpha = 0;
+    if (alarm[0] != -1) drawAlpha = floor(alarm[0]/10) mod 2;
 
-draw_sprite_ext(spr1x1, 0, x, y, 32, 32, 0, c_red, drawAlpha * 0.5);</string>
+    draw_sprite_ext(spr1x1, 0, x, y, 32, 32, 0, c_red, drawAlpha * 0.5);
+} else {
+    draw_self();
+    draw_background_part(Back, xBack, yBack, 32, 32, x, y);
+}</string>
           </argument>
         </arguments>
       </action>

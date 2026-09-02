@@ -72,7 +72,8 @@
 
 var a = instance_create(x, y, objMikuBullet);
 a.vspeed = -5.5;
-a.gravity = 0.1;</string>
+a.gravity = 0.1;
+a.sprite_index = sprite_index;</string>
           </argument>
         </arguments>
       </action>

@@ -62,6 +62,31 @@ Boss = &quot;BigCherry&quot;;</string>
         a.hspeed = random_range(-1,1);
         a.vspeed = -1;
     break;
+    case &quot;Magic_BigCherry&quot;:
+        var a = instance_create(x, y, objCherryBullet);
+        a.speed = 3;
+        a.friction = -0.1;
+        a.direction = 270 + irandom_range(-50,50);
+    break;
+
+    case &quot;Miku&quot;:
+        var Ran = irandom(360);
+        for (var i = 0; i &lt; 360; i += 360/15) {
+            var a = instance_create(x, y, objMikuBullet);
+            a.speed = 7;
+            a.direction = i + Ran;
+            a.image_blend = c_black;
+        }
+    break;
+    case &quot;Magic_Miku&quot;:
+        var XX = scrGetPlayerID() * 1280;
+        var YY = 800;
+
+        var a = instance_create(x, y, objMikuBulletLeek);
+        a.speed = 6;
+        a.direction = point_direction(x, y, XX + battle_width/2, YY + battle_height/2) + irandom_range(-20,20);
+        a.Dir = random_range(-1,1);
+    break;
 }
 
 instance_destroy();</string>
@@ -115,6 +140,18 @@ y = lerp(y,YY + ySpawn,0.1);</string>
     case &quot;BigCherry&quot;:
         xSpawn = irandom_range(30,battle_width-30);
         ySpawn = irandom_range(50,100);
+    break;
+    case &quot;Magic_BigCherry&quot;:
+        xSpawn = irandom_range(30,battle_width-30);
+        ySpawn = irandom_range(50,100);
+    break;
+    case &quot;Miku&quot;:
+        xSpawn = irandom_range(30,battle_width-30);
+        ySpawn = 32;
+    break;
+    case &quot;Magic_Miku&quot;:
+        xSpawn = battle_width * irandom(1);
+        ySpawn = 0;
     break;
 }</string>
           </argument>

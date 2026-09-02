@@ -26,7 +26,14 @@
           <argument>
             <kind>1</kind>
             <string>bossName[0] = &quot;Big Cherry&quot;;
-bossName[1] = &quot;Hatsune Miku&quot;;</string>
+bossName[1] = &quot;Hatsune Miku&quot;;
+bossName[2] = &quot;The Colonel&quot;;
+
+bossSkin[0] = sprCherryIdle;
+bossSkin[1] = sprMikuIdle;
+bossSkin[2] = sprPlayerIdle;
+
+bossTotal = 3;</string>
           </argument>
         </arguments>
       </action>
@@ -53,7 +60,7 @@ bossName[1] = &quot;Hatsune Miku&quot;;</string>
     var v = scrButtonCheckPressed(KEY.DOWN, i) - scrButtonCheckPressed(KEY.UP, i);
 
     if (v != 0){
-        global.charSelect[i] = scrWrapInRange(global.charSelect[i] + v,0,1);
+        global.charSelect[i] = scrWrapInRange(global.charSelect[i] + v,0,bossTotal-1);
     }
 }</string>
           </argument>
@@ -77,12 +84,40 @@ bossName[1] = &quot;Hatsune Miku&quot;;</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font(fDefault24);
+            <string>/// Characters
+
+for (var i = 0; i &lt; 2; i ++) {
+    var Side = -(1 - 2 * i);
+
+    draw_sprite_ext(bossSkin[global.charSelect[i]],0,room_width/2 + Side * 500,room_height/2,5 * -Side,5,0,c_white,1);
+}</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Boss list
+
+draw_set_font(fDefault24);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
 //Bosses list
-for (var i = 0; i &lt; 2; i ++) {
+for (var i = 0; i &lt; bossTotal; i ++) {
     scrDrawTextOutline(room_width/2, 100 + i * 30, bossName[i], c_white, c_black);
 }
 
@@ -90,7 +125,7 @@ for (var i = 0; i &lt; 2; i ++) {
 for (var i = 0; i &lt; 2; i ++) {
     draw_set_font(fDefault24);
     var W = string_width(bossName[global.charSelect[i]]) / 2;
-    var XX = W * (1 - 2 * i);
+    var XX = -W * (1 - 2 * i);
 
     draw_sprite(sprCherry + i,0,room_width/2 + XX, 100 + global.charSelect[i] * 30);
 }</string>

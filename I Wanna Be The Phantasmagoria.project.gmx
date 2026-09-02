@@ -83,7 +83,7 @@
       <sound>sound\musOnDeath</sound>
     </sounds>
   </sounds>
-                                              <sprites name="sprites">
+                                                                                                                                                <sprites name="sprites">
     <sprites name="World">
       <sprite>sprites\sprCamera</sprite>
       <sprite>sprites\sprPlayMusic</sprite>
@@ -102,6 +102,20 @@
       <sprite>sprites\sprBullet</sprite>
       <sprite>sprites\sprBlood</sprite>
       <sprite>sprites\sprGameOver</sprite>
+      <sprites name="Big Cherry">
+        <sprite>sprites\sprCherryIdle</sprite>
+        <sprite>sprites\sprCherryJump</sprite>
+        <sprite>sprites\sprCherryFall</sprite>
+        <sprite>sprites\sprCherryRun</sprite>
+        <sprite>sprites\sprCherryKidBullet</sprite>
+      </sprites>
+      <sprites name="Miku">
+        <sprite>sprites\sprMikuIdle</sprite>
+        <sprite>sprites\sprMikuJump</sprite>
+        <sprite>sprites\sprMikuFall</sprite>
+        <sprite>sprites\sprMikuRun</sprite>
+        <sprite>sprites\sprMikuKidBullet</sprite>
+      </sprites>
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\sprBlockMask</sprite>
@@ -137,9 +151,17 @@
       <sprite>sprites\sprMiniLeft</sprite>
       <sprite>sprites\sprMiniDown</sprite>
       <sprite>sprites\sprCherry</sprite>
+      <sprite>sprites\sprCherryOrange</sprite>
       <sprite>sprites\sprCherryYellow</sprite>
+      <sprite>sprites\sprCherryChartreuse</sprite>
       <sprite>sprites\sprCherryGreen</sprite>
+      <sprite>sprites\sprCherryEmerald</sprite>
+      <sprite>sprites\sprCherryCyan</sprite>
+      <sprite>sprites\sprCherryAzure</sprite>
       <sprite>sprites\sprCherryBlue</sprite>
+      <sprite>sprites\sprCherryViolet</sprite>
+      <sprite>sprites\sprCherryMagenta</sprite>
+      <sprite>sprites\sprCherryPink</sprite>
       <sprite>sprites\sprCherryGray</sprite>
       <sprite>sprites\sprCherryWhite</sprite>
       <sprite>sprites\sprMiku</sprite>
@@ -187,9 +209,12 @@
         <sprite>sprites\sprLeek</sprite>
         <sprite>sprites\sprMikuHachume</sprite>
       </sprites>
+      <sprites name="Colonel">
+        <sprite>sprites\sprColonelBossMain</sprite>
+      </sprites>
     </sprites>
   </sprites>
-                <backgrounds name="backgrounds">
+                    <backgrounds name="backgrounds">
     <background>background\bAllTiles</background>
     <background>background\bMegaman</background>
     <background>background\bJumpThrough</background>
@@ -199,11 +224,13 @@
     <background>background\bBossBigCherry</background>
     <background>background\bBossTestPlace</background>
     <background>background\bBossMiku</background>
+    <background>background\bBossColonel</background>
+    <background>background\bTilesColonel</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\pathExample</path>
   </paths>
-                                                            <scripts name="scripts">
+                                                                          <scripts name="scripts">
     <scripts name="World">
       <script>scripts\scrInitializeGlobals.gml</script>
       <script>scripts\scrSetGlobalOptions.gml</script>
@@ -254,6 +281,8 @@
       <script>scripts\scrFlipGrav.gml</script>
       <script>scripts\scrHitPlayer.gml</script>
       <script>scripts\scrPlayerMagic.gml</script>
+      <script>scripts\scrMagicSpell.gml</script>
+      <script>scripts\scrPlayerSprite.gml</script>
     </scripts>
     <scripts name="Trigger">
       <script>scripts\scrMakeTrigger.gml</script>
@@ -300,10 +329,12 @@
         <script>scripts\scrPY.gml</script>
         <script>scripts\draw_sprite_fog.gml</script>
         <script>scripts\draw_sprite_neg.gml</script>
+        <script>scripts\scrOutsideView.gml</script>
       </scripts>
       <scripts name="Bosses Setup">
         <script>scripts\bossBigCherry.gml</script>
         <script>scripts\bossHatsuneMku.gml</script>
+        <script>scripts\bossColonel.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -313,7 +344,7 @@
     <font>fonts\fDefault18</font>
     <font>fonts\fDefault12</font>
   </fonts>
-                                                                                                                                          <objects name="objects">
+                                                                                                                                                                                  <objects name="objects">
     <objects name="World">
       <object>objects\objWorld</object>
       <object>objects\objCamera</object>
@@ -426,11 +457,14 @@
       <object>objects\objGameClear</object>
     </objects>
     <objects name="Phantasmagoria">
-      <object>objects\objBossParent</object>
-      <object>objects\objBossBulletParent</object>
-      <object>objects\objEnemyBulletSpawn</object>
+      <objects name="Parents">
+        <object>objects\objBossParent</object>
+        <object>objects\objBossBulletParent</object>
+        <object>objects\objMagicSpellParent</object>
+      </objects>
       <object>objects\objPhantasmagoriaSystem</object>
       <object>objects\objSpawnBoss</object>
+      <object>objects\objEnemyBulletSpawn</object>
       <object>objects\objMagicField</object>
       <object>objects\objCopyRoom</object>
       <object>objects\objDangerScreen</object>
@@ -442,6 +476,7 @@
         <object>objects\objCherryBulletYellow</object>
         <object>objects\objCherryBulletWall</object>
         <object>objects\objCherryBulletBounce</object>
+        <object>objects\objMagicCherry</object>
       </objects>
       <objects name="Hatsune Miku">
         <object>objects\objMikuBossMain</object>
@@ -453,6 +488,10 @@
         <object>objects\objMikuHachume</object>
         <object>objects\objMikuNegativeEff</object>
         <object>objects\objMikuBulletBig</object>
+        <object>objects\objMagicMiku</object>
+      </objects>
+      <objects name="Colonel">
+        <object>objects\objColonelMainBoss</object>
       </objects>
     </objects>
   </objects>

@@ -231,6 +231,9 @@ if (extraPhase){
 
 switch (HP)
 {
+    case 5:
+        sprite_index = sprCherry;
+    break;
     case 4:
         sprite_index = sprCherryGreen;
     break;

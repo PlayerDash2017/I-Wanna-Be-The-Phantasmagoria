@@ -7,10 +7,10 @@
   <coltolerance>0</coltolerance>
   <sepmasks>-1</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>14</bbox_left>
-  <bbox_right>458</bbox_right>
-  <bbox_top>15</bbox_top>
-  <bbox_bottom>528</bbox_bottom>
+  <bbox_left>0</bbox_left>
+  <bbox_right>475</bbox_right>
+  <bbox_top>0</bbox_top>
+  <bbox_bottom>549</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -20,6 +20,7 @@
   <width>476</width>
   <height>550</height>
   <frames>
-    <frame index="0">images\sprMiku_0.png</frame>
+    <frame index="0">images\sprMiku_strip0_0.png</frame>
+    <frame index="1">images\sprMiku_strip0_1.png</frame>
   </frames>
 </sprite>

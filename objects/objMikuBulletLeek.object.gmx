@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Dis = false;</string>
+            <string>Dis = false;
+Dir = 0;</string>
           </argument>
         </arguments>
       </action>
@@ -84,7 +85,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (Dis){
+            <string>direction += Dir;
+
+if (Dis){
     mask_index = sprEmpty;
     image_alpha -= 1/20;
     if (image_alpha &lt;= 0) instance_destroy();

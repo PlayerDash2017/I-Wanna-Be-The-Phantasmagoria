@@ -9,7 +9,8 @@ if (global.playerCharge[PlayerID] != 0)
                 { event_user(2); event_user(3); }
         }
 
-        global.playerMagic[0] = 0;
+        scrMagicSpell(PlayerID);
+        global.playerMagic[PlayerID] = 0;
     }
     else if (global.playerCharge[PlayerID] >= 75)//Level 2
     {
@@ -18,11 +19,13 @@ if (global.playerCharge[PlayerID] != 0)
                 { event_user(2); }
         }
 
-        global.playerMagic[0] -= 50;
+        scrMagicSpell(PlayerID);
+        global.playerMagic[PlayerID] -= 50;
     }
     else if (global.playerCharge[PlayerID] >= 50)//Level 1
     {
-
+        scrMagicSpell(PlayerID);
+        global.playerMagic[PlayerID] -= 25;
     }
 }
 

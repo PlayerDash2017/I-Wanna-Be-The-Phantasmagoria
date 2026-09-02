@@ -28,7 +28,7 @@
             <string>event_inherited();
 
 BossType = &quot;Miku&quot;;
-enemyRepeat = 4;
+enemyRepeat = 1;
 iframeMax = 75;
 
 Negative = noone;
@@ -60,11 +60,13 @@ alarm[0] = 50;</string>
         var Ran = irandom(360);
         var XX = irandom_range(40,battle_width-40);
         var YY = irandom_range(40,70);
+        var Color = irandom_range(sprCherry,sprCherryPink);
         for (var i = 0; i &lt; 360; i += 360/8) {
             var a = instance_create_battle(XX, YY, objMikuBulletCircle);
             a.speed = 2;
             a.direction = i + Ran;
             a.friction = 0.1;
+            a.sprite_index = Color;
         }
 
         alarm[1] = 75;
@@ -73,6 +75,7 @@ alarm[0] = 50;</string>
         a = instance_create_battle(battle_width, battle_height, objMikuBulletWave);
         a.hspeed = -2.5;
         a.alarm[1] = battle_width/abs(a.hspeed);
+        a.sprite_index = irandom_range(sprCherryAzure,sprCherryBlue);
         
         alarm[1] = 170;
     break;
@@ -99,9 +102,10 @@ alarm[0] = 50;</string>
           <argument>
             <kind>1</kind>
             <string>if (extraPhase){
-    a = instance_create_battle(battle_width, irandom(battle_height), objMikuBulletBig);
-    a.hspeed = -random_range(3,4);
+    var a = instance_create_battle(battle_width, irandom(battle_height), objMikuBulletBig);
+    a.hspeed = -random_range(4,5);
     a.alarm[0] = 10;
+    a.sprite_index = irandom_range(sprCherry,sprCherryPink);
 
     alarm[0] = 10;
     exit;
@@ -109,7 +113,12 @@ alarm[0] = 50;</string>
 
 switch (HP) {
     case 5: case 4:
-        scrMakeShapes(x, y, irandom(360), 4, irandom_range(3,4), random_range(4,6), objMikuBullet);
+        var a = scrMakeShapes(x, y, irandom(360), 4, irandom_range(3,4), random_range(4,6), objMikuBullet);
+
+        var Color = irandom_range(sprCherry,sprCherryPink);
+        for (var i = 0; i &lt; array_length_1d(a); i += 1) {
+            a[i].sprite_index = Color;
+        }
 
         alarm[0] = 30;
     break;
@@ -127,6 +136,7 @@ switch (HP) {
         a.Dir = random_range(-1,1);
         a.image_xscale = random_range(0.5,1);
         a.image_yscale = a.image_xscale;
+        a.sprite_index = irandom_range(sprCherry,sprCherryPink);
 
         alarm[0] = 5;
     break;
@@ -236,13 +246,16 @@ instance_create_battle(576,416,objMikuHachume);</string>
     }
     with(objMikuBulletBig){
         if (scrGetPlayerID() == B)
-            { Dis = true; }
+            { Dis = true; alarm[0] = -1; }
     }
 
     with(Negative) instance_destroy();
 }
 
 switch (HP) {
+    case 5:
+        alarm[0] = 50;
+    break;
     case 4: case 2:
         alarm[1] = 1;
     break;
@@ -293,7 +306,38 @@ switch (HP) {
         alarm[0] = 50;
         alarm[1] = -1;
     break;
+    case 0:
+        instance_destroy();
+        
+        var A = scrGetPlayerID();
+        with(objMikuBullet){
+            if (scrGetPlayerID() == A)
+                { Dis = true; }
+        }
+    break;
 }</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_sprite_ext(sprite_index,-1,x,y,image_xscale,image_yscale,0,c_white,1 - (iframes != 0) * 0.5);</string>
           </argument>
         </arguments>
       </action>

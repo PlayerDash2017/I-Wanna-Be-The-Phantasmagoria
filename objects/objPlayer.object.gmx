@@ -204,12 +204,12 @@ if (!onVineR &amp;&amp; !onVineL)   //Not touching any vines
         
         if ((L || R) &amp;&amp; !frozen)
         {
-            sprite_index = sprPlayerRun;
+            sprite_index = scrPlayerSprite(&quot;Run&quot;);
             image_speed = 1/2;
         }
         else
         {
-            sprite_index = sprPlayerIdle;
+            sprite_index = scrPlayerSprite(&quot;Idle&quot;);
             image_speed = 1/5;
         }
     }
@@ -217,12 +217,12 @@ if (!onVineR &amp;&amp; !onVineL)   //Not touching any vines
     { 
         if ((vspeed * global.grav) &lt; 0)
         {
-            sprite_index = sprPlayerJump;
+            sprite_index = scrPlayerSprite(&quot;Jump&quot;);
             image_speed = 1/2;
         }
         else
         {
-            sprite_index = sprPlayerFall;
+            sprite_index = scrPlayerSprite(&quot;Fall&quot;);
             image_speed = 1/2;
         }
     }

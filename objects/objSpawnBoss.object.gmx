@@ -29,12 +29,15 @@
 tile_delete(tile);
 //show_debug_message(tile)
 
-switch (global.charSelect[scrGetPlayerID()]) {
+switch (global.charSelect[!scrGetPlayerID()]) {
     case 0:
         bossScr = bossBigCherry;
     break;
     case 1:
         bossScr = bossHatsuneMku;
+    break;
+    case 2:
+        bossScr = bossColonel;
     break;
 }
 
