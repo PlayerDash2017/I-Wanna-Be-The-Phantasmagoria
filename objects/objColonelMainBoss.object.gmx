@@ -41,8 +41,167 @@
           <argument>
             <kind>1</kind>
             <string>BossType = &quot;Colonel&quot;;
+enemyRepeat = 2;
+iframeMax = 40;
 
-image_speed = 0;</string>
+Dir = 0;
+
+image_speed = 0;
+alarm[0] = 50;</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>switch (HP) {
+    case 3:
+        Dir = -irandom(180);
+
+        alarm[1] = 15;
+    break;
+}</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (!instance_exists(objPlatform)){
+    var a = instance_create(x,y,objPlatform);
+    a.speed = 3;
+    a.direction = 270 + choose(-1,1) * 30;
+}
+
+switch (HP) {
+    case 5:
+        var a = instance_create(x + irandom(sprite_width/2)*choose(-1,1), y + irandom(sprite_height/2)*choose(-1,1), objColonelBullet);
+        a.speed = random_range(2,4);
+        a.direction = irandom(360);
+        a.sprite_index = sprBulletDot;
+        a.image_blend = make_color_hsv(random(255), 255, 255);
+
+        alarm[0] = 4;
+    break;
+    case 4:
+        var a = instance_create_battle(battle_width/2, battle_height/2, objColonelBulletCenter);
+        a.speed = 7;
+        a.direction = irandom(360);
+
+        alarm[0] = 4;
+    break;
+    case 3:
+        var a = instance_create(x, y, objColonelBullet);
+        a.speed = 6;
+        a.direction = Dir;
+
+        alarm[0] = 3;
+    break;
+    case 2:
+        var a = instance_create(x, y, objColonelBulletWrap);
+        a.speed = random_range(3,5);
+        a.direction = irandom(360);
+
+        alarm[0] = 7;
+    break;
+    case 1:
+        repeat(2){
+            var a = instance_create(x + irandom(sprite_width/2)*choose(-1,1), y + irandom(sprite_height/2)*choose(-1,1), objColonelBullet);
+            a.speed = random_range(0.5,5);
+            a.direction = irandom(360);
+            a.sprite_index = choose(sprBulletKunai,sprBulletArrowhead,sprPCircle,sprBulletDot,sprPBigArrowhead);
+            a.image_index = irandom(a.image_number-1);
+
+            if (a.sprite_index == sprBulletDot){
+                a.image_blend = make_color_hsv(random(255), 255, 255);
+            }
+        }
+
+        alarm[0] = 4;
+    break;
+}</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (extraPhase){
+
+}
+
+switch (HP) {
+    case 3: // Red Colonel
+        Dir = 0;
+        alarm[1] = 1;
+        image_index = 1;
+    break;
+    case 1: // Final Colonel
+        var A = scrGetPlayerID();
+        with(objColonelBulletWrap){
+            if (scrGetPlayerID() == A) instance_destroy();
+        }
+        image_index = 2;
+    break;
+    case 0:
+        var A = scrGetPlayerID();
+        with(objColonelBullet){
+            if (scrGetPlayerID() == A) instance_destroy();
+        }
+        with(objPlatform){
+            if (scrGetPlayerID() == A) instance_destroy();
+        }
+
+        instance_destroy();
+    break;
+}
+
+alarm[0] = 50;</string>
           </argument>
         </arguments>
       </action>

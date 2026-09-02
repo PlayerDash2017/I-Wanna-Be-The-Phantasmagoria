@@ -83,7 +83,7 @@
       <sound>sound\musOnDeath</sound>
     </sounds>
   </sounds>
-                                                                                                                                                <sprites name="sprites">
+                                                                                                                                                              <sprites name="sprites">
     <sprites name="World">
       <sprite>sprites\sprCamera</sprite>
       <sprite>sprites\sprPlayMusic</sprite>
@@ -208,9 +208,15 @@
       <sprites name="Miku">
         <sprite>sprites\sprLeek</sprite>
         <sprite>sprites\sprMikuHachume</sprite>
+        <sprite>sprites\sprCherryGlow</sprite>
       </sprites>
       <sprites name="Colonel">
         <sprite>sprites\sprColonelBossMain</sprite>
+        <sprite>sprites\sprBulletDot</sprite>
+        <sprite>sprites\sprBulletKunai</sprite>
+        <sprite>sprites\sprBulletArrowhead</sprite>
+        <sprite>sprites\sprPCircle</sprite>
+        <sprite>sprites\sprPBigArrowhead</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -344,7 +350,7 @@
     <font>fonts\fDefault18</font>
     <font>fonts\fDefault12</font>
   </fonts>
-                                                                                                                                                                                  <objects name="objects">
+                                                                                                                                                                                                  <objects name="objects">
     <objects name="World">
       <object>objects\objWorld</object>
       <object>objects\objCamera</object>
@@ -489,9 +495,13 @@
         <object>objects\objMikuNegativeEff</object>
         <object>objects\objMikuBulletBig</object>
         <object>objects\objMagicMiku</object>
+        <object>objects\objMikuBulletGlow</object>
       </objects>
       <objects name="Colonel">
         <object>objects\objColonelMainBoss</object>
+        <object>objects\objColonelBullet</object>
+        <object>objects\objColonelBulletCenter</object>
+        <object>objects\objColonelBulletWrap</object>
       </objects>
     </objects>
   </objects>

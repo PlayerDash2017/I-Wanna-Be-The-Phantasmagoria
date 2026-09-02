@@ -72,10 +72,9 @@ Boss = &quot;BigCherry&quot;;</string>
     case &quot;Miku&quot;:
         var Ran = irandom(360);
         for (var i = 0; i &lt; 360; i += 360/15) {
-            var a = instance_create(x, y, objMikuBullet);
+            var a = instance_create(x, y, objMikuBulletGlow);
             a.speed = 7;
             a.direction = i + Ran;
-            a.image_blend = c_black;
         }
     break;
     case &quot;Magic_Miku&quot;:
@@ -86,6 +85,15 @@ Boss = &quot;BigCherry&quot;;</string>
         a.speed = 6;
         a.direction = point_direction(x, y, XX + battle_width/2, YY + battle_height/2) + irandom_range(-20,20);
         a.Dir = random_range(-1,1);
+    break;
+
+    case &quot;Colonel&quot;:
+        var a = instance_create(x,y,objColonelBullet);
+        a.speed = 4;
+        a.friction = -0.1;
+        a.direction = irandom(360);
+        a.sprite_index = sprBulletKunai;
+        a.image_index = 9;
     break;
 }
 
@@ -145,11 +153,21 @@ y = lerp(y,YY + ySpawn,0.1);</string>
         xSpawn = irandom_range(30,battle_width-30);
         ySpawn = irandom_range(50,100);
     break;
+
     case &quot;Miku&quot;:
         xSpawn = irandom_range(30,battle_width-30);
         ySpawn = 32;
     break;
     case &quot;Magic_Miku&quot;:
+        xSpawn = battle_width * irandom(1);
+        ySpawn = 0;
+    break;
+
+    case &quot;Colonel&quot;:
+        xSpawn = battle_width/2 + irandom_range(-10,10);
+        ySpawn = battle_height/2 + irandom_range(-10,10);
+    break;
+    case &quot;Magic_Colonel&quot;:
         xSpawn = battle_width * irandom(1);
         ySpawn = 0;
     break;
