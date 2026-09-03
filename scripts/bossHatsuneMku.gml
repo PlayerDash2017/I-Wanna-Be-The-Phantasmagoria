@@ -1,5 +1,8 @@
 /// bossHatsuneMku()
 
+// Music
+global.bossMusic[scrGetPlayerID()] = musBossMiku;
+
 // Objects
 var a;
 

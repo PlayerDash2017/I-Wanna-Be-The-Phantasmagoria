@@ -115,6 +115,11 @@ repeat(2)
     var Charge = global.playerCharge[i];
     draw_healthbar(640 * i,0,(640 * i) + 100,20,Charge,c_black,c_white,c_white,0,false,false);
     
+    draw_set_colour(c_white);
+    draw_line((640 * i) + 50, 1, (640 * i) + 50, 19);
+    draw_line((640 * i) + 75, 1, (640 * i) + 75, 19);
+    draw_line((640 * i) + 100, 1, (640 * i) + 100, 19);
+
     draw_set_font(fDefault12);
     draw_set_halign(fa_left);
     scrDrawTextOutline(640 * i + 110,5,string(floor(Magic))+&quot;%&quot;,c_white,c_black);

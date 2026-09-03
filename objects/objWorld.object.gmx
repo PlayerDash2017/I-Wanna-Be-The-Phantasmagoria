@@ -148,7 +148,7 @@ if (global.gameStarted)
     }
     else    //Volume control
     {
-        var inPauseOptions = instance_exists(objOptionsMenu) || instance_exists(objKeyboardControlsMenu) || instance_exists(objControllerMenu);
+        var inPauseOptions = instance_exists(objOptionsMenu) || instance_exists(objKeyboardControlsMenu) || instance_exists(objControllerMenu) || instance_exists(objControlMenu);
 
         if (!inPauseOptions)
         {        
@@ -642,7 +642,7 @@ if (global.gamePaused)
     
     draw_set_alpha(1);
     
-    var inPauseOptions = instance_exists(objOptionsMenu) || instance_exists(objKeyboardControlsMenu) || instance_exists(objControllerMenu);
+    var inPauseOptions = instance_exists(objOptionsMenu) || instance_exists(objKeyboardControlsMenu) || instance_exists(objControllerMenu) || instance_exists(objControlMenu);
     
     if (!inPauseOptions)
     {
@@ -694,6 +694,10 @@ if (global.gamePaused)
             event_perform(ev_draw, 0);
         }
         with(objControllerMenu)
+        {
+            event_perform(ev_draw, 0);
+        }
+        with(objControlMenu)
         {
             event_perform(ev_draw, 0);
         }

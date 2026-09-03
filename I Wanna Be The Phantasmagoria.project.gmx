@@ -61,7 +61,7 @@
   <NewExtensions>
     <extension index="0">extensions\GMSched</extension>
   </NewExtensions>
-          <sounds name="sound">
+                                <sounds name="sound">
     <sounds name="Sfx">
       <sound>sound\sndJump</sound>
       <sound>sound\sndDJump</sound>
@@ -77,13 +77,21 @@
       <sounds name="Phantasmagoria">
         <sound>sound\sndDanger</sound>
         <sound>sound\sndGraze</sound>
+        <sound>sound\sndNarratorGo</sound>
+        <sound>sound\sndNarratorReady</sound>
       </sounds>
     </sounds>
     <sounds name="Music">
       <sound>sound\musOnDeath</sound>
+      <sounds name="Phantasmagoria">
+        <sound>sound\musMenu</sound>
+        <sound>sound\musBossCherry</sound>
+        <sound>sound\musBossMiku</sound>
+        <sound>sound\musBossColonel</sound>
+      </sounds>
     </sounds>
   </sounds>
-                                                                                                                                                              <sprites name="sprites">
+                                                                                                                                                                                                    <sprites name="sprites">
     <sprites name="World">
       <sprite>sprites\sprCamera</sprite>
       <sprite>sprites\sprPlayMusic</sprite>
@@ -115,6 +123,13 @@
         <sprite>sprites\sprMikuFall</sprite>
         <sprite>sprites\sprMikuRun</sprite>
         <sprite>sprites\sprMikuKidBullet</sprite>
+      </sprites>
+      <sprites name="Colonel">
+        <sprite>sprites\sprColonelIdle</sprite>
+        <sprite>sprites\sprColonelJump</sprite>
+        <sprite>sprites\sprColonelFall</sprite>
+        <sprite>sprites\sprColonelRun</sprite>
+        <sprite>sprites\sprColonelKidBullet</sprite>
       </sprites>
     </sprites>
     <sprites name="Blocks">
@@ -205,6 +220,8 @@
     <sprites name="Phantasmagoria">
       <sprite>sprites\sprHUDHP</sprite>
       <sprite>sprites\sprMagicField</sprite>
+      <sprite>sprites\sprArrowSelect</sprite>
+      <sprite>sprites\sprMenuStart</sprite>
       <sprites name="Miku">
         <sprite>sprites\sprLeek</sprite>
         <sprite>sprites\sprMikuHachume</sprite>
@@ -217,6 +234,9 @@
         <sprite>sprites\sprBulletArrowhead</sprite>
         <sprite>sprites\sprPCircle</sprite>
         <sprite>sprites\sprPBigArrowhead</sprite>
+        <sprite>sprites\sprColonelMargot</sprite>
+        <sprite>sprites\sprBulletStama</sprite>
+        <sprite>sprites\sprColonelBulletYellow</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -350,7 +370,7 @@
     <font>fonts\fDefault18</font>
     <font>fonts\fDefault12</font>
   </fonts>
-                                                                                                                                                                                                  <objects name="objects">
+                                                                                                                                                                                                                              <objects name="objects">
     <objects name="World">
       <object>objects\objWorld</object>
       <object>objects\objCamera</object>
@@ -476,6 +496,8 @@
       <object>objects\objDangerScreen</object>
       <object>objects\objCharacterMenu</object>
       <object>objects\objKillZone</object>
+      <object>objects\objHudReady</object>
+      <object>objects\objMenuStart</object>
       <objects name="Big Cherry">
         <object>objects\objCherryBossMain</object>
         <object>objects\objCherryBullet</object>
@@ -502,6 +524,10 @@
         <object>objects\objColonelBullet</object>
         <object>objects\objColonelBulletCenter</object>
         <object>objects\objColonelBulletWrap</object>
+        <object>objects\objMagicColonel</object>
+        <object>objects\objColonelLastTis</object>
+        <object>objects\objColonelBulletMargot</object>
+        <object>objects\objColonelBulletYellow</object>
       </objects>
     </objects>
   </objects>

@@ -9,6 +9,9 @@ switch (global.charSelect[PlayerID])
     case 1:
         charName = "Miku";
     break;
+    case 2:
+        charName = "Colonel";
+    break;
     default:
         charName = "Player";
 }

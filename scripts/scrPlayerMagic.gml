@@ -11,6 +11,7 @@ if (global.playerCharge[PlayerID] != 0)
 
         scrMagicSpell(PlayerID);
         global.playerMagic[PlayerID] = 0;
+        iframes += 100;
     }
     else if (global.playerCharge[PlayerID] >= 75)//Level 2
     {
@@ -21,11 +22,13 @@ if (global.playerCharge[PlayerID] != 0)
 
         scrMagicSpell(PlayerID);
         global.playerMagic[PlayerID] -= 50;
+        iframes += 50;
     }
     else if (global.playerCharge[PlayerID] >= 50)//Level 1
     {
         scrMagicSpell(PlayerID);
         global.playerMagic[PlayerID] -= 25;
+        iframes += 25;
     }
 }
 

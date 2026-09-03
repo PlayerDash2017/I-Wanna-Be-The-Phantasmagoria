@@ -31,7 +31,7 @@ bossName[2] = &quot;The Colonel&quot;;
 
 bossSkin[0] = sprCherryIdle;
 bossSkin[1] = sprMikuIdle;
-bossSkin[2] = sprPlayerIdle;
+bossSkin[2] = sprColonelIdle;
 
 bossTotal = 3;</string>
           </argument>
@@ -124,10 +124,10 @@ for (var i = 0; i &lt; bossTotal; i ++) {
 //Cursor
 for (var i = 0; i &lt; 2; i ++) {
     draw_set_font(fDefault24);
-    var W = string_width(bossName[global.charSelect[i]]) / 2;
+    var W = string_width(bossName[global.charSelect[i]]) / 1.5;
     var XX = -W * (1 - 2 * i);
 
-    draw_sprite(sprCherry + i,0,room_width/2 + XX, 100 + global.charSelect[i] * 30);
+    draw_sprite(sprArrowSelect,i,room_width/2 + XX, 100 + global.charSelect[i] * 30);
 }</string>
           </argument>
         </arguments>

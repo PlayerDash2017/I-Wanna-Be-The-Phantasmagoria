@@ -36,6 +36,9 @@ if (Bullet != noone){
         case 1: //Hatsune Miku
             BossType = &quot;Miku&quot;;
         break;
+        case 2: //The Colonel
+            BossType = &quot;Colonel&quot;;
+        break;
     }
 
     scrEnemyBullet(&quot;Magic_&quot;+BossType, 1);

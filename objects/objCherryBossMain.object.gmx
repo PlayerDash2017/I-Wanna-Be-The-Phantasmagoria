@@ -35,7 +35,7 @@ image_xscale = 6;
 image_yscale = image_xscale;
 
 image_speed = 1/15;
-alarm[0] = 50;
+alarm[0] = 75;
 
 Dir = 0;</string>
           </argument>

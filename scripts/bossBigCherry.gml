@@ -1,5 +1,8 @@
 /// bossBigCherry()
 
+// Music
+global.bossMusic[scrGetPlayerID()] = musBossCherry;
+
 // Objects
 var a;
 

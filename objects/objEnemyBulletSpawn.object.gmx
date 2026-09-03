@@ -89,11 +89,16 @@ Boss = &quot;BigCherry&quot;;</string>
 
     case &quot;Colonel&quot;:
         var a = instance_create(x,y,objColonelBullet);
-        a.speed = 4;
-        a.friction = -0.1;
+        a.speed = 0.1;
+        a.friction = -0.02;
         a.direction = irandom(360);
         a.sprite_index = sprBulletKunai;
         a.image_index = 9;
+    break;
+    case &quot;Magic_Colonel&quot;:
+        var a = instance_create(x,y,objColonelBulletYellow);
+        a.speed = 1;
+        a.direction = 270+irandom_range(-80,80);
     break;
 }
 
@@ -164,13 +169,15 @@ y = lerp(y,YY + ySpawn,0.1);</string>
     break;
 
     case &quot;Colonel&quot;:
-        xSpawn = battle_width/2 + irandom_range(-10,10);
-        ySpawn = battle_height/2 + irandom_range(-10,10);
+        xSpawn = battle_width/2 + irandom_range(-20,20);
+        ySpawn = battle_height/2 + irandom_range(-20,20);
     break;
     case &quot;Magic_Colonel&quot;:
-        xSpawn = battle_width * irandom(1);
+        xSpawn = battle_width/2;
         ySpawn = 0;
     break;
+    default:
+        show_debug_message(Boss);
 }</string>
           </argument>
         </arguments>

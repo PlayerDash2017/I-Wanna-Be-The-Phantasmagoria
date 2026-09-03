@@ -1,5 +1,8 @@
 /// bossColonel()
 
+// Music
+global.bossMusic[scrGetPlayerID()] = musBossColonel;
+
 // Objects
 var a;
 

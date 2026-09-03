@@ -39,6 +39,7 @@ for (var i = 0; i < 2; i ++) {
     global.playerMagic[i] = 0;
     global.playerCharge[i] = 0;
     global.charSelect[i] = 0;
+    global.bossMusic[i] = musBossCherry;
 }
 global.pX = 0;
 global.pY = 0;

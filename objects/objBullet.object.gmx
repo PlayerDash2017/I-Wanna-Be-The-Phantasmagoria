@@ -175,6 +175,9 @@ alarm[0] = 40;
         sprite_index = sprMikuKidBullet;
         image_xscale = sign(hspeed);
     break;
+    case 2: //The Colonel
+        sprite_index = sprColonelKidBullet;
+    break;
 }</string>
           </argument>
         </arguments>

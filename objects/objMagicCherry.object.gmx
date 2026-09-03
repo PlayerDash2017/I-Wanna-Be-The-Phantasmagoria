@@ -25,12 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>BossType = &quot;BigCherry&quot;;
-
-Scale = 3;
-image_xscale = Scale;
+            <string>image_speed = 1/15;
+image_xscale = 0;
 image_yscale = image_xscale;
-image_speed = 1/15;</string>
+Num = 5;</string>
           </argument>
         </arguments>
       </action>
@@ -52,7 +50,7 @@ image_speed = 1/15;</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_xscale = lerp(image_xscale,Scale,0.1);
+            <string>image_xscale = lerp(image_xscale,min(Num,15),0.2);
 image_yscale = image_xscale;</string>
           </argument>
         </arguments>
@@ -75,7 +73,7 @@ image_yscale = image_xscale;</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Scale = min(Scale + 0.2,5);</string>
+            <string>Num ++;</string>
           </argument>
         </arguments>
       </action>

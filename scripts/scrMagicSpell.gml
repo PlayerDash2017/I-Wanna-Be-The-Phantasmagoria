@@ -14,4 +14,11 @@ switch (global.charSelect[playerID]) {
         a.image_xscale = 3 * xScale;
         a.image_yscale = a.image_xscale;
     break;
+    case 2: // Colonel
+        repeat(10){
+            var a = instance_create(x, y, objMagicColonel);
+            a.XX = scrGetPlayerID() * 1280 + irandom(battle_width);
+            a.YY = 800 + irandom(battle_height);
+        }
+    break;
 }
