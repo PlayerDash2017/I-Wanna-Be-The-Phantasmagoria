@@ -5,18 +5,20 @@ Un fangame de I Wanna Be The Guy inspirado en Touhou 9 y Touhou 19, este proyect
 -- Controles --
 
 Teclado:
-Teclas de direccion: Moverte
-Shift: Salto/Doble Salto
-Z: Disparo
-Mantenter S: Cargar poder magico
-Soltar S: Usar poder magico
+
+- Teclas de direccion: Moverte
+- Shift: Salto/Doble Salto
+- Z: Disparo
+- Mantenter S: Cargar poder magico
+- Soltar S: Usar poder magico
 
 Mando:
-Cruceta: Moverte
-A/X: Salto/Doble Salto
-X/Cuadrado: Disparo
-Mantener B/Circulo: Cargar poder magico
-Soltar B/Circulo: Usar poder magico
+
+- Cruceta: Moverte
+- A/X: Salto/Doble Salto
+- X/Cuadrado: Disparo
+- Mantener B/Circulo: Cargar poder magico
+- Soltar B/Circulo: Usar poder magico
 
 -- Bosses --
 
@@ -28,15 +30,24 @@ Otras inspiraciones:
 Hatsune Miku
 De: I Wanna Be The LoveTrap
 Otras inspiraciones:
+	I Wanna Be The Emperor
 	I Wanna Bye The Bye Bye
 	I Wanna Bye The Entrance
 
 The Colonel
-De: I Wanna Be The Barrage
+De: I Wanna Be The Black
 Otras inspiraciones:
-	I Wanna Be The Last Tis
+	I Wanna Be The Barrage
+	I Wanna Be The Last TIS
 
 Big Kid
 De: I Wanna Be The LoveTrap
 Otras inspiraciones:
 	I Wanna Be The LemonTrap
+	I Wanna Be The Online
+
+Prince Shiratama
+De: I Wanna Be The Destination
+
+Nue Houjuu
+De: I Wanna Make It Breaking Out
