@@ -21,4 +21,8 @@ switch (global.charSelect[playerID]) {
             a.YY = 800 + irandom(battle_height);
         }
     break;
+    case 3: // Big Kid
+        var a = instance_create(x,y,objMagicBigKidController);
+        a.followID = id;
+    break;
 }

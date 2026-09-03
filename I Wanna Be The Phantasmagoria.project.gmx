@@ -92,7 +92,7 @@
       </sounds>
     </sounds>
   </sounds>
-                                                                                                                                                                                                                          <sprites name="sprites">
+                                                                                                                                                                                                                                            <sprites name="sprites">
     <sprites name="World">
       <sprite>sprites\sprCamera</sprite>
       <sprite>sprites\sprPlayMusic</sprite>
@@ -223,6 +223,7 @@
       <sprite>sprites\sprMagicField</sprite>
       <sprite>sprites\sprArrowSelect</sprite>
       <sprite>sprites\sprMenuStart</sprite>
+      <sprite>sprites\sprArrowPlayer</sprite>
       <sprites name="Miku">
         <sprite>sprites\sprLeek</sprite>
         <sprite>sprites\sprMikuHachume</sprite>
@@ -244,6 +245,7 @@
         <sprite>sprites\sprBigKidBody</sprite>
         <sprite>sprites\sprBigKidWater</sprite>
         <sprite>sprites\sprBigKidBigBullet</sprite>
+        <sprite>sprites\sprBigKidMiniBullet</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -265,7 +267,7 @@
   <paths name="paths">
     <path>paths\pathExample</path>
   </paths>
-                                                                              <scripts name="scripts">
+                                                                                  <scripts name="scripts">
     <scripts name="World">
       <script>scripts\scrInitializeGlobals.gml</script>
       <script>scripts\scrSetGlobalOptions.gml</script>
@@ -355,6 +357,7 @@
       <script>scripts\scrMakeCircle.gml</script>
       <script>scripts\scrEaseValue.gml</script>
       <script>scripts\scrFormat.gml</script>
+      <script>scripts\scrPrint.gml</script>
       <scripts name="Phantasmagoria">
         <script>scripts\instance_create_battle.gml</script>
         <script>scripts\tile_add_battle.gml</script>
@@ -380,7 +383,7 @@
     <font>fonts\fDefault18</font>
     <font>fonts\fDefault12</font>
   </fonts>
-                                                                                                                                                                                                                                                          <objects name="objects">
+                                                                                                                                                                                                                                                                                    <objects name="objects">
     <objects name="World">
       <object>objects\objWorld</object>
       <object>objects\objCamera</object>
@@ -508,6 +511,7 @@
       <object>objects\objKillZone</object>
       <object>objects\objHudReady</object>
       <object>objects\objMenuStart</object>
+      <object>objects\objHudPlayerIndicator</object>
       <objects name="Big Cherry">
         <object>objects\objCherryBossMain</object>
         <object>objects\objCherryBullet</object>
@@ -546,6 +550,11 @@
         <object>objects\objBigKidBigBullet</object>
         <object>objects\objBigKidCherry</object>
         <object>objects\objBigKidBounce</object>
+        <object>objects\objBigKidSpikeFall</object>
+        <object>objects\objBigKidCreateMini</object>
+        <object>objects\objBigKidMiniBullet</object>
+        <object>objects\objMagicBigKidController</object>
+        <object>objects\objMagicBigKid</object>
       </objects>
     </objects>
   </objects>

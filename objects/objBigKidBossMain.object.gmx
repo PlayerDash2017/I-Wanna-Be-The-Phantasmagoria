@@ -53,6 +53,31 @@ alarm[0] = 200;</string>
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var a = instance_create_battle(32 * irandom_range(1,8), 0, objBigKidSpikeFall);
+a.vspeed = 4;
+
+alarm[2] = 60;</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
@@ -135,6 +160,100 @@ alarm[0] = 60;</string>
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="13">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Level 3
+
+extraHP = 10;
+extraPhase = true;
+
+audio_play_sound(sndBlockChange, 0, false);
+with(instance_place(x, y+5, objBigKidBody))
+    { Spd = 3; }
+
+var A = scrGetPlayerID();
+with(objBigKidWater){
+    if (A == scrGetPlayerID()){
+        hspeed = -3;
+    }
+}
+with(objBigKidBigBullet){
+    if (A == scrGetPlayerID()){
+        hspeed = -3;
+    }
+}
+
+alarm[2] = 1;</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="12">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Level 2
+
+var a = instance_create_battle(battle_width,irandom_range(300,350),objBigKidCreateMini);
+a.hspeed = -4;</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="11">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (extraPhase){
+    var a = instance_create_battle(224,240,objBigKidCherry);
+    a.speed = 3;
+    a.direction = point_direction(a.x,a.y,scrPX(),scrPY());
+}</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="10">
       <action>
         <libid>1</libid>
@@ -152,7 +271,28 @@ alarm[0] = 60;</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>switch (HP) {
+            <string>//scrPrint(extraPhase);
+if (extraPhase){
+    audio_play_sound(sndBlockChange, 0, false);
+    alarm[2] = -1;
+    
+    with(instance_place(x, y+5, objBigKidBody))
+        { Spd = 2; }
+
+    var A = scrGetPlayerID();
+    with(objBigKidWater){
+        if (A == scrGetPlayerID()){
+            hspeed = -2;
+        }
+    }
+    with(objBigKidBigBullet){
+        if (A == scrGetPlayerID()){
+            hspeed = -2;
+        }
+    }
+}
+
+switch (HP) {
     case 3: case 1:
         alarm[1] = 1;
     break;

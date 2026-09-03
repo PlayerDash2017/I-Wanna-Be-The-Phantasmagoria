@@ -147,7 +147,7 @@ switch (HP) {
         a.speed = random_range(3,5);
         a.direction = 270 + irandom_range(-80,80);
 
-        alarm[0] = 9;
+        alarm[0] = 12;
     break;
     case 1:
         repeat(2){
