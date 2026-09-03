@@ -53,6 +53,8 @@ roomSong = -2;
 if (roomSong != -2)
 {
     scrPlayMusic(roomSong, true);
+
+    if (roomSong == musBossBigKid) audio_sound_pitch(global.currentMusic,1.2);
 }
 </string>
           </argument>

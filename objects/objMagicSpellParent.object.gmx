@@ -39,6 +39,9 @@ if (Bullet != noone){
         case 2: //The Colonel
             BossType = &quot;Colonel&quot;;
         break;
+        case 3: //Big Kid
+            BossType = &quot;BigKid&quot;;
+        break;
     }
 
     scrEnemyBullet(&quot;Magic_&quot;+BossType, 1);

@@ -39,6 +39,9 @@ switch (global.charSelect[!scrGetPlayerID()]) {
     case 2:
         bossScr = bossColonel;
     break;
+    case 3:
+        bossScr = bossBigKid;
+    break;
 }
 
 script_execute(bossScr);

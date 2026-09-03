@@ -61,7 +61,7 @@
   <NewExtensions>
     <extension index="0">extensions\GMSched</extension>
   </NewExtensions>
-                                <sounds name="sound">
+                                  <sounds name="sound">
     <sounds name="Sfx">
       <sound>sound\sndJump</sound>
       <sound>sound\sndDJump</sound>
@@ -88,10 +88,11 @@
         <sound>sound\musBossCherry</sound>
         <sound>sound\musBossMiku</sound>
         <sound>sound\musBossColonel</sound>
+        <sound>sound\musBossBigKid</sound>
       </sounds>
     </sounds>
   </sounds>
-                                                                                                                                                                                                    <sprites name="sprites">
+                                                                                                                                                                                                                          <sprites name="sprites">
     <sprites name="World">
       <sprite>sprites\sprCamera</sprite>
       <sprite>sprites\sprPlayMusic</sprite>
@@ -238,9 +239,15 @@
         <sprite>sprites\sprBulletStama</sprite>
         <sprite>sprites\sprColonelBulletYellow</sprite>
       </sprites>
+      <sprites name="Big Kid">
+        <sprite>sprites\sprBigKidBossMain</sprite>
+        <sprite>sprites\sprBigKidBody</sprite>
+        <sprite>sprites\sprBigKidWater</sprite>
+        <sprite>sprites\sprBigKidBigBullet</sprite>
+      </sprites>
     </sprites>
   </sprites>
-                    <backgrounds name="backgrounds">
+                          <backgrounds name="backgrounds">
     <background>background\bAllTiles</background>
     <background>background\bMegaman</background>
     <background>background\bJumpThrough</background>
@@ -252,11 +259,13 @@
     <background>background\bBossMiku</background>
     <background>background\bBossColonel</background>
     <background>background\bTilesColonel</background>
+    <background>background\bColorTiles</background>
+    <background>background\bBossBigKid</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\pathExample</path>
   </paths>
-                                                                          <scripts name="scripts">
+                                                                              <scripts name="scripts">
     <scripts name="World">
       <script>scripts\scrInitializeGlobals.gml</script>
       <script>scripts\scrSetGlobalOptions.gml</script>
@@ -361,6 +370,7 @@
         <script>scripts\bossBigCherry.gml</script>
         <script>scripts\bossHatsuneMku.gml</script>
         <script>scripts\bossColonel.gml</script>
+        <script>scripts\bossBigKid.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -370,7 +380,7 @@
     <font>fonts\fDefault18</font>
     <font>fonts\fDefault12</font>
   </fonts>
-                                                                                                                                                                                                                              <objects name="objects">
+                                                                                                                                                                                                                                                          <objects name="objects">
     <objects name="World">
       <object>objects\objWorld</object>
       <object>objects\objCamera</object>
@@ -528,6 +538,14 @@
         <object>objects\objColonelLastTis</object>
         <object>objects\objColonelBulletMargot</object>
         <object>objects\objColonelBulletYellow</object>
+      </objects>
+      <objects name="Big Kid">
+        <object>objects\objBigKidBossMain</object>
+        <object>objects\objBigKidBody</object>
+        <object>objects\objBigKidWater</object>
+        <object>objects\objBigKidBigBullet</object>
+        <object>objects\objBigKidCherry</object>
+        <object>objects\objBigKidBounce</object>
       </objects>
     </objects>
   </objects>

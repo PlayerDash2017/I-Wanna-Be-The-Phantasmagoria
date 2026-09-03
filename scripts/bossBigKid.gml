@@ -1,12 +1,14 @@
+/// bossBigKid()
+
 // Music
-global.bossMusic[scrGetPlayerID()] = musBossCherry;
+global.bossMusic[scrGetPlayerID()] = musBossBigKid;
 
 // Objects
 var a;
 
-a = instance_create_battle(64, 384, objPlayerStart);
+/*a = instance_create_battle(64, 384, objPlayerStart);
 a.image_xscale = 1;
-a.image_yscale = 1;
+a.image_yscale = 1;*/
 
 a = instance_create_battle(416, 312, objBigKidBody);
 a.image_xscale = 1;
@@ -137,3 +139,4 @@ tile_add_battle(bColorTiles, 0, 224, 32, 32, 512, 448, 1000000);
 tile_add_battle(bColorTiles, 0, 224, 32, 32, 544, 448, 1000000);
 tile_add_battle(bColorTiles, 0, 224, 32, 32, 576, 448, 1000000);
 tile_add_battle(bColorTiles, 0, 224, 32, 32, 608, 448, 1000000);
+tile_add_battle(bBossBigKid, 0, 0, 640, 480, 0, 0, 2000000);

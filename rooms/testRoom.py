@@ -209,6 +209,13 @@ def generar_codigo(instancias, tiles):
     codigo = []
 
     # -------------------------
+    # MUSICA
+    # -------------------------
+    codigo.append("// Music")
+    codigo.append("global.bossMusic[scrGetPlayerID()] = musBossCherry;")
+    codigo.append("")
+
+    # -------------------------
     # INSTANCIAS
     # -------------------------
 
