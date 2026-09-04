@@ -42,6 +42,9 @@ if (Bullet != noone){
         case 3: //Big Kid
             BossType = &quot;BigKid&quot;;
         break;
+        case 4: // Kurodama
+            BossType = &quot;Kurodama&quot;;
+        break;
     }
 
     scrEnemyBullet(&quot;Magic_&quot;+BossType, 1);

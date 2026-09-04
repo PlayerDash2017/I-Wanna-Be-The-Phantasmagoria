@@ -1,12 +1,14 @@
+/// bossKurodama()
+
 // Music
-global.bossMusic[scrGetPlayerID()] = musBossCherry;
+global.bossMusic[scrGetPlayerID()] = musBossKurodama;
 
 // Objects
 var a;
 
-a = instance_create_battle(64, 384, objPlayerStart);
+/*a = instance_create_battle(64, 384, objPlayerStart);
 a.image_xscale = 1;
-a.image_yscale = 1;
+a.image_yscale = 1;*/
 
 a = instance_create_battle(0, 0, objKurodamaBlock);
 a.image_xscale = 1;
@@ -279,3 +281,4 @@ a.image_yscale = 1;
 
 // Tilesets
 
+tile_add_battle(bBossKurodama, 0, 0, 640, 480, 0, 0, 2000000);

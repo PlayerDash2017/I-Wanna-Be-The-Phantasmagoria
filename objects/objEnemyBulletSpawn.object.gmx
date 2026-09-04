@@ -110,6 +110,15 @@ Boss = &quot;BigCherry&quot;;</string>
         var a = instance_create(x,y,objBigKidCherry);
         a.hspeed = sign(x - XX) * -4;
     break;
+
+    case &quot;Kurodama&quot;:
+        var a = instance_create(x, y, objKurodamaCherryFire);
+        a.gravity = 0.1;
+    break;
+    case &quot;Magic_Kurodama&quot;:
+        var a = instance_create(x, y, objKurodamaFireBlock);
+        a.gravity = 0.1;
+    break;
 }
 
 instance_destroy();</string>
@@ -194,6 +203,11 @@ y = lerp(y,YY + ySpawn,0.1);</string>
     case &quot;Magic_BigKid&quot;:
         xSpawn = battle_width * irandom(1);
         ySpawn = irandom(battle_height);
+    break;
+
+    case &quot;Kurodama&quot;: case &quot;Magic_Kurodama&quot;:
+        xSpawn = floor(irandom_range(32,battle_width-32)/32)*32 + 16;
+        ySpawn = 0;
     break;
 
     default:

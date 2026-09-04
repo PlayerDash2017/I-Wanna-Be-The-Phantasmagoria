@@ -61,7 +61,7 @@
   <NewExtensions>
     <extension index="0">extensions\GMSched</extension>
   </NewExtensions>
-                                  <sounds name="sound">
+                                      <sounds name="sound">
     <sounds name="Sfx">
       <sound>sound\sndJump</sound>
       <sound>sound\sndDJump</sound>
@@ -89,10 +89,11 @@
         <sound>sound\musBossMiku</sound>
         <sound>sound\musBossColonel</sound>
         <sound>sound\musBossBigKid</sound>
+        <sound>sound\musBossKurodama</sound>
       </sounds>
     </sounds>
   </sounds>
-                                                                                                                                                                                                                                            <sprites name="sprites">
+                                                                                                                                                                                                                                                                                                  <sprites name="sprites">
     <sprites name="World">
       <sprite>sprites\sprCamera</sprite>
       <sprite>sprites\sprPlayMusic</sprite>
@@ -131,6 +132,12 @@
         <sprite>sprites\sprColonelFall</sprite>
         <sprite>sprites\sprColonelRun</sprite>
         <sprite>sprites\sprColonelKidBullet</sprite>
+      </sprites>
+      <sprites name="Kurodama">
+        <sprite>sprites\sprKurodamaFall</sprite>
+        <sprite>sprites\sprKurodamaIdle</sprite>
+        <sprite>sprites\sprKurodamaJump</sprite>
+        <sprite>sprites\sprKurodamaRun</sprite>
       </sprites>
     </sprites>
     <sprites name="Blocks">
@@ -247,9 +254,17 @@
         <sprite>sprites\sprBigKidBigBullet</sprite>
         <sprite>sprites\sprBigKidMiniBullet</sprite>
       </sprites>
+      <sprites name="Kurodama">
+        <sprite>sprites\sprKurodamaBossMain</sprite>
+        <sprite>sprites\sprKurodamaBlock</sprite>
+        <sprite>sprites\sprKurodamaExplosion</sprite>
+        <sprite>sprites\sprKurodamaFire</sprite>
+        <sprite>sprites\sprKurodamaFireBlock</sprite>
+        <sprite>sprites\sprKurodamaPrinceDead</sprite>
+      </sprites>
     </sprites>
   </sprites>
-                          <backgrounds name="backgrounds">
+                              <backgrounds name="backgrounds">
     <background>background\bAllTiles</background>
     <background>background\bMegaman</background>
     <background>background\bJumpThrough</background>
@@ -263,11 +278,12 @@
     <background>background\bTilesColonel</background>
     <background>background\bColorTiles</background>
     <background>background\bBossBigKid</background>
+    <background>background\bBossKurodama</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\pathExample</path>
   </paths>
-                                                                                  <scripts name="scripts">
+                                                                                      <scripts name="scripts">
     <scripts name="World">
       <script>scripts\scrInitializeGlobals.gml</script>
       <script>scripts\scrSetGlobalOptions.gml</script>
@@ -374,6 +390,7 @@
         <script>scripts\bossHatsuneMku.gml</script>
         <script>scripts\bossColonel.gml</script>
         <script>scripts\bossBigKid.gml</script>
+        <script>scripts\bossKurodama.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -383,7 +400,7 @@
     <font>fonts\fDefault18</font>
     <font>fonts\fDefault12</font>
   </fonts>
-                                                                                                                                                                                                                                                                                    <objects name="objects">
+                                                                                                                                                                                                                                                                                                                                      <objects name="objects">
     <objects name="World">
       <object>objects\objWorld</object>
       <object>objects\objCamera</object>
@@ -555,6 +572,19 @@
         <object>objects\objBigKidMiniBullet</object>
         <object>objects\objMagicBigKidController</object>
         <object>objects\objMagicBigKid</object>
+      </objects>
+      <objects name="Kurodama">
+        <object>objects\objKurodamaBossMain</object>
+        <object>objects\objKurodamaBlock</object>
+        <object>objects\objKurodamaBomb</object>
+        <object>objects\objKurodamaExplosion</object>
+        <object>objects\objKurodamaFire</object>
+        <object>objects\objKurodamaCherryFire</object>
+        <object>objects\objKurodamaFireBlock</object>
+        <object>objects\objKurodamaCherryYellow</object>
+        <object>objects\objMagicKurodama</object>
+        <object>objects\objKurodamaPrinceDead</object>
+        <object>objects\objKurodamaSpike</object>
       </objects>
     </objects>
   </objects>

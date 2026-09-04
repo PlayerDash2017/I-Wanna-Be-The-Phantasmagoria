@@ -46,8 +46,8 @@ Otras inspiraciones:
 	I Wanna Be The LemonTrap
 	I Wanna Be The Online
 
-Prince Shiratama
-De: I Wanna Be The Destination
-
-Nue Houjuu
-De: I Wanna Make It Breaking Out
+Prince Kurodama (Dark Devil)
+De: I Wanna Be The Crimson
+Otras inspiraciones:
+	I Wanna Rush Out!
+	Crimson Needle 2.5

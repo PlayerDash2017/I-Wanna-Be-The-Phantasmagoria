@@ -12,6 +12,9 @@ switch (global.charSelect[PlayerID])
     case 2:
         charName = "Colonel";
     break;
+    case 4:
+        charName = "Kurodama";
+    break;
     default:
         charName = "Player";
 }
