@@ -41,6 +41,8 @@ xScale = 1;
 PlayerID = 0;
 bulletCount = 0;
 iframes = 0;
+preCharge = 0;
+chargeSound = noone;
 
 scrSetPlayerMask();
 
@@ -333,13 +335,17 @@ if (!frozen)
         scrPlayerReleaseJump();
     
     // Magic
-    if (scrButtonCheck(KEY.SKIP, PlayerID)){
+    if (scrButtonCheck(KEY.SHOOT, PlayerID)){
         global.playerCharge[PlayerID] = min(global.playerCharge[PlayerID] + 1,global.playerMagic[PlayerID]);
+
+        if (global.playerCharge[PlayerID] == 10 &amp;&amp; preCharge != global.playerCharge[PlayerID])
+            { chargeSound = audio_play_sound(sndCharge, 0, false); }
+        preCharge = global.playerCharge[PlayerID];
     } else {
         scrPlayerMagic();
     }
-    if (scrButtonCheckPressed(KEY.SUICIDE,PlayerID))
-        scrKillPlayer();
+    //if (scrButtonCheckPressed(KEY.SUICIDE,PlayerID))
+    //    scrKillPlayer();
 }
 
 if (global.adAlign &amp;&amp; !place_free(x, y + (global.grav)) &amp;&amp; !frozen)

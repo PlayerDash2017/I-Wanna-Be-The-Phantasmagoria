@@ -65,10 +65,10 @@ if (!extraPhase) {
     if (extraHP &lt;= 0) {
         event_user(0);
         
+        audio_play_sound(sndEndExtraPhase,0,false);
         extraPhase = false;
     }
 }
-
 
 preHP = HP;</string>
           </argument>

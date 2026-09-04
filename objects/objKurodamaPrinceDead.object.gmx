@@ -49,7 +49,9 @@
             <kind>1</kind>
             <string>for (var XX = 32; XX &lt; battle_width-32; XX += 32) {
     instance_create_battle(XX, battle_height-64, objKurodamaSpike);
-}</string>
+}
+
+audio_play_sound(sndGlass, 0, false);</string>
           </argument>
         </arguments>
       </action>

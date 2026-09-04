@@ -32,4 +32,5 @@ if (global.playerCharge[PlayerID] != 0)
     }
 }
 
+audio_stop_sound(chargeSound);
 global.playerCharge[PlayerID] = 0;

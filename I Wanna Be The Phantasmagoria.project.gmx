@@ -61,7 +61,7 @@
   <NewExtensions>
     <extension index="0">extensions\GMSched</extension>
   </NewExtensions>
-                                      <sounds name="sound">
+                                                  <sounds name="sound">
     <sounds name="Sfx">
       <sound>sound\sndJump</sound>
       <sound>sound\sndDJump</sound>
@@ -79,6 +79,9 @@
         <sound>sound\sndGraze</sound>
         <sound>sound\sndNarratorGo</sound>
         <sound>sound\sndNarratorReady</sound>
+        <sound>sound\sndCharge</sound>
+        <sound>sound\sndBossDeath</sound>
+        <sound>sound\sndEndExtraPhase</sound>
       </sounds>
     </sounds>
     <sounds name="Music">
@@ -93,7 +96,7 @@
       </sounds>
     </sounds>
   </sounds>
-                                                                                                                                                                                                                                                                                                  <sprites name="sprites">
+                                                                                                                                                                                                                                                                                                        <sprites name="sprites">
     <sprites name="World">
       <sprite>sprites\sprCamera</sprite>
       <sprite>sprites\sprPlayMusic</sprite>
@@ -199,6 +202,7 @@
       <sprite>sprites\sprGravityDown</sprite>
       <sprite>sprites\sprEmpty</sprite>
       <sprite>sprites\spr1x1</sprite>
+      <sprite>sprites\spr2x2</sprite>
     </sprites>
     <sprites name="Triggers">
       <sprite>sprites\sprTriggerMask</sprite>
@@ -261,6 +265,7 @@
         <sprite>sprites\sprKurodamaFire</sprite>
         <sprite>sprites\sprKurodamaFireBlock</sprite>
         <sprite>sprites\sprKurodamaPrinceDead</sprite>
+        <sprite>sprites\sprKurodamaSpikeBlock</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -400,7 +405,7 @@
     <font>fonts\fDefault18</font>
     <font>fonts\fDefault12</font>
   </fonts>
-                                                                                                                                                                                                                                                                                                                                      <objects name="objects">
+                                                                                                                                                                                                                                                                                                                                              <objects name="objects">
     <objects name="World">
       <object>objects\objWorld</object>
       <object>objects\objCamera</object>
@@ -585,6 +590,8 @@
         <object>objects\objMagicKurodama</object>
         <object>objects\objKurodamaPrinceDead</object>
         <object>objects\objKurodamaSpike</object>
+        <object>objects\objKurodamaBigBomb</object>
+        <object>objects\objKurodamaTail</object>
       </objects>
     </objects>
   </objects>
