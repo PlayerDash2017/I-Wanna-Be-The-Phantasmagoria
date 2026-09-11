@@ -34,15 +34,15 @@ yStep = 40;
 settingButton = false;
 showResetPrompt = false;
 
-//Add two for the &quot;Controller index&quot; and &quot;Reset controls&quot; lines
+//Add two for the "Controller index" and "Reset controls" lines
 numberOfButtons = KEY.NUMBER + 3;
-buttonName = scrControls(&quot;getControlNameArray&quot;);
+buttonName = scrControls("getControlNameArray");
 
 event_user(0);
-buttonName[numberOfButtons - 1] = &quot;Reset Controls&quot;;
-bindName[numberOfButtons - 1] = &quot;&quot;;
+buttonName[numberOfButtons - 1] = "Reset Controls";
+bindName[numberOfButtons - 1] = "";
 
-if (bindName[0] == &quot;-1&quot;) bindName[0] = &quot;Keyboard&quot;;
+if (bindName[0] == "-1") bindName[0] = "Keyboard";
 
 animationTime = 0;
 </string>
@@ -140,7 +140,7 @@ showResetPrompt = false;
             else
             {
                 //Reset controls
-                scrControls(&quot;setControlDefault&quot;);
+                scrControls("setControlDefault");
                 
                 showResetPrompt = true;
                 alarm[0] = 60;
@@ -157,7 +157,7 @@ showResetPrompt = false;
             global.controllerIndex[playerID] += hInputPressed;
             global.controllerIndex[playerID] = scrWrapInRange(global.controllerIndex[playerID], -1, 11);
 
-            scrControls(&quot;setMenuControl&quot;);
+            scrControls("setMenuControl");
         }
         else if (select == 1)
         {
@@ -200,7 +200,7 @@ else
 //Get current controls
 event_user(0);
 
-if (bindName[0] == &quot;-1&quot;) bindName[0] = &quot;Keyboard&quot;;
+if (bindName[0] == "-1") bindName[0] = "Keyboard";
 
 animationTime++;
 </string>
@@ -234,7 +234,7 @@ for (var i = 0; i &lt; numberOfButtons - 3; i++)
     //show_debug_message(i);
     var getName = scrGetControllerBind(global.controls[i, playerID]);
     //show_debug_message(getName)
-    bindName[i+2] = scrTernary(getName == &quot;Unknown&quot;,scrGetKeybind(global.controls[i, playerID]),getName);//scrGetControllerBind(global.controls[i, playerID]);
+    bindName[i+2] = scrTernary(getName == "Unknown",scrGetKeybind(global.controls[i, playerID]),getName);//scrGetControllerBind(global.controls[i, playerID]);
 }
 </string>
           </argument>
@@ -270,11 +270,11 @@ for(var i = 0; i &lt; numberOfButtons; i += 1)
     var bindText = bindName[i];
     if (i == select &amp;&amp; settingButton)
     {
-        bindText = &quot;Press button to set&quot;;
+        bindText = "Press button to set";
     }
     else if (showResetPrompt &amp;&amp; i == numberOfButtons - 1)
     {
-        bindText = &quot;Controls reset!&quot;;
+        bindText = "Controls reset!";
     }
     scrDrawOption(buttonName[i], bindText);
     
@@ -289,7 +289,7 @@ if (global.controllerIndex[playerID] != -1)
     draw_set_halign(fa_middle);
     draw_set_valign(fa_middle);
     
-    var controllerText = &quot;Current controller: &quot;;
+    var controllerText = "Current controller: ";
     
     if (gamepad_is_connected(global.controllerIndex[playerID]))
     { 
@@ -297,7 +297,7 @@ if (global.controllerIndex[playerID] != -1)
     }
     else
     {
-        controllerText += &quot;None&quot;;
+        controllerText += "None";
     }
     
     scrDrawTextOutline(400, 48, controllerText, c_white, c_black);

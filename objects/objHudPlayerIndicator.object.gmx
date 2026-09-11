@@ -101,7 +101,7 @@ with(objPlayer){
     draw_set_halign(fa_center);
     draw_set_font(fDefault18);
     draw_set_alpha(drawAlpha);
-    scrDrawTextOutline(x, y-40, &quot;P&quot;+string(PlayerID+1), merge_colour(c_red, c_aqua, PlayerID), c_black);
+    scrDrawTextOutline(x, y-40, "P"+string(PlayerID+1), merge_colour(c_red, c_aqua, PlayerID), c_black);
 }
 
 draw_set_alpha(1);</string>
@@ -114,11 +114,11 @@ draw_set_alpha(1);</string>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
-  <PhysicsObjectRestitution>0.1</PhysicsObjectRestitution>
+  <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
-  <PhysicsObjectLinearDamping>0.1</PhysicsObjectLinearDamping>
-  <PhysicsObjectAngularDamping>0.1</PhysicsObjectAngularDamping>
-  <PhysicsObjectFriction>0.2</PhysicsObjectFriction>
+  <PhysicsObjectLinearDamping>0.100000001490116</PhysicsObjectLinearDamping>
+  <PhysicsObjectAngularDamping>0.100000001490116</PhysicsObjectAngularDamping>
+  <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints/>

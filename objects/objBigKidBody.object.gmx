@@ -79,8 +79,8 @@ var YY = 800;
 var placeBullet = (instance_position(XX+160, YY+240, objBigKidWater) == noone &amp;&amp; instance_position(XX+160, YY+240, objBigKidBigBullet) == noone);
 
 if (alarm[0] == -1 &amp;&amp; placeBullet){
-    //scrPrint(&quot;Water:&quot;,instance_position(XX+160, YY+256, objBigKidWater));
-    //scrPrint(&quot;Killer:&quot;,instance_position(XX+160, YY+256, objBigKidBigBullet));
+    //scrPrint("Water:",instance_position(XX+160, YY+256, objBigKidWater));
+    //scrPrint("Killer:",instance_position(XX+160, YY+256, objBigKidBigBullet));
 
     a = instance_create_battle(192,240,objBigKidWater + (Type == 0));
     a.hspeed = -Spd;
@@ -105,7 +105,6 @@ if (alarm[0] == -1 &amp;&amp; placeBullet){
         <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-        <arguments/>
       </action>
     </event>
   </events>
@@ -113,11 +112,11 @@ if (alarm[0] == -1 &amp;&amp; placeBullet){
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
-  <PhysicsObjectRestitution>0.1</PhysicsObjectRestitution>
+  <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
-  <PhysicsObjectLinearDamping>0.1</PhysicsObjectLinearDamping>
-  <PhysicsObjectAngularDamping>0.1</PhysicsObjectAngularDamping>
-  <PhysicsObjectFriction>0.2</PhysicsObjectFriction>
+  <PhysicsObjectLinearDamping>0.100000001490116</PhysicsObjectLinearDamping>
+  <PhysicsObjectAngularDamping>0.100000001490116</PhysicsObjectAngularDamping>
+  <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints/>

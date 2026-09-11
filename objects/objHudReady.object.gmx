@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Text = &quot;Ready&quot;;//&quot;Round &quot;+string(global.roundNum+1)+&quot;#Ready&quot;;
+            <string>Text = "Ready";//"Round "+string(global.roundNum+1)+"#Ready";
 alarm[0] = 75;
 
 audio_play_sound(sndNarratorReady,0,0);
@@ -48,7 +48,6 @@ audio_play_sound(sndNarratorReady,0,0);
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-        <arguments/>
       </action>
     </event>
     <event eventtype="2" enumb="0">
@@ -68,7 +67,7 @@ audio_play_sound(sndNarratorReady,0,0);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Text = &quot;GO!&quot;;
+            <string>Text = "GO!";
 with(objPlayer) frozen = false;
 
 alarm[1] = 75;

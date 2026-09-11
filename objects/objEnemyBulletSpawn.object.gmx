@@ -33,7 +33,7 @@ Color = random(255);
 
 xSpawn = 0;
 ySpawn = 0;
-Boss = &quot;BigCherry&quot;;</string>
+Boss = "BigCherry";</string>
           </argument>
         </arguments>
       </action>
@@ -56,20 +56,20 @@ Boss = &quot;BigCherry&quot;;</string>
           <argument>
             <kind>1</kind>
             <string>switch (Boss) {
-    case &quot;BigCherry&quot;:
+    case "BigCherry":
         var a = instance_create(x, y, objCherryBullet);
         a.gravity = 0.14;
         a.hspeed = random_range(-1,1);
         a.vspeed = -1;
     break;
-    case &quot;Magic_BigCherry&quot;:
+    case "Magic_BigCherry":
         var a = instance_create(x, y, objCherryBullet);
         a.speed = 3;
         a.friction = -0.1;
         a.direction = 270 + irandom_range(-50,50);
     break;
 
-    case &quot;Miku&quot;:
+    case "Miku":
         var Ran = irandom(360);
         for (var i = 0; i &lt; 360; i += 360/15) {
             var a = instance_create(x, y, objMikuBulletGlow);
@@ -77,7 +77,7 @@ Boss = &quot;BigCherry&quot;;</string>
             a.direction = i + Ran;
         }
     break;
-    case &quot;Magic_Miku&quot;:
+    case "Magic_Miku":
         var XX = scrGetPlayerID() * 1280;
         var YY = 800;
 
@@ -87,7 +87,7 @@ Boss = &quot;BigCherry&quot;;</string>
         a.Dir = random_range(-1,1);
     break;
 
-    case &quot;Colonel&quot;:
+    case "Colonel":
         var a = instance_create(x,y,objColonelBullet);
         a.speed = 0.1;
         a.friction = -0.02;
@@ -95,27 +95,27 @@ Boss = &quot;BigCherry&quot;;</string>
         a.sprite_index = sprBulletKunai;
         a.image_index = 9;
     break;
-    case &quot;Magic_Colonel&quot;:
+    case "Magic_Colonel":
         var a = instance_create(x,y,objColonelBulletYellow);
         a.speed = 1;
         a.direction = 270+irandom_range(-80,80);
     break;
 
-    case &quot;BigKid&quot;:
+    case "BigKid":
         var a = instance_create(x,y,objBigKidCherry);
         a.vspeed = 4;
     break;
-    case &quot;Magic_BigKid&quot;:
+    case "Magic_BigKid":
         var XX = scrGetPlayerID() * 1280 + battle_width/2;
         var a = instance_create(x,y,objBigKidCherry);
         a.hspeed = sign(x - XX) * -4;
     break;
 
-    case &quot;Kurodama&quot;:
+    case "Kurodama":
         var a = instance_create(x, y, objKurodamaCherryFire);
         a.gravity = 0.1;
     break;
-    case &quot;Magic_Kurodama&quot;:
+    case "Magic_Kurodama":
         var a = instance_create(x, y, objKurodamaFireBlock);
         a.gravity = 0.1;
     break;
@@ -169,43 +169,43 @@ y = lerp(y,YY + ySpawn,0.1);</string>
           <argument>
             <kind>1</kind>
             <string>switch (Boss) {
-    case &quot;BigCherry&quot;:
+    case "BigCherry":
         xSpawn = irandom_range(30,battle_width-30);
         ySpawn = irandom_range(50,100);
     break;
-    case &quot;Magic_BigCherry&quot;:
+    case "Magic_BigCherry":
         xSpawn = irandom_range(30,battle_width-30);
         ySpawn = irandom_range(50,100);
     break;
 
-    case &quot;Miku&quot;:
+    case "Miku":
         xSpawn = irandom_range(30,battle_width-30);
         ySpawn = 32;
     break;
-    case &quot;Magic_Miku&quot;:
+    case "Magic_Miku":
         xSpawn = battle_width * irandom(1);
         ySpawn = 0;
     break;
 
-    case &quot;Colonel&quot;:
+    case "Colonel":
         xSpawn = battle_width/2 + irandom_range(-20,20);
         ySpawn = battle_height/2 + irandom_range(-20,20);
     break;
-    case &quot;Magic_Colonel&quot;:
+    case "Magic_Colonel":
         xSpawn = battle_width/2;
         ySpawn = 0;
     break;
 
-    case &quot;BigKid&quot;:
+    case "BigKid":
         xSpawn = irandom(battle_width);
         ySpawn = 0;
     break;
-    case &quot;Magic_BigKid&quot;:
+    case "Magic_BigKid":
         xSpawn = battle_width * irandom(1);
         ySpawn = irandom(battle_height);
     break;
 
-    case &quot;Kurodama&quot;: case &quot;Magic_Kurodama&quot;:
+    case "Kurodama": case "Magic_Kurodama":
         xSpawn = floor(irandom_range(32,battle_width-32)/32)*32 + 16;
         ySpawn = 0;
     break;
@@ -246,11 +246,11 @@ draw_set_blend_mode(bm_normal);</string>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
-  <PhysicsObjectRestitution>0.1</PhysicsObjectRestitution>
+  <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
-  <PhysicsObjectLinearDamping>0.1</PhysicsObjectLinearDamping>
-  <PhysicsObjectAngularDamping>0.1</PhysicsObjectAngularDamping>
-  <PhysicsObjectFriction>0.2</PhysicsObjectFriction>
+  <PhysicsObjectLinearDamping>0.100000001490116</PhysicsObjectLinearDamping>
+  <PhysicsObjectAngularDamping>0.100000001490116</PhysicsObjectAngularDamping>
+  <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints/>

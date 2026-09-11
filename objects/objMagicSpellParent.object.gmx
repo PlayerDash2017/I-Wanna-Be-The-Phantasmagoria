@@ -28,26 +28,26 @@
             <string>var Bullet = instance_place(x, y, objBossBulletParent);
 
 if (Bullet != noone){
-    var BossType = &quot;&quot;;
+    var BossType = "";
     switch (global.charSelect[!scrGetPlayerID()]) {
         case 0: //Big Cherry
-            BossType = &quot;BigCherry&quot;;
+            BossType = "BigCherry";
         break;
         case 1: //Hatsune Miku
-            BossType = &quot;Miku&quot;;
+            BossType = "Miku";
         break;
         case 2: //The Colonel
-            BossType = &quot;Colonel&quot;;
+            BossType = "Colonel";
         break;
         case 3: //Big Kid
-            BossType = &quot;BigKid&quot;;
+            BossType = "BigKid";
         break;
         case 4: // Kurodama
-            BossType = &quot;Kurodama&quot;;
+            BossType = "Kurodama";
         break;
     }
 
-    scrEnemyBullet(&quot;Magic_&quot;+BossType, 1);
+    scrEnemyBullet("Magic_"+BossType, 1);
     event_user(0);
     instance_destroy(Bullet);
 }</string>
@@ -60,11 +60,11 @@ if (Bullet != noone){
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
-  <PhysicsObjectRestitution>0.1</PhysicsObjectRestitution>
+  <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
-  <PhysicsObjectLinearDamping>0.1</PhysicsObjectLinearDamping>
-  <PhysicsObjectAngularDamping>0.1</PhysicsObjectAngularDamping>
-  <PhysicsObjectFriction>0.2</PhysicsObjectFriction>
+  <PhysicsObjectLinearDamping>0.100000001490116</PhysicsObjectLinearDamping>
+  <PhysicsObjectAngularDamping>0.100000001490116</PhysicsObjectAngularDamping>
+  <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints/>

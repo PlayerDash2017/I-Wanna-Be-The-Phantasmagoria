@@ -114,7 +114,7 @@ if (!place_free(x, y))
     var dirY = sign(y-ysafe);
     var epsilon = 0.001; //Appease the floating point gods
     
-    //If something moved the player into a block since Step, move back towards where we were until we&apos;re out of a block.
+    //If something moved the player into a block since Step, move back towards where we were until we're out of a block.
     while(!place_free(x, y))
     {
         if (dirX * (x - xsafe) &gt;= epsilon)
@@ -206,12 +206,12 @@ if (!onVineR &amp;&amp; !onVineL)   //Not touching any vines
         
         if ((L || R) &amp;&amp; !frozen)
         {
-            sprite_index = scrPlayerSprite(&quot;Run&quot;);
+            sprite_index = scrPlayerSprite("Run");
             image_speed = 1/2;
         }
         else
         {
-            sprite_index = scrPlayerSprite(&quot;Idle&quot;);
+            sprite_index = scrPlayerSprite("Idle");
             image_speed = 1/5;
         }
     }
@@ -219,12 +219,12 @@ if (!onVineR &amp;&amp; !onVineL)   //Not touching any vines
     { 
         if ((vspeed * global.grav) &lt; 0)
         {
-            sprite_index = scrPlayerSprite(&quot;Jump&quot;);
+            sprite_index = scrPlayerSprite("Jump");
             image_speed = 1/2;
         }
         else
         {
-            sprite_index = scrPlayerSprite(&quot;Fall&quot;);
+            sprite_index = scrPlayerSprite("Fall");
             image_speed = 1/2;
         }
     }
@@ -478,7 +478,7 @@ if (instance_exists(objSlope) &amp;&amp; hspeed != 0)
     //Moving down a slope
     if (!notOnBlock)
     {                                              
-        var onSlope = (place_meeting(x, y + global.grav, objSlope));    //Treat normal blocks the same as slopes if we&apos;re standing on a slope
+        var onSlope = (place_meeting(x, y + global.grav, objSlope));    //Treat normal blocks the same as slopes if we're standing on a slope
         
         slopeCheck = true;
         hTest = hspeed;
@@ -787,7 +787,7 @@ drawAlpha -= (iframes &gt; 0) * 0.5;
 
 draw_sprite_ext(sprite_index, image_index, drawX, drawY, image_xscale * xScale, image_yscale * global.grav, image_angle, image_blend, image_alpha * drawAlpha);
 
-//Draw the player&apos;s hitbox
+//Draw the player's hitbox
 if (global.debugShowHitbox)
     { draw_sprite_ext(mask_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha * 0.8); }
 </string>

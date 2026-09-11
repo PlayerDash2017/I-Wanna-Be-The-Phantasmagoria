@@ -20,7 +20,7 @@
   <width>300</width>
   <height>300</height>
   <frames>
-    <frame index="0">images\sprKurodamaBossMain_strip1_0.png</frame>
-    <frame index="1">images\sprKurodamaBossMain_strip1_1.png</frame>
+    <frame index="0">images\sprKurodamaBossMain_0.png</frame>
+    <frame index="1">images\sprKurodamaBossMain_1.png</frame>
   </frames>
 </sprite>

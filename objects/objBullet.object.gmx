@@ -41,14 +41,14 @@ with(objTriggerButtonR)
     }
 }
 
-//Get the bullet&apos;s direction based off the direction the player is facing
+//Get the bullet's direction based off the direction the player is facing
 /*var bulletDir;
 if (instance_exists(objPlayer))
     bulletDir = objPlayer.xScale;
 else
     bulletDir = 1;
 
-//Set the bullet&apos;s speed
+//Set the bullet's speed
 hspeed = bulletDir * 16;*/
 
 PlayerID = 0;

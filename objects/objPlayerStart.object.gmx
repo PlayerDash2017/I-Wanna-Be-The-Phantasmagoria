@@ -47,7 +47,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Create player if it doesn&apos;t exist
+            <string>///Create player if it doesn't exist
 
 global.noDeath = false;
 

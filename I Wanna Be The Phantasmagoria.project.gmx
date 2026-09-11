@@ -61,7 +61,7 @@
   <NewExtensions>
     <extension index="0">extensions\GMSched</extension>
   </NewExtensions>
-                                                  <sounds name="sound">
+  <sounds name="sound">
     <sounds name="Sfx">
       <sound>sound\sndJump</sound>
       <sound>sound\sndDJump</sound>
@@ -96,7 +96,7 @@
       </sounds>
     </sounds>
   </sounds>
-                                                                                                                                                                                                                                                                                                        <sprites name="sprites">
+  <sprites name="sprites">
     <sprites name="World">
       <sprite>sprites\sprCamera</sprite>
       <sprite>sprites\sprPlayMusic</sprite>
@@ -269,7 +269,7 @@
       </sprites>
     </sprites>
   </sprites>
-                              <backgrounds name="backgrounds">
+  <backgrounds name="background">
     <background>background\bAllTiles</background>
     <background>background\bMegaman</background>
     <background>background\bJumpThrough</background>
@@ -288,7 +288,7 @@
   <paths name="paths">
     <path>paths\pathExample</path>
   </paths>
-                                                                                      <scripts name="scripts">
+  <scripts name="scripts">
     <scripts name="World">
       <script>scripts\scrInitializeGlobals.gml</script>
       <script>scripts\scrSetGlobalOptions.gml</script>
@@ -405,7 +405,7 @@
     <font>fonts\fDefault18</font>
     <font>fonts\fDefault12</font>
   </fonts>
-                                                                                                                                                                                                                                                                                                                                              <objects name="objects">
+  <objects name="objects">
     <objects name="World">
       <object>objects\objWorld</object>
       <object>objects\objCamera</object>
@@ -595,7 +595,7 @@
       </objects>
     </objects>
   </objects>
-                <rooms name="rooms">
+  <rooms name="rooms">
     <rooms name="Init">
       <room>rooms\rInit</room>
       <room>rooms\rTitle</room>
@@ -615,6 +615,10 @@
     <room>rooms\rBattleRoom</room>
     <room>rooms\rTestBoss</room>
   </rooms>
+  <constants number="2">
+    <constant name="battle_width">640</constant>
+    <constant name="battle_height">480</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
@@ -623,8 +627,4 @@
     <TutorialName></TutorialName>
     <TutorialPage>0</TutorialPage>
   </TutorialState>
-  <constants number="2">
-    <constant name="battle_width">640</constant>
-    <constant name="battle_height">480</constant>
-  </constants>
 </assets>

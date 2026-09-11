@@ -20,6 +20,6 @@
   <width>8</width>
   <height>6</height>
   <frames>
-    <frame index="0">images\sprMikuKidBullet_strip0_0.png</frame>
+    <frame index="0">images\sprMikuKidBullet_0.png</frame>
   </frames>
 </sprite>

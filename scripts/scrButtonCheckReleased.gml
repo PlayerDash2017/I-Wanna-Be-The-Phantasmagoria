@@ -1,7 +1,7 @@
 ///scrButtonCheckReleased(button,playerID)
 //Checks whether a button is being released this frame
 
-var button = argument0;
+var button = argument[0];
 var playerControl = 0;
 if (argument_count > 1) playerControl = argument[1];
 
