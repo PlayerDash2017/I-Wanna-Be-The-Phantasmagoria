@@ -3,14 +3,14 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="3" name="datafiles">
-    <datafiles number="3" name="Music">
+  <datafiles name="datafiles" number="3">
+    <datafiles name="Music" number="3">
       <datafile>
         <name>GuyRock.ogg</name>
         <exists>-1</exists>
         <size>3681713</size>
         <exportAction>2</exportAction>
-        <exportDir></exportDir>
+        <exportDir/>
         <overwrite>0</overwrite>
         <freeData>-1</freeData>
         <removeEnd>0</removeEnd>
@@ -27,7 +27,7 @@
         <exists>-1</exists>
         <size>1503274</size>
         <exportAction>2</exportAction>
-        <exportDir></exportDir>
+        <exportDir/>
         <overwrite>0</overwrite>
         <freeData>-1</freeData>
         <removeEnd>0</removeEnd>
@@ -44,7 +44,7 @@
         <exists>-1</exists>
         <size>1326098</size>
         <exportAction>2</exportAction>
-        <exportDir></exportDir>
+        <exportDir/>
         <overwrite>0</overwrite>
         <freeData>-1</freeData>
         <removeEnd>0</removeEnd>
@@ -624,7 +624,7 @@
   </help>
   <TutorialState>
     <IsTutorial>0</IsTutorial>
-    <TutorialName></TutorialName>
+    <TutorialName/>
     <TutorialPage>0</TutorialPage>
   </TutorialState>
 </assets>
