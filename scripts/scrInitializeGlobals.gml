@@ -43,6 +43,7 @@ for (var i = 0; i < 2; i ++) {
 }
 global.pX = 0;
 global.pY = 0;
+global.count = 0;
 
 global.trigger = ds_map_create();
 

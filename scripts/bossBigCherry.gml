@@ -26,6 +26,12 @@ a = instance_create_battle(528, 368, objCherryBossMain);
 a.image_xscale = 6;
 a.image_yscale = 6;
 
+a = instance_create_battle(0, 0, objCherryWall);
+a.image_xscale = 20;
+
+a = instance_create_battle(0, 448, objCherryWall);
+a.image_xscale = 20;
+
 // Tilesets
 
 tile_add_battle(bAllTiles, 0, 0, 32, 32, 32, 448, 1000000);

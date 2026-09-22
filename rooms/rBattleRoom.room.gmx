@@ -54,44 +54,44 @@ view_hport[2] = 480;</code>
     <yoffset>11010215</yoffset>
   </makerSettings>
   <backgrounds>
-    <background stretch="0" htiled="-1" vtiled="-1" foreground="0" x="0" hspeed="0" vspeed="0" name="" visible="-1" y="0"/>
-    <background stretch="-1" htiled="-1" vtiled="-1" foreground="0" x="0" hspeed="0" vspeed="0" name="" visible="0" y="0"/>
-    <background stretch="0" htiled="-1" vtiled="-1" foreground="0" x="0" hspeed="0" vspeed="0" name="" visible="0" y="0"/>
-    <background stretch="0" htiled="-1" vtiled="-1" foreground="0" x="0" hspeed="0" vspeed="0" name="" visible="0" y="0"/>
-    <background stretch="0" htiled="-1" vtiled="-1" foreground="0" x="0" hspeed="0" vspeed="0" name="" visible="0" y="0"/>
-    <background stretch="0" htiled="-1" vtiled="-1" foreground="0" x="0" hspeed="0" vspeed="0" name="" visible="0" y="0"/>
-    <background stretch="0" htiled="-1" vtiled="-1" foreground="0" x="0" hspeed="0" vspeed="0" name="" visible="0" y="0"/>
-    <background stretch="0" htiled="-1" vtiled="-1" foreground="0" x="0" hspeed="0" vspeed="0" name="" visible="0" y="0"/>
+    <background y="0" vtiled="-1" name="" vspeed="0" foreground="0" stretch="0" hspeed="0" x="0" htiled="-1" visible="-1"/>
+    <background y="0" vtiled="-1" name="" vspeed="0" foreground="0" stretch="-1" hspeed="0" x="0" htiled="-1" visible="0"/>
+    <background y="0" vtiled="-1" name="" vspeed="0" foreground="0" stretch="0" hspeed="0" x="0" htiled="-1" visible="0"/>
+    <background y="0" vtiled="-1" name="" vspeed="0" foreground="0" stretch="0" hspeed="0" x="0" htiled="-1" visible="0"/>
+    <background y="0" vtiled="-1" name="" vspeed="0" foreground="0" stretch="0" hspeed="0" x="0" htiled="-1" visible="0"/>
+    <background y="0" vtiled="-1" name="" vspeed="0" foreground="0" stretch="0" hspeed="0" x="0" htiled="-1" visible="0"/>
+    <background y="0" vtiled="-1" name="" vspeed="0" foreground="0" stretch="0" hspeed="0" x="0" htiled="-1" visible="0"/>
+    <background y="0" vtiled="-1" name="" vspeed="0" foreground="0" stretch="0" hspeed="0" x="0" htiled="-1" visible="0"/>
   </backgrounds>
   <views>
-    <view objName="&lt;undefined>" hborder="400" yview="0" wport="1920" xview="0" hview="720" yport="0" vborder="304" xport="0" hport="720" wview="1920" hspeed="-1" vspeed="-1" visible="-1"/>
-    <view objName="&lt;undefined>" hborder="32" yview="0" wport="640" xview="0" hview="480" yport="0" vborder="32" xport="0" hport="480" wview="640" hspeed="-1" vspeed="-1" visible="0"/>
-    <view objName="&lt;undefined>" hborder="32" yview="0" wport="640" xview="0" hview="480" yport="0" vborder="32" xport="0" hport="480" wview="640" hspeed="-1" vspeed="-1" visible="0"/>
-    <view objName="&lt;undefined>" hborder="32" yview="0" wport="640" xview="0" hview="480" yport="0" vborder="32" xport="0" hport="480" wview="640" hspeed="-1" vspeed="-1" visible="0"/>
-    <view objName="&lt;undefined>" hborder="32" yview="0" wport="640" xview="0" hview="480" yport="0" vborder="32" xport="0" hport="480" wview="640" hspeed="-1" vspeed="-1" visible="0"/>
-    <view objName="&lt;undefined>" hborder="32" yview="0" wport="640" xview="0" hview="480" yport="0" vborder="32" xport="0" hport="480" wview="640" hspeed="-1" vspeed="-1" visible="0"/>
-    <view objName="&lt;undefined>" hborder="32" yview="0" wport="640" xview="0" hview="480" yport="0" vborder="32" xport="0" hport="480" wview="640" hspeed="-1" vspeed="-1" visible="0"/>
-    <view objName="&lt;undefined>" hborder="32" yview="0" wport="640" xview="0" hview="480" yport="0" vborder="32" xport="0" hport="480" wview="640" hspeed="-1" vspeed="-1" visible="0"/>
+    <view hport="720" wport="1920" yview="0" xview="0" hview="720" vborder="304" vspeed="-1" xport="0" hspeed="-1" objName="&lt;undefined>" hborder="400" yport="0" visible="-1" wview="1920"/>
+    <view hport="480" wport="640" yview="0" xview="0" hview="480" vborder="32" vspeed="-1" xport="0" hspeed="-1" objName="&lt;undefined>" hborder="32" yport="0" visible="0" wview="640"/>
+    <view hport="480" wport="640" yview="0" xview="0" hview="480" vborder="32" vspeed="-1" xport="0" hspeed="-1" objName="&lt;undefined>" hborder="32" yport="0" visible="0" wview="640"/>
+    <view hport="480" wport="640" yview="0" xview="0" hview="480" vborder="32" vspeed="-1" xport="0" hspeed="-1" objName="&lt;undefined>" hborder="32" yport="0" visible="0" wview="640"/>
+    <view hport="480" wport="640" yview="0" xview="0" hview="480" vborder="32" vspeed="-1" xport="0" hspeed="-1" objName="&lt;undefined>" hborder="32" yport="0" visible="0" wview="640"/>
+    <view hport="480" wport="640" yview="0" xview="0" hview="480" vborder="32" vspeed="-1" xport="0" hspeed="-1" objName="&lt;undefined>" hborder="32" yport="0" visible="0" wview="640"/>
+    <view hport="480" wport="640" yview="0" xview="0" hview="480" vborder="32" vspeed="-1" xport="0" hspeed="-1" objName="&lt;undefined>" hborder="32" yport="0" visible="0" wview="640"/>
+    <view hport="480" wport="640" yview="0" xview="0" hview="480" vborder="32" vspeed="-1" xport="0" hspeed="-1" objName="&lt;undefined>" hborder="32" yport="0" visible="0" wview="640"/>
   </views>
   <instances>
-    <instance objName="objPlayerStart" scaleY="1" scaleX="1" code="PlayerID = 0;" x="64" locked="0" colour="4294967295" rotation="0" name="inst_13D9482A" y="1184"/>
-    <instance objName="objPlayerStart" scaleY="1" scaleX="1" code="PlayerID = 1;" x="1344" locked="0" colour="4294967295" rotation="0" name="inst_948C6B33" y="1184"/>
-    <instance objName="objPhantasmagoriaSystem" scaleY="1" scaleX="1" code="" x="0" locked="0" colour="4294967295" rotation="0" name="inst_2A74054C" y="1328"/>
-    <instance objName="objBlock" scaleY="15" scaleX="1" code="" x="0" locked="0" colour="4294967295" rotation="0" name="inst_963CB4F9" y="0"/>
-    <instance objName="objBlock" scaleY="1" scaleX="18" code="" x="32" locked="0" colour="4294967295" rotation="0" name="inst_10F3ACB1" y="0"/>
-    <instance objName="objBlock" scaleY="15" scaleX="1" code="" x="608" locked="0" colour="4294967295" rotation="0" name="inst_2E382E4B" y="0"/>
-    <instance objName="objBlock" scaleY="1" scaleX="18" code="" x="32" locked="0" colour="4294967295" rotation="0" name="inst_CFF1396A" y="448"/>
-    <instance objName="objSpawnBoss" scaleY="1" scaleX="1" code="" x="288" locked="0" colour="4294967295" rotation="0" name="inst_32FDA372" y="1072"/>
-    <instance objName="objSpawnBoss" scaleY="1" scaleX="1" code="" x="1632" locked="0" colour="4294967295" rotation="0" name="inst_99C841C8" y="1056"/>
-    <instance objName="objKillZone" scaleY="1" scaleX="20" code="" x="0" locked="0" colour="4294967295" rotation="0" name="inst_B392A423" y="1296"/>
-    <instance objName="objKillZone" scaleY="1" scaleX="20" code="" x="1280" locked="0" colour="4294967295" rotation="0" name="inst_9AD015E8" y="1296"/>
-    <instance objName="objHudReady" scaleY="1" scaleX="1" code="" x="32" locked="0" colour="4294967295" rotation="0" name="inst_26D88C03" y="1328"/>
-    <instance objName="objPlayMusic" scaleY="1" scaleX="1" code="roomSong = choose(global.bossMusic[0],global.bossMusic[1]);" x="64" locked="0" colour="4294967295" rotation="0" name="inst_FB747812" y="1328"/>
-    <instance objName="objHudPlayerIndicator" scaleY="1" scaleX="1" code="" x="96" locked="0" colour="4294967295" rotation="0" name="inst_2834C45F" y="1328"/>
+    <instance scaleY="1" y="1184" rotation="0" name="inst_13D9482A" code="PlayerID = 0;" locked="0" colour="4294967295" objName="objPlayerStart" x="64" scaleX="1"/>
+    <instance scaleY="1" y="1184" rotation="0" name="inst_948C6B33" code="PlayerID = 1;" locked="0" colour="4294967295" objName="objPlayerStart" x="1344" scaleX="1"/>
+    <instance scaleY="1" y="1328" rotation="0" name="inst_2A74054C" code="" locked="0" colour="4294967295" objName="objPhantasmagoriaSystem" x="0" scaleX="1"/>
+    <instance scaleY="15" y="0" rotation="0" name="inst_963CB4F9" code="" locked="0" colour="4294967295" objName="objBlock" x="0" scaleX="1"/>
+    <instance scaleY="1" y="0" rotation="0" name="inst_10F3ACB1" code="" locked="0" colour="4294967295" objName="objBlock" x="32" scaleX="18"/>
+    <instance scaleY="15" y="0" rotation="0" name="inst_2E382E4B" code="" locked="0" colour="4294967295" objName="objBlock" x="608" scaleX="1"/>
+    <instance scaleY="1" y="448" rotation="0" name="inst_CFF1396A" code="" locked="0" colour="4294967295" objName="objBlock" x="32" scaleX="18"/>
+    <instance scaleY="1" y="1072" rotation="0" name="inst_32FDA372" code="" locked="0" colour="4294967295" objName="objSpawnBoss" x="288" scaleX="1"/>
+    <instance scaleY="1" y="1056" rotation="0" name="inst_99C841C8" code="" locked="0" colour="4294967295" objName="objSpawnBoss" x="1632" scaleX="1"/>
+    <instance scaleY="1" y="1296" rotation="0" name="inst_B392A423" code="" locked="0" colour="4294967295" objName="objKillZone" x="0" scaleX="20"/>
+    <instance scaleY="1" y="1296" rotation="0" name="inst_9AD015E8" code="" locked="0" colour="4294967295" objName="objKillZone" x="1280" scaleX="20"/>
+    <instance scaleY="1" y="1328" rotation="0" name="inst_26D88C03" code="" locked="0" colour="4294967295" objName="objHudReady" x="32" scaleX="1"/>
+    <instance scaleY="1" y="1328" rotation="0" name="inst_FB747812" code="roomSong = choose(global.bossMusic[0],global.bossMusic[1]);" locked="0" colour="4294967295" objName="objPlayMusic" x="64" scaleX="1"/>
+    <instance scaleY="1" y="1328" rotation="0" name="inst_2834C45F" code="" locked="0" colour="4294967295" objName="objHudPlayerIndicator" x="96" scaleX="1"/>
   </instances>
   <tiles>
-    <tile scaleY="1" id="10000001" scaleX="1" x="0" depth="1000000" h="480" locked="0" colour="4294967295" xo="0" yo="0" w="640" name="inst_220EDFDC" bgName="bBossTestPlace" y="800"/>
-    <tile scaleY="1" id="10000002" scaleX="1" x="1280" depth="1000000" h="480" locked="0" colour="4294967295" xo="0" yo="0" w="640" name="inst_F1992D7B" bgName="bBossTestPlace" y="800"/>
+    <tile scaleY="1" y="800" xo="0" id="10000001" name="inst_220EDFDC" w="640" depth="1000000" h="480" locked="0" bgName="bBossTestPlace" colour="4294941597" x="0" scaleX="1" yo="0"/>
+    <tile scaleY="1" y="800" xo="0" id="10000002" name="inst_F1992D7B" w="640" depth="1000000" h="480" locked="0" bgName="bBossTestPlace" colour="4288396799" x="1280" scaleX="1" yo="0"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

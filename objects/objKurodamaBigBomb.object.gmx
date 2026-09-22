@@ -6,9 +6,9 @@
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>objBossBulletParent</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>&lt;undefined></maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event enumb="0" eventtype="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -17,26 +17,26 @@
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0;
-image_index = 5;
-
-image_xscale = 2;
-image_yscale = 2;
-
+            <string>image_speed = 0;&#xd;
+image_index = 5;&#xd;
+&#xd;
+image_xscale = 2;&#xd;
+image_yscale = 2;&#xd;
+&#xd;
 Type = 0;</string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="1" enumb="0">
+    <event enumb="0" eventtype="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -45,15 +45,15 @@ Type = 0;</string>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with(ID) bombCount --;
+            <string>with(ID) bigBombCount --;
 
 var a = instance_create(x+32, y+32, objKurodamaExplosion);
 a.image_xscale = 2;
@@ -70,7 +70,7 @@ for (var i = -1; i &lt;= 1; i += 1) {
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="2">
+    <event enumb="2" eventtype="3">
       <action>
         <libid>1</libid>
         <id>604</id>
@@ -80,7 +80,7 @@ for (var i = -1; i &lt;= 1; i += 1) {
         <useapplyto>0</useapplyto>
         <exetype>1</exetype>
         <functionname>action_inherited</functionname>
-        <codestring></codestring>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
@@ -93,17 +93,17 @@ for (var i = -1; i &lt;= 1; i += 1) {
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (y-800 &gt; battle_height-96){
-    gravity = 0;
-    speed = 0;
+            <string>if (y-800 > battle_height-96){&#xd;
+    gravity = 0;&#xd;
+    speed = 0;&#xd;
 }</string>
           </argument>
         </arguments>
@@ -118,21 +118,21 @@ for (var i = -1; i &lt;= 1; i += 1) {
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy(other);
+            <string>instance_destroy(other);&#xd;
 image_speed = -1/50;</string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="7">
+    <event enumb="7" eventtype="7">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -141,8 +141,8 @@ image_speed = -1/50;</string>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>

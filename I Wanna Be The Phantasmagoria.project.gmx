@@ -82,6 +82,7 @@
         <sound>sound\sndCharge</sound>
         <sound>sound\sndBossDeath</sound>
         <sound>sound\sndEndExtraPhase</sound>
+        <sound>sound\sndMagicSpell</sound>
       </sounds>
     </sounds>
     <sounds name="Music">
@@ -235,6 +236,7 @@
       <sprite>sprites\sprArrowSelect</sprite>
       <sprite>sprites\sprMenuStart</sprite>
       <sprite>sprites\sprArrowPlayer</sprite>
+      <sprite>sprites\sprDestroyEff</sprite>
       <sprites name="Miku">
         <sprite>sprites\sprLeek</sprite>
         <sprite>sprites\sprMikuHachume</sprite>
@@ -534,6 +536,8 @@
       <object>objects\objHudReady</object>
       <object>objects\objMenuStart</object>
       <object>objects\objHudPlayerIndicator</object>
+      <object>objects\objHudFinalScreen</object>
+      <object>objects\objDestroyEff</object>
       <objects name="Big Cherry">
         <object>objects\objCherryBossMain</object>
         <object>objects\objCherryBullet</object>
@@ -541,6 +545,7 @@
         <object>objects\objCherryBulletWall</object>
         <object>objects\objCherryBulletBounce</object>
         <object>objects\objMagicCherry</object>
+        <object>objects\objCherryWall</object>
       </objects>
       <objects name="Hatsune Miku">
         <object>objects\objMikuBossMain</object>

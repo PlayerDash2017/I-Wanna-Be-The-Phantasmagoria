@@ -31,3 +31,5 @@ switch (global.charSelect[playerID]) {
         a.image_yscale = a.image_xscale;
     break;
 }
+
+audio_play_sound(sndMagicSpell,0,false);

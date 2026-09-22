@@ -2,10 +2,10 @@
 <sound>
   <kind>0</kind>
   <extension>.wav</extension>
-  <origname>sound\audio\sndEndExtraPhase.wav</origname>
+  <origname>audio\sndEndExtraPhase.wav</origname>
   <effects>0</effects>
   <volume>
-    <volume>1</volume>
+    <volume>0.8</volume>
   </volume>
   <pan>0</pan>
   <bitRates>

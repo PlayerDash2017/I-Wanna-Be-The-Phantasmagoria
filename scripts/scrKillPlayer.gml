@@ -11,7 +11,7 @@ if (instance_exists(objPlayer) && (!global.noDeath && !global.debugNoDeath) && i
     }
 
     audio_play_sound(sndDeath, 0, false);
-    
+    (instance_create(0,0,objHudFinalScreen)).winnerID = PlayerID;
     instance_create(x, y, objBloodEmitter);
     instance_destroy();
 

@@ -76,6 +76,7 @@ switch(type)
     case "saveControlConfig":
         for (var i = 0; i <= 1; i ++)
         {
+            ini_write_real("Player_"+string(i+1),  "Index",    global.controllerIndex[i]);
             ini_write_real("Player_"+string(i+1),  "Left",     global.controls[KEY.LEFT, i]);
             ini_write_real("Player_"+string(i+1),  "Right",    global.controls[KEY.RIGHT, i]);
             ini_write_real("Player_"+string(i+1),  "Up",       global.controls[KEY.UP, i]);
