@@ -12,6 +12,8 @@ if (global.playerCharge[PlayerID] != 0)
         scrMagicSpell(PlayerID);
         global.playerMagic[PlayerID] = 0;
         iframes += 100;
+        
+        audio_play_sound(sndExtraSpell,0,false);
     }
     else if (global.playerCharge[PlayerID] >= 75)//Level 2
     {

@@ -9,16 +9,14 @@ Teclado:
 - Teclas de direccion: Moverte
 - Shift: Salto/Doble Salto
 - Z: Disparo
-- Mantenter S: Cargar poder magico
-- Soltar S: Usar poder magico
+- Mantenter y soltar Z: Cargar poder magico y usarlo
 
 Mando:
 
 - Cruceta: Moverte
 - A/X: Salto/Doble Salto
 - X/Cuadrado: Disparo
-- Mantener B/Circulo: Cargar poder magico
-- Soltar B/Circulo: Usar poder magico
+- Mantener y soltar X/Cuadrado: Cargar poder magico y usarlo
 
 -- Bosses --
 
@@ -46,8 +44,13 @@ Otras inspiraciones:
 	I Wanna Be The LemonTrap
 	I Wanna Be The Online
 
-Prince Kurodama (Dark Devil)
+Prince Kurotama (Dark Devil)
 De: I Wanna Be The Crimson
 Otras inspiraciones:
 	I Wanna Rush Out!
 	Crimson Needle 2.5
+
+Prince Shiratama (Destination)
+De: I Wanna Be The Destination
+Otras inspiraciones:
+	I Wanna Be The Flamestination

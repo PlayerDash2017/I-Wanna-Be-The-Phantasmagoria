@@ -30,6 +30,11 @@ switch (global.charSelect[playerID]) {
         a.image_xscale = 1.2;
         a.image_yscale = a.image_xscale;
     break;
+    case 5: // Shiratama
+        repeat(5){
+            instance_create_battle(irandom(battle_width),irandom(1) * battle_height,objShiratamaBanana);
+        }
+    break;
 }
 
 audio_play_sound(sndMagicSpell,0,false);

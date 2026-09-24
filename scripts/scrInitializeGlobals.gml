@@ -40,6 +40,7 @@ for (var i = 0; i < 2; i ++) {
     global.playerCharge[i] = 0;
     global.charSelect[i] = 0;
     global.bossMusic[i] = musBossCherry;
+    global.playerBotMode[i] = false;
 }
 global.pX = 0;
 global.pY = 0;

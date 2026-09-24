@@ -83,6 +83,7 @@
         <sound>sound\sndBossDeath</sound>
         <sound>sound\sndEndExtraPhase</sound>
         <sound>sound\sndMagicSpell</sound>
+        <sound>sound\sndExtraSpell</sound>
       </sounds>
     </sounds>
     <sounds name="Music">
@@ -238,6 +239,7 @@
       <sprite>sprites\sprMenuStart</sprite>
       <sprite>sprites\sprArrowPlayer</sprite>
       <sprite>sprites\sprDestroyEff</sprite>
+      <sprite>sprites\sprMenuBotMode</sprite>
       <sprites name="Miku">
         <sprite>sprites\sprLeek</sprite>
         <sprite>sprites\sprMikuHachume</sprite>
@@ -278,6 +280,7 @@
         <sprite>sprites\sprShiratamaRed</sprite>
         <sprite>sprites\sprShiratamaSpike</sprite>
         <sprite>sprites\sprShiratamaAqua</sprite>
+        <sprite>sprites\sprShiratamaBanana</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -546,6 +549,7 @@
       <object>objects\objCharacterMenu</object>
       <object>objects\objKillZone</object>
       <object>objects\objHudReady</object>
+      <object>objects\objMenuBotMode</object>
       <object>objects\objMenuStart</object>
       <object>objects\objHudPlayerIndicator</object>
       <object>objects\objHudFinalScreen</object>
@@ -620,6 +624,8 @@
         <object>objects\objShiratamaCherry</object>
         <object>objects\objShiratamaCherryLine</object>
         <object>objects\objShiratamaCherryYellow</object>
+        <object>objects\objShiratamaBanana</object>
+        <object>objects\objShiratamaBananaTail</object>
       </objects>
     </objects>
   </objects>

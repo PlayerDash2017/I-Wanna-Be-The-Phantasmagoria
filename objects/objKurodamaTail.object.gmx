@@ -5,10 +5,10 @@
   <visible>-1</visible>
   <depth>5</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <parentName>&lt;undefined></parentName>
+  <maskName>&lt;undefined></maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event enumb="0" eventtype="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -17,21 +17,21 @@
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_xscale = 8;
+            <string>image_xscale = 5;
 image_yscale = image_xscale;</string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event enumb="0" eventtype="3">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -40,15 +40,15 @@ image_yscale = image_xscale;</string>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_alpha -= 1/25;
+            <string>image_alpha -= 1/25;&#xd;
 if (image_alpha &lt;= 0) instance_destroy();</string>
           </argument>
         </arguments>

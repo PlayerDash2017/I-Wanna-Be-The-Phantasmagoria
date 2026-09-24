@@ -18,7 +18,7 @@
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <events>
-    <event eventtype="0" enumb="0">
+    <event enumb="0" eventtype="0">
       <action>
         <libid>1</libid>
         <id>604</id>
@@ -85,7 +85,7 @@ alarm[0] = 75;</string>
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
+    <event enumb="0" eventtype="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -149,8 +149,9 @@ if (ds_list_size(listColor) > 0){
     }
 }
 
-alarm[1] = 1;
-alarm[2] = 1;
+alarm[1] = 10;
+alarm[2] = 10;
+Angle = 0;
 audio_play_sound(sndBlockChange,0,false);
 with(objShiratamaCherry){
     if (A == scrGetPlayerID())
@@ -160,7 +161,7 @@ with(objShiratamaCherry){
         </arguments>
       </action>
     </event>
-    <event eventtype="1" enumb="0">
+    <event enumb="0" eventtype="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -182,7 +183,7 @@ with(objShiratamaCherry){
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="3">
+    <event enumb="3" eventtype="7">
       <action>
         <libid>1</libid>
         <id>203</id>
@@ -199,7 +200,7 @@ with(objShiratamaCherry){
         <arguments/>
       </action>
     </event>
-    <event eventtype="7" enumb="5">
+    <event enumb="5" eventtype="7">
       <action>
         <libid>1</libid>
         <id>203</id>
@@ -216,7 +217,7 @@ with(objShiratamaCherry){
         <arguments/>
       </action>
     </event>
-    <event eventtype="7" enumb="10">
+    <event enumb="10" eventtype="7">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -247,6 +248,12 @@ if (ds_list_size(listColor) > 0){
     ds_list_delete(listColor,0);
     
     alarm[0] = !extraPhase;
+    
+    if (ds_list_size(listColor) &lt;= 0){
+        with(spike){
+            hspeed = 5 * sign(hspeed);
+        }
+    }
 } else {
     instance_destroy(spike);
     instance_destroy(extraColor);
@@ -269,7 +276,7 @@ if (ds_list_size(listColor) > 0){
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="13">
+    <event enumb="13" eventtype="7">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -329,7 +336,7 @@ alarm[2] = 1;</string>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="14">
+    <event enumb="14" eventtype="7">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -355,7 +362,7 @@ alarm[0] = 1;</string>
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="1">
+    <event enumb="1" eventtype="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -395,7 +402,7 @@ alarm[0] = 1;</string>
             a.sprite_index = sprCherryMagenta;
         }
         
-        alarm[1] = 10;
+        alarm[1] = 12;
     break;
     case 3://Yellow
         var a = instance_create_battle(irandom(640),0,objShiratamaCherry);
@@ -441,7 +448,7 @@ alarm[0] = 1;</string>
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="2">
+    <event enumb="2" eventtype="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -516,7 +523,7 @@ alarm[0] = 1;</string>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="4">
+    <event enumb="4" eventtype="7">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -542,7 +549,7 @@ with(objPlayer){
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="12">
+    <event enumb="12" eventtype="7">
       <action>
         <libid>1</libid>
         <id>603</id>

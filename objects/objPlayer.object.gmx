@@ -8,7 +8,7 @@
   <parentName>&lt;undefined></parentName>
   <maskName>sprPlayerMask</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event enumb="0" eventtype="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -75,7 +75,7 @@ scrDynamicCollision(true);
         </arguments>
       </action>
     </event>
-    <event eventtype="1" enumb="0">
+    <event enumb="0" eventtype="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -100,7 +100,7 @@ with (objBow)&#xd;
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="2">
+    <event enumb="2" eventtype="3">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -250,7 +250,7 @@ else    //Touching a vine
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event enumb="0" eventtype="3">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -345,12 +345,21 @@ if (botMode &amp;&amp; !frozen &amp;&amp; instance_number(objBossParent) >= 2){
                     botReleaseJump = true;
                 }
             }
+            
+            if (sign(bossParent.x - x) == xScale){
+                if ((global.count mod 3) == 0 &amp;&amp; irandom(10) == 0){
+                    botReleaseShoot = true;
+                    botKey[KEY.SHOOT] = true;
+                    botCharge = (irandom(5) == 0);
+                }
+            }
         } else {
+            //Shiratama
             if (botState == "Destination"){
                 bossParent = instance_nearest(x,y,objShiratamaSpike);
             }
             
-            if (sign(bossParent.x > x) != xScale){
+            if (sign(bossParent.x - x) != xScale){
                 if (bossParent.x > x) botKey[KEY.RIGHT] = true;
                 else botKey[KEY.LEFT] = true;
             } else {
@@ -911,7 +920,7 @@ else    //Flipped&#xd;
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="4">
+    <event enumb="4" eventtype="7">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -940,13 +949,14 @@ var Field = instance_create(x,y,objMagicField);
 Field.playerID = PlayerID;
 Field.followID = id;
 
+botMode = global.playerBotMode[PlayerID];
 //botMode = true;
 //if (PlayerID == 1) botMode = true;</string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event enumb="0" eventtype="8">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -980,7 +990,14 @@ draw_sprite_ext(sprite_index, image_index, drawX, drawY, image_xscale * xScale, 
 if (global.debugShowHitbox){
     draw_sprite_ext(mask_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha * 0.8);
 
-    
+    var bulletParent = instance_nearest(x, y, objPlayerKiller);
+    if (bulletParent != noone){
+        var bulletDis = point_distance(x, y, bulletParent.x, bulletParent.y);
+        
+        var Color = scrTernary(bulletDis &lt; botDistance,make_colour_hsv(current_time/16,255,255),c_black);
+        draw_set_colour(Color);
+        draw_line(x,y,bulletParent.x,bulletParent.y);
+    }
 }</string>
           </argument>
         </arguments>
