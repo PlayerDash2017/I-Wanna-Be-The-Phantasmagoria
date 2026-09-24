@@ -1,0 +1,28 @@
+<sound>
+  <kind>0</kind>
+  <effects>0</effects>
+  <pan>0</pan>
+  <preload>-1</preload>
+  <extension>.mp3</extension>
+  <origname>audio\musBossShiratama.mp3</origname>
+  <data>musBossShiratama.mp3</data>
+  <compressed>0</compressed>
+  <streamed>0</streamed>
+  <uncompressOnLoad>0</uncompressOnLoad>
+  <audioGroup>0</audioGroup>
+  <volume>
+    <volume>1</volume>
+  </volume>
+  <bitRates>
+    <bitRate>192</bitRate>
+  </bitRates>
+  <sampleRates>
+    <sampleRate>44100</sampleRate>
+  </sampleRates>
+  <types>
+    <type>0</type>
+  </types>
+  <bitDepths>
+    <bitDepth>16</bitDepth>
+  </bitDepths>
+</sound>

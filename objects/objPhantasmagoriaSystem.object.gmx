@@ -5,8 +5,8 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <parentName>&lt;undefined></parentName>
+  <maskName>&lt;undefined></maskName>
   <events>
     <event eventtype="8" enumb="73">
       <action>
@@ -17,32 +17,32 @@
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var j = 0;
-var i = 1;//Player 1 View
-var Color = c_red;
-repeat(2)
-{
-    repeat(5)
-    {
-        draw_rectangle_colour(view_xview[i]+j, view_yview[i]+j,
-                       view_xview[i]+view_wview[i]-1-j, view_yview[i]+view_hview[i]-1-j,
-                       Color,merge_colour(Color,c_white,0.5),Color,merge_colour(Color,c_white,0.5),
-                       true);
-
-        j ++;
-    }
-
-    Color = c_blue;
-    i = 2;//Player 2 View
-    j = 0;
+            <string>var j = 0;&#xd;
+var i = 1;//Player 1 View&#xd;
+var Color = c_red;&#xd;
+repeat(2)&#xd;
+{&#xd;
+    repeat(5)&#xd;
+    {&#xd;
+        draw_rectangle_colour(view_xview[i]+j, view_yview[i]+j,&#xd;
+                       view_xview[i]+view_wview[i]-1-j, view_yview[i]+view_hview[i]-1-j,&#xd;
+                       Color,merge_colour(Color,c_white,0.5),Color,merge_colour(Color,c_white,0.5),&#xd;
+                       true);&#xd;
+&#xd;
+        j ++;&#xd;
+    }&#xd;
+&#xd;
+    Color = c_blue;&#xd;
+    i = 2;//Player 2 View&#xd;
+    j = 0;&#xd;
 }</string>
           </argument>
         </arguments>
@@ -57,16 +57,16 @@ repeat(2)
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Background
-
+            <string>/// Background&#xd;
+&#xd;
 draw_background_stretched(bPhantasmagoria, 0, 0, room_width, 720);</string>
           </argument>
         </arguments>
@@ -81,8 +81,8 @@ draw_background_stretched(bPhantasmagoria, 0, 0, room_width, 720);</string>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
@@ -122,6 +122,7 @@ repeat(2)
 
     draw_set_font(fDefault12);
     draw_set_halign(fa_left);
+    draw_set_valign(fa_top);
     scrDrawTextOutline(640 * i + 110,5,string(floor(Magic))+"%",c_white,c_black);
 
     i = 1;

@@ -6,7 +6,7 @@
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>objPlayerKiller</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>&lt;undefined></maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -17,22 +17,22 @@
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>HP = 5;
-preHP = HP;
-extraPhase = false;
-extraHP = 0;
-
-BossType = "Undefined"; //Id del boss para los ataques basuras
-enemyRepeat = 1;//Cantidad de balas para los golpes normales
-iframes = 0;
+            <string>HP = 5;&#xd;
+preHP = HP;&#xd;
+extraPhase = false;&#xd;
+extraHP = 0;&#xd;
+&#xd;
+BossType = "Undefined"; //Id del boss para los ataques basuras&#xd;
+enemyRepeat = 1;//Cantidad de balas para los golpes normales&#xd;
+iframes = 0;&#xd;
 iframeMax = 100;//La duracion de los iframes</string>
           </argument>
         </arguments>
@@ -47,8 +47,8 @@ iframeMax = 100;//La duracion de los iframes</string>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
@@ -58,7 +58,19 @@ iframeMax = 100;//La duracion de los iframes</string>
             <string>iframes = max(iframes - 1,0);
 HP = global.playerHP[!scrGetPlayerID()];
 
-if (!extraPhase) {
+if (HP != preHP)
+    { event_user(0); }
+
+if (extraPhase &amp;&amp; extraHP &lt;= 0){
+    event_user(4);
+        
+    audio_play_sound(sndEndExtraPhase,0,false);
+    extraPhase = false;
+}
+
+preHP = HP;
+
+/*if (!extraPhase) {
     if (HP != preHP)
         { event_user(0); }
 } else {
@@ -68,9 +80,7 @@ if (!extraPhase) {
         audio_play_sound(sndEndExtraPhase,0,false);
         extraPhase = false;
     }
-}
-
-preHP = HP;</string>
+}*/</string>
           </argument>
         </arguments>
       </action>
@@ -84,24 +94,24 @@ preHP = HP;</string>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (iframes == 0){
-    iframes = iframeMax;
-
-    extraHP = max(extraHP - 1,0);
-    audio_play_sound(sndBossHit,0,false);
-    scrEnemyBullet(BossType, enemyRepeat);
-
-    event_user(1);
-}
-
+            <string>if (iframes == 0){&#xd;
+    iframes = iframeMax;&#xd;
+&#xd;
+    extraHP = max(extraHP - 1,0);&#xd;
+    audio_play_sound(sndBossHit,0,false);&#xd;
+    scrEnemyBullet(BossType, enemyRepeat);&#xd;
+&#xd;
+    event_user(1);&#xd;
+}&#xd;
+&#xd;
 instance_destroy(other);</string>
           </argument>
         </arguments>
@@ -116,16 +126,16 @@ instance_destroy(other);</string>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Fase extra del jefe
-
+            <string>/// Fase extra del jefe&#xd;
+&#xd;
 extraPhase = true;</string>
           </argument>
         </arguments>
@@ -140,8 +150,8 @@ extraPhase = true;</string>
         <isquestion>0</isquestion>
         <useapplyto>0</useapplyto>
         <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
@@ -162,8 +172,8 @@ extraPhase = true;</string>
         <isquestion>0</isquestion>
         <useapplyto>0</useapplyto>
         <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
@@ -184,8 +194,8 @@ extraPhase = true;</string>
         <isquestion>0</isquestion>
         <useapplyto>0</useapplyto>
         <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>

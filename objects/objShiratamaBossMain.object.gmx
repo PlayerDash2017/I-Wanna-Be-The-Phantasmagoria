@@ -1,0 +1,575 @@
+<object>
+  <spriteName>sprShiratamaBossMain</spriteName>
+  <parentName>objBossParent</parentName>
+  <maskName>&lt;undefined></maskName>
+  <solid>0</solid>
+  <visible>-1</visible>
+  <depth>5</depth>
+  <persistent>0</persistent>
+  <PhysicsObject>0</PhysicsObject>
+  <PhysicsObjectSensor>0</PhysicsObjectSensor>
+  <PhysicsObjectShape>0</PhysicsObjectShape>
+  <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
+  <PhysicsObjectRestitution>0.1</PhysicsObjectRestitution>
+  <PhysicsObjectGroup>0</PhysicsObjectGroup>
+  <PhysicsObjectLinearDamping>0.1</PhysicsObjectLinearDamping>
+  <PhysicsObjectAngularDamping>0.1</PhysicsObjectAngularDamping>
+  <PhysicsObjectFriction>0.2</PhysicsObjectFriction>
+  <PhysicsObjectAwake>-1</PhysicsObjectAwake>
+  <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>604</id>
+        <kind>0</kind>
+        <exetype>1</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <functionname>action_inherited</functionname>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments/>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>BossType = "Shiratama";
+enemyRepeat = 3;
+iframeMax = 10;
+
+image_speed = 0;
+spike = noone;
+extraColor = noone;
+extraLine = noone;
+Angle = 0;
+
+//Color phases
+var colorX, colorY;
+colorX[0] = 260; colorY[0] = 221;
+colorX[1] = 256; colorY[1] = 100;
+colorX[2] = 380; colorY[2] = 88;
+colorX[3] = 404; colorY[3] = 216;
+
+for (var i = 0; i &lt; 4; i ++)
+{
+    var a = instance_create_battle(colorX[i],colorY[i],objShiratamaPhase);
+    a.Phase = i + 1;
+    a.sprite_index = sprShiratamaBlue + i;
+}
+
+listColor = ds_list_create();
+ds_list_add(listColor,0);
+ds_list_add(listColor,1);
+ds_list_add(listColor,2);
+ds_list_add(listColor,3);
+
+alarm[0] = 75;</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Change Color
+
+if (!instance_exists(spike)){
+    spike = instance_create_battle(608,432,objShiratamaSpike);
+}
+
+var A = scrGetPlayerID();
+if (ds_list_size(listColor) > 0){
+    ds_list_shuffle(listColor);
+    
+    var Color = ds_list_find_value(listColor,0) + 1;
+    
+    with(objShiratamaBlock){
+        if (A == scrGetPlayerID())
+            { Phase = Color; }
+    }
+    
+    with(objShiratamaBackground){
+        if (A == scrGetPlayerID())
+            { Phase = Color; }
+    }
+    
+    with(spike){
+        image_index = Color;
+    }
+    
+    image_index = Color;
+    alarm[0] = 600;
+} else {
+    image_index = 0;
+    
+    with(objShiratamaBlock){
+        if (A == scrGetPlayerID())
+            { Phase = 0 }
+    }
+    
+    with(objShiratamaBackground){
+        if (A == scrGetPlayerID())
+            { Phase = 0 }
+    }
+    
+    with(spike){
+        image_index = 0;
+        hspeed = 5 * sign(hspeed);
+    }
+}
+
+alarm[1] = 1;
+alarm[2] = 1;
+audio_play_sound(sndBlockChange,0,false);
+with(objShiratamaCherry){
+    if (A == scrGetPlayerID())
+        { Bounce = false; }
+}</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>ds_list_destroy(listColor);</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <exetype>1</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname>action_kill_object</functionname>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments/>
+      </action>
+    </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <exetype>1</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname>action_kill_object</functionname>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments/>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Next Attack
+
+if (ds_list_size(listColor) > 0){
+    var destroyPhase = ds_list_find_value(listColor,0) + 1;
+    
+    var A = scrGetPlayerID();
+    with(objShiratamaPhase){
+        if (A == scrGetPlayerID() &amp;&amp; Phase == destroyPhase)
+            { instance_destroy(); }
+    }
+    
+    ds_list_delete(listColor,0);
+    
+    alarm[0] = !extraPhase;
+} else {
+    instance_destroy(spike);
+    instance_destroy(extraColor);
+    instance_destroy(extraLine);
+    
+    var A = scrGetPlayerID();
+    with(objShiratamaBlock){
+        if (A == scrGetPlayerID())
+            { Phase = 0 }
+    }
+    
+    with(objShiratamaBackground){
+        if (A == scrGetPlayerID())
+            { Phase = 0 }
+    }
+    
+    instance_destroy();
+}</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="13">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Level 3
+
+extraPhase = true;
+extraHP = 5;
+
+instance_destroy(extraLine);
+if (!instance_exists(extraColor)){
+    extraColor = instance_create_battle(320,88,objShiratamaPhase);
+    extraColor.sprite_index = sprShiratamaAqua;
+    extraColor.Phase = 5;
+    extraColor.depth --;
+}
+
+image_index = 5;
+var A = scrGetPlayerID();
+
+with(objShiratamaBlock){
+    if (A == scrGetPlayerID())
+        { Phase = 5; }
+}
+
+with(objShiratamaBackground){
+    if (A == scrGetPlayerID())
+        { Phase = 5; }
+}
+
+with(spike){
+    image_index = 5;
+}
+
+with(objShiratamaCherry){
+    if (A == scrGetPlayerID())
+        { Bounce = false; }
+}
+
+audio_play_sound(sndBlockChange,0,false);
+alarm[0] = -1;
+alarm[1] = 50;
+alarm[2] = 1;</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="14">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///End aqua phase
+
+instance_destroy(extraColor);
+instance_destroy(extraLine);
+alarm[0] = 1;</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>switch (image_index)
+{
+    case 1://Blue
+        for (var i = 0; i &lt; 360; i += 360/8)
+        {
+            var a = instance_create(x,y,objShiratamaCherry);
+            a.speed = 5;
+            a.direction = i + point_direction(x,y,scrPX(),scrPY());
+            a.sprite_index = sprCherryBlue;
+        }
+        
+        alarm[1] = 21;
+    break;
+    case 2://Purple
+        Angle += 17;
+        for (var i = 0; i &lt; 360; i += 360/2)
+        {
+            var a = instance_create(x,y,objShiratamaCherry);
+            a.speed = 6;
+            a.direction = i + Angle;
+            a.sprite_index = sprCherryMagenta;
+        }
+        
+        alarm[1] = 10;
+    break;
+    case 3://Yellow
+        var a = instance_create_battle(irandom(640),0,objShiratamaCherry);
+        a.vspeed = 6;
+        a.sprite_index = sprCherryYellow;
+        
+        alarm[1] = 25;
+    break;
+    case 4://Red
+        var a = instance_create(x,y,objShiratamaCherry);
+        a.speed = random_range(3,5);
+        a.direction = 270 + irandom_range(-45,45);
+        
+        alarm[1] = 10;
+    break;
+    
+    case 5://Cyan (Extra)
+        alarm[1] = 60;
+        
+        repeat(25){
+            var a = instance_create(x,y,objShiratamaCherry);
+            a.sprite_index = sprCherryCyan;
+            a.speed = random_range(2,4);
+            a.direction = irandom(360);
+            a.image_xscale = random_range(0.5,1);
+            a.image_yscale = a.image_xscale;
+        }
+    break;
+    
+    case 0://Final
+        var a = instance_create(x,y,objShiratamaCherry);
+        a.image_blend = make_colour_hsv(random(255),255,255);
+        a.sprite_index = sprCherryWhite;
+        a.image_xscale = 0.5;
+        a.image_yscale = a.image_xscale;
+        a.speed = random_range(1,3)
+        a.direction = irandom(360);
+        
+        alarm[1] = 2;
+    break;
+}</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>switch (image_index)
+{
+    case 1://Blue
+        var a = instance_create(x,y,objShiratamaCherry);
+        a.speed = random_range(3,6);
+        a.direction = random_range(40,140);
+        a.image_xscale = 1.5;
+        a.image_yscale = a.image_xscale;
+        a.gravity = random_range(0.07,0.2);
+        a.sprite_index = sprCherryBlue;
+        
+        alarm[2] = 25;
+    break;
+    case 2://Purple
+        var XX = 0;
+        repeat(2){
+            var a = instance_create_battle(XX,0,objShiratamaCherry);
+            a.speed = 5;
+            a.direction = point_direction(a.x,a.y,scrPX(),scrPY());
+            a.sprite_index = sprCherryMagenta;
+            
+            XX = battle_width;
+        }
+        
+        alarm[2] = 30;
+    break;
+    case 3://Yellow
+        for (var i = 0; i &lt; 360; i += 360/5){
+            var a = instance_create(x,y,objShiratamaCherry);
+            a.speed = 3;
+            a.direction = i + point_direction(a.x,a.y,scrPX(),scrPY());
+            a.Bounce = true;
+            a.sprite_index = sprCherryYellow;
+            a.image_speed = 0;
+        }
+        
+        alarm[2] = 110;
+    break;
+    case 4://Red
+        var a = instance_create(x,y,objShiratamaCherry);
+        a.speed = 6;
+        a.direction = point_direction(a.x,a.y,scrPX(),scrPY());
+        
+        alarm[2] = 25;
+    break;
+    
+    case 5:
+        extraLine = instance_create_battle(floor(battle_width/2),0,objShiratamaCherryLine);
+        extraLine.Dir = point_direction(extraLine.x,extraLine.y,scrPX(),scrPY()) + (360/10)/2;
+        extraLine.alarm[1] = 110;
+        
+        alarm[2] = 110;
+    break;
+}</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var A = scrGetPlayerID();
+with(objPlayer){
+    if (A == scrGetPlayerID())
+        { botState = "Destination"; }
+}</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="12">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Level 2
+
+with(spike){
+    hspeed = -hspeed;
+}
+
+alarm[0] = !extraPhase;</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
+  <PhysicsShapePoints/>
+</object>

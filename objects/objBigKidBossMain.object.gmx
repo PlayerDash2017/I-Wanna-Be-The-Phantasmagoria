@@ -6,7 +6,7 @@
   <depth>1000005</depth>
   <persistent>0</persistent>
   <parentName>objBossParent</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>&lt;undefined></maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -18,7 +18,7 @@
         <useapplyto>0</useapplyto>
         <exetype>1</exetype>
         <functionname>action_inherited</functionname>
-        <codestring></codestring>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
@@ -31,8 +31,8 @@
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
@@ -47,7 +47,8 @@ spikeStart = false;
 Bounce[0] = noone;
 Bounce[1] = noone;
 
-alarm[0] = 200;</string>
+alarm[0] = 200;
+alarm[3] = 50;</string>
           </argument>
         </arguments>
       </action>
@@ -61,17 +62,17 @@ alarm[0] = 200;</string>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var a = instance_create_battle(32 * irandom_range(1,8), 0, objBigKidSpikeFall);
-a.vspeed = 4;
-
+            <string>var a = instance_create_battle(32 * irandom_range(1,8), 0, objBigKidSpikeFall);&#xd;
+a.vspeed = 4;&#xd;
+&#xd;
 alarm[2] = 60;</string>
           </argument>
         </arguments>
@@ -86,31 +87,31 @@ alarm[2] = 60;</string>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Create a fruit
-
-var hpMin;
-hpMin[0] = 3;
-hpMin[1] = 1;
-
-for (var i = 0; i &lt;= 1; i ++) {
-    if (!instance_exists(Bounce[i]) &amp;&amp; HP &lt;= hpMin[i]){
-        Bounce[i] = instance_create(x, y, objBigKidBounce);
-        Bounce[i].direction = 45 + 90*irandom(3);
-        Bounce[i].speed = 3 + i*0.5;
-        Bounce[i].ID = id;
-
-        audio_play_sound(sndShoot, 0, false);
-        //show_debug_message("Cherry Bounce: "+string(i))
-        //show_debug_message(HP);
-    }
+            <string>/// Create a fruit&#xd;
+&#xd;
+var hpMin;&#xd;
+hpMin[0] = 3;&#xd;
+hpMin[1] = 1;&#xd;
+&#xd;
+for (var i = 0; i &lt;= 1; i ++) {&#xd;
+    if (!instance_exists(Bounce[i]) &amp;&amp; HP &lt;= hpMin[i]){&#xd;
+        Bounce[i] = instance_create(x, y, objBigKidBounce);&#xd;
+        Bounce[i].direction = 45 + 90*irandom(3);&#xd;
+        Bounce[i].speed = 3 + i*0.5;&#xd;
+        Bounce[i].ID = id;&#xd;
+&#xd;
+        audio_play_sound(sndShoot, 0, false);&#xd;
+        //show_debug_message("Cherry Bounce: "+string(i))&#xd;
+        //show_debug_message(HP);&#xd;
+    }&#xd;
 }</string>
           </argument>
         </arguments>
@@ -125,35 +126,35 @@ for (var i = 0; i &lt;= 1; i ++) {
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!spikeStart){
-    spikeStart = true;
-    for (var i = 32; i &lt; 640-32; i += 32)
-    {
-        instance_create_battle(i,384,objSpikeUp);
-    }
-}
-
-var a = instance_create_battle(irandom_range(32,252), 0, objBigKidCherry);
-a.vspeed = 3;
-
-if (HP &lt;= 4){
-    var a = instance_create_battle(irandom_range(32,252), battle_height, objBigKidCherry);
-    a.vspeed = -4;
-}
-
-if (HP &lt;= 2){
-    var a = instance_create_battle(battle_width, irandom_range(64,battle_height-96), objBigKidCherry);
-    a.hspeed = -5;
-}
-
+            <string>if (!spikeStart){&#xd;
+    spikeStart = true;&#xd;
+    for (var i = 32; i &lt; 640-32; i += 32)&#xd;
+    {&#xd;
+        instance_create_battle(i,384,objSpikeUp);&#xd;
+    }&#xd;
+}&#xd;
+&#xd;
+var a = instance_create_battle(irandom_range(32,252), 0, objBigKidCherry);&#xd;
+a.vspeed = 3;&#xd;
+&#xd;
+if (HP &lt;= 4){&#xd;
+    var a = instance_create_battle(irandom_range(32,252), battle_height, objBigKidCherry);&#xd;
+    a.vspeed = -4;&#xd;
+}&#xd;
+&#xd;
+if (HP &lt;= 2){&#xd;
+    var a = instance_create_battle(battle_width, irandom_range(64,battle_height-96), objBigKidCherry);&#xd;
+    a.hspeed = -5;&#xd;
+}&#xd;
+&#xd;
 alarm[0] = 60;</string>
           </argument>
         </arguments>
@@ -168,35 +169,35 @@ alarm[0] = 60;</string>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Level 3
-
-extraHP = 10;
-extraPhase = true;
-
-audio_play_sound(sndBlockChange, 0, false);
-with(instance_place(x, y+5, objBigKidBody))
-    { Spd = 3; }
-
-var A = scrGetPlayerID();
-with(objBigKidWater){
-    if (A == scrGetPlayerID()){
-        hspeed = -3;
-    }
-}
-with(objBigKidBigBullet){
-    if (A == scrGetPlayerID()){
-        hspeed = -3;
-    }
-}
-
+            <string>/// Level 3&#xd;
+&#xd;
+extraHP = 10;&#xd;
+extraPhase = true;&#xd;
+&#xd;
+audio_play_sound(sndBlockChange, 0, false);&#xd;
+with(instance_place(x, y+5, objBigKidBody))&#xd;
+    { Spd = 3; }&#xd;
+&#xd;
+var A = scrGetPlayerID();&#xd;
+with(objBigKidWater){&#xd;
+    if (A == scrGetPlayerID()){&#xd;
+        hspeed = -3;&#xd;
+    }&#xd;
+}&#xd;
+with(objBigKidBigBullet){&#xd;
+    if (A == scrGetPlayerID()){&#xd;
+        hspeed = -3;&#xd;
+    }&#xd;
+}&#xd;
+&#xd;
 alarm[2] = 1;</string>
           </argument>
         </arguments>
@@ -211,17 +212,17 @@ alarm[2] = 1;</string>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Level 2
-
-var a = instance_create_battle(battle_width,irandom_range(300,350),objBigKidCreateMini);
+            <string>/// Level 2&#xd;
+&#xd;
+var a = instance_create_battle(battle_width,irandom_range(300,350),objBigKidCreateMini);&#xd;
 a.hspeed = -4;</string>
           </argument>
         </arguments>
@@ -236,18 +237,18 @@ a.hspeed = -4;</string>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (extraPhase){
-    var a = instance_create_battle(224,240,objBigKidCherry);
-    a.speed = 3;
-    a.direction = point_direction(a.x,a.y,scrPX(),scrPY());
+            <string>if (extraPhase){&#xd;
+    var a = instance_create_battle(224,240,objBigKidCherry);&#xd;
+    a.speed = 3;&#xd;
+    a.direction = point_direction(a.x,a.y,scrPX(),scrPY());&#xd;
 }</string>
           </argument>
         </arguments>
@@ -262,36 +263,15 @@ a.hspeed = -4;</string>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//scrPrint(extraPhase);
-if (extraPhase){
-    audio_play_sound(sndBlockChange, 0, false);
-    alarm[2] = -1;
-    
-    with(instance_place(x, y+5, objBigKidBody))
-        { Spd = 2; }
-
-    var A = scrGetPlayerID();
-    with(objBigKidWater){
-        if (A == scrGetPlayerID()){
-            hspeed = -2;
-        }
-    }
-    with(objBigKidBigBullet){
-        if (A == scrGetPlayerID()){
-            hspeed = -2;
-        }
-    }
-}
-
-switch (HP) {
+            <string>switch (HP) {
     case 3: case 1:
         alarm[1] = 1;
     break;
@@ -337,6 +317,57 @@ switch (HP) {
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_sprite_ext(sprite_index,-1,x,y,image_xscale,image_yscale,0,merge_colour(c_black, c_white, iframes == 0),1);</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Bot Start
+
+var A = scrGetPlayerID();
+with(objPlayer){
+    if (PlayerID == A){
+        botState = "BigKid_Init";
+    }
+}</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="14">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
         <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
@@ -345,7 +376,23 @@ switch (HP) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite_index,-1,x,y,image_xscale,image_yscale,0,merge_colour(c_black, c_white, iframes == 0),1);</string>
+            <string>audio_play_sound(sndBlockChange, 0, false);
+alarm[2] = -1;
+
+with(instance_place(x, y+5, objBigKidBody))
+    { Spd = 2; }
+
+var A = scrGetPlayerID();
+with(objBigKidWater){
+    if (A == scrGetPlayerID()){
+        hspeed = -2;
+    }
+}
+with(objBigKidBigBullet){
+    if (A == scrGetPlayerID()){
+        hspeed = -2;
+    }
+}</string>
           </argument>
         </arguments>
       </action>

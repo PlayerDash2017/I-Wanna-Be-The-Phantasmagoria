@@ -5,8 +5,8 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <parentName>&lt;undefined></parentName>
+  <maskName>&lt;undefined></maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -17,22 +17,22 @@
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = 100;
-
-XX = 0;
-YY = 0;
-Color = random(255);
-
-xSpawn = 0;
-ySpawn = 0;
+            <string>alarm[0] = 100;&#xd;
+&#xd;
+XX = 0;&#xd;
+YY = 0;&#xd;
+Color = random(255);&#xd;
+&#xd;
+xSpawn = 0;&#xd;
+ySpawn = 0;&#xd;
 Boss = "BigCherry";</string>
           </argument>
         </arguments>
@@ -47,8 +47,8 @@ Boss = "BigCherry";</string>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
@@ -119,6 +119,57 @@ Boss = "BigCherry";</string>
         var a = instance_create(x, y, objKurodamaFireBlock);
         a.gravity = 0.1;
     break;
+    
+    case "ShiratamaRed":
+        for (var i = 3; i &lt;= 5; ++i){
+            var a = instance_create(x,y,objShiratamaCherry);
+            a.direction = point_direction(x,y,scrPX(),scrPY());
+            a.speed = i;
+            a.sprite_index = sprCherry;
+        }
+    break;
+    case "ShiratamaPurple":
+        var XX = 0;
+        repeat(2){
+            var a = instance_create_battle(XX,0,objShiratamaCherry);
+            a.direction = point_direction(a.x,a.y,scrPX(),scrPY());
+            a.speed = 5;
+            a.sprite_index = sprCherryMagenta;
+            
+            XX += battle_width;
+        }
+    break;
+    case "ShiratamaYellow":
+        var a = instance_create(x,y,objShiratamaCherryYellow);
+        a.direction = 270 + irandom_range(-60,60);
+        a.speed = random_range(3,4);
+    break;
+    case "ShiratamaBlue":
+        var a = instance_create(x,y,objShiratamaCherry);
+        a.speed = random_range(3,6);
+        a.direction = random_range(40,140);
+        a.image_xscale = 1.5;
+        a.image_yscale = a.image_xscale;
+        a.gravity = random_range(0.07,0.2);
+        a.sprite_index = sprCherryBlue;
+    break;
+    case "ShiratamaAqua":
+        repeat(5){
+            var a = instance_create(x,y,objShiratamaCherry);
+            a.sprite_index = sprCherryCyan;
+            a.speed = random_range(2,4);
+            a.direction = point_direction(x,y,scrPX(),scrPY()) + irandom_range(-90,90);
+            a.image_xscale = random_range(0.5,1);
+            a.image_yscale = a.image_xscale;
+        }
+    break;
+    case "Shiratama": case "Magic_Shiratama":
+        var a = instance_create(x,y,objShiratamaCherry);
+        a.speed = random_range(1,3);
+        a.direction = irandom(360);
+        a.sprite_index = sprCherryWhite;
+        a.image_blend = make_colour_hsv(random(255),255,255);
+    break;
 }
 
 instance_destroy();</string>
@@ -135,17 +186,17 @@ instance_destroy();</string>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Color = (Color + 1) mod 255;
-
-x = lerp(x,XX + xSpawn,0.1);
+            <string>Color = (Color + 1) mod 255;&#xd;
+&#xd;
+x = lerp(x,XX + xSpawn,0.1);&#xd;
 y = lerp(y,YY + ySpawn,0.1);</string>
           </argument>
         </arguments>
@@ -160,8 +211,8 @@ y = lerp(y,YY + ySpawn,0.1);</string>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
@@ -209,6 +260,31 @@ y = lerp(y,YY + ySpawn,0.1);</string>
         xSpawn = floor(irandom_range(32,battle_width-32)/32)*32 + 16;
         ySpawn = 0;
     break;
+    
+    case "ShiratamaBlue":
+        xSpawn = battle_width/2;
+        ySpawn = 200;
+    break;
+    case "ShiratamaPurple":
+        xSpawn = irandom(1) * battle_width;
+        ySpawn = 0;
+    break;
+    case "ShiratamaYellow":
+        xSpawn = irandom_range(32,battle_width-32);
+        ySpawn = irandom(100);
+    break;
+    case "ShiratamaRed":
+        xSpawn = irandom(battle_width);
+        ySpawn = 0;
+    break;
+    case "ShiratamaAqua":
+        xSpawn = battle_width/2 + irandom_range(50,50);
+        ySpawn = 150 + irandom_range(-50,50);
+    break;
+    case "Shiratama": case "Magic_Shiratama":
+        xSpawn = irandom(battle_width);
+        ySpawn = irandom(100);
+    break;
 
     default:
         show_debug_message(Boss);
@@ -226,16 +302,16 @@ y = lerp(y,YY + ySpawn,0.1);</string>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_blend_mode(bm_add);
-draw_circle_colour(x, y, 20, make_color_hsv(Color, 255, 255), c_black, false);
+            <string>draw_set_blend_mode(bm_add);&#xd;
+draw_circle_colour(x, y, 20, make_color_hsv(Color, 255, 255), c_black, false);&#xd;
 draw_set_blend_mode(bm_normal);</string>
           </argument>
         </arguments>

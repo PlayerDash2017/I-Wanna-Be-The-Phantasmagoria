@@ -8,7 +8,7 @@
   <parentName>&lt;undefined></parentName>
   <maskName>sprPlayerMask</maskName>
   <events>
-    <event enumb="0" eventtype="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -53,6 +53,7 @@ botCharge = false;
 for (var i = 0; i &lt; KEY.NUMBER; i ++) {
     botKey[i] = false;
 }
+botState = "";
 
 scrSetPlayerMask();
 
@@ -74,7 +75,7 @@ scrDynamicCollision(true);
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="1">
+    <event eventtype="1" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -99,7 +100,7 @@ with (objBow)&#xd;
         </arguments>
       </action>
     </event>
-    <event enumb="2" eventtype="3">
+    <event eventtype="3" enumb="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -249,7 +250,7 @@ else    //Touching a vine
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="3">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -270,15 +271,36 @@ else    //Touching a vine
 
 iframes = max(iframes - 1,0);
 
-if (botMode &amp;&amp; !frozen){
+botKey[KEY.LEFT] = false;
+botKey[KEY.RIGHT] = false;
+botKey[KEY.JUMP] = false;
+botKey[KEY.SHOOT] = false;
+if (botMode &amp;&amp; !frozen &amp;&amp; instance_number(objBossParent) >= 2){
     var bossParent = instance_nearest(x, y, objBossParent);
-    var bulletParent = instance_nearest(x, y, objBossBulletParent);
+    var bulletParent = instance_nearest(x, y, objPlayerKiller);
+    var yPlayer = y - 800;
+    var xPlayer = x - PlayerID*1280;
 
-    botKey[KEY.LEFT] = false;
-    botKey[KEY.RIGHT] = false;
-    botKey[KEY.JUMP] = false;
-    botKey[KEY.SHOOT] = false;
     botReleaseShoot = false;
+    botJumpTime = max(botJumpTime - 1,0);
+    
+    //BigKid
+    if (botState == "BigKid_Init"){
+        if (yPlayer >= 264){
+            if (botJumpTime &lt;= 0){
+                botKey[KEY.JUMP] = true;
+                botJumpTime = 20;
+                botReleaseJump = false;
+                //scrPrint("Salta");
+            }
+        } else {
+            botState = "BigKid_Step";
+        }
+        
+        if (xPlayer &lt; 128) botKey[KEY.RIGHT] = true;
+        else if (xPlayer > 135) botKey[KEY.LEFT] = true;
+    } else {
+    
     if (bulletParent != noone){
         var bulletDis = point_distance(x, y, bulletParent.x, bulletParent.y);
         
@@ -293,8 +315,25 @@ if (botMode &amp;&amp; !frozen){
                 if (place_meeting(x-20, y, objBlock)) botKey[KEY.RIGHT] = true;
                 else botKey[KEY.LEFT] = true;
             }
-
-            botJumpTime = max(botJumpTime - 1,0);
+            
+            //BigKid
+            if (botState == "BigKid_Step"){
+                var bulletKiller = instance_nearest(x,y,objBigKidBigBullet);
+                
+                if (bulletKiller != noone){
+                    var bigBulletDis = point_distance(x, y, bulletKiller.x, bulletKiller.y);
+                    if (bigBulletDis &lt;= 96){
+                        botKey[KEY.RIGHT] = true;
+                        botKey[KEY.JUMP] = true;
+                    }
+                }
+                
+                if (xPlayer > 160){
+                    botKey[KEY.RIGHT] = false;
+                    botKey[KEY.LEFT] = true;
+                }
+            }
+            
             botReleaseJump = false;
             if (abs(bulletParent.y - y) &lt; 20){
                 if (bulletParent.y - y > -10 &amp;&amp; botJumpTime &lt;= 0){
@@ -307,6 +346,10 @@ if (botMode &amp;&amp; !frozen){
                 }
             }
         } else {
+            if (botState == "Destination"){
+                bossParent = instance_nearest(x,y,objShiratamaSpike);
+            }
+            
             if (sign(bossParent.x > x) != xScale){
                 if (bossParent.x > x) botKey[KEY.RIGHT] = true;
                 else botKey[KEY.LEFT] = true;
@@ -317,6 +360,88 @@ if (botMode &amp;&amp; !frozen){
                     botCharge = (irandom(3) == 0);
                 }
             }
+            
+            if (botState == "InfJump"){
+                var bossH = bossParent.sprite_width/2 - bossParent.sprite_xoffset;
+                if (y > bossParent.y+bossH &amp;&amp; botJumpTime == 0){
+                    botKey[KEY.JUMP] = true;
+                    botJumpTime = 10;
+                }
+                
+                var yPlayer = y - 800;
+                if (yPlayer > battle_height-32){
+                    //scrPrint("Salta?");
+                    botKey[KEY.JUMP] = true;
+                }
+            }
+        }
+        
+        if (place_meeting(x,y+1,objWater2) &amp;&amp; botJumpTime &lt;= 0){
+            botJumpTime = 5;
+            botKey[KEY.JUMP] = true;
+        }
+    }}
+    
+    //BigKid
+    if (botState == "BigKid_Step"){
+        var yPlayer = y - 800;
+        
+        if (yPlayer > 288){
+            botKey[KEY.JUMP] = true;
+        }
+        
+        if (!place_free(x,y+1))
+            { botState = "BigKid_Init"; }
+    }
+    
+    //Hatsune Miku
+    if (botState == "Miku_NoFloor"){
+        var yPlayer = y - 800;
+        var xPlayer = x - PlayerID*1280;
+        
+        botKey[KEY.RIGHT] = false;
+        botKey[KEY.LEFT] = false;
+        botKey[KEY.JUMP] = false;
+        botReleaseJump = false;
+        if (yPlayer > 352){
+            //Se va fuera del bloque
+            if (xPlayer > 176){
+                botKey[KEY.RIGHT] = true;
+            } else {
+                botKey[KEY.LEFT] = true;
+            }
+            
+            //Salta
+            if ((xPlayer &lt;= 80 || xPlayer >= 272) &amp;&amp; botJumpTime == 0){
+                botKey[KEY.JUMP] = true;
+                botJumpTime = 10;
+            }
+        } else {
+            
+            //Se va a la plataforma
+            if (xPlayer &lt;= 96){
+                botKey[KEY.RIGHT] = true;
+            } else if (xPlayer >= 256){
+                botKey[KEY.LEFT] = true;
+            } else {
+                botState = "Miku_OnFloor";
+            }
+            
+            //Salta
+            if (botJumpTime == 0){
+                botKey[KEY.JUMP] = true;
+                botJumpTime = 10;
+            }
+        }
+    }
+    
+    if (botState == "Miku_OnFloor"){
+        var xPlayer = x - PlayerID*1280;
+        
+        if (xPlayer &lt;= 96){
+            botKey[KEY.RIGHT] = true;
+        } else if (xPlayer >= 256){
+            botKey[KEY.LEFT] = true;
         }
     }
 }
@@ -786,7 +911,7 @@ else    //Flipped&#xd;
         </arguments>
       </action>
     </event>
-    <event enumb="4" eventtype="7">
+    <event eventtype="7" enumb="4">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -815,12 +940,13 @@ var Field = instance_create(x,y,objMagicField);
 Field.playerID = PlayerID;
 Field.followID = id;
 
-if (PlayerID == 1) botMode = true;</string>
+//botMode = true;
+//if (PlayerID == 1) botMode = true;</string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="8">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -837,23 +963,25 @@ if (PlayerID == 1) botMode = true;</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Draw the player&#xd;
-&#xd;
-var drawX = floor(x + 0.5);&#xd;
-var drawY = floor(y + 0.5);&#xd;
-var drawAlpha = 1;&#xd;
-&#xd;
-if (global.grav == -1)      //Need to draw the player a pixel off in the y-axis when flipped for some reason&#xd;
-    { drawY += 1; }&#xd;
-&#xd;
-drawAlpha -= (iframes > 0) * 0.5;&#xd;
-&#xd;
-draw_sprite_ext(sprite_index, image_index, drawX, drawY, image_xscale * xScale, image_yscale * global.grav, image_angle, image_blend, image_alpha * drawAlpha);&#xd;
-&#xd;
-//Draw the player's hitbox&#xd;
-if (global.debugShowHitbox)&#xd;
-    { draw_sprite_ext(mask_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha * 0.8); }&#xd;
-</string>
+            <string>/// Draw the player
+
+var drawX = floor(x + 0.5);
+var drawY = floor(y + 0.5);
+var drawAlpha = 1;
+
+if (global.grav == -1)      //Need to draw the player a pixel off in the y-axis when flipped for some reason
+    { drawY += 1; }
+
+drawAlpha -= (iframes > 0) * 0.5;
+
+draw_sprite_ext(sprite_index, image_index, drawX, drawY, image_xscale * xScale, image_yscale * global.grav, image_angle, image_blend, image_alpha * drawAlpha);
+
+//Draw the player's hitbox
+if (global.debugShowHitbox){
+    draw_sprite_ext(mask_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha * 0.8);
+
+    
+}</string>
           </argument>
         </arguments>
       </action>

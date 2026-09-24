@@ -3,8 +3,8 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles name="datafiles" number="3">
-    <datafiles name="Music" number="3">
+  <datafiles number="3" name="datafiles">
+    <datafiles number="3" name="Music">
       <datafile>
         <name>GuyRock.ogg</name>
         <exists>-1</exists>
@@ -94,6 +94,7 @@
         <sound>sound\musBossColonel</sound>
         <sound>sound\musBossBigKid</sound>
         <sound>sound\musBossKurodama</sound>
+        <sound>sound\musBossShiratama</sound>
       </sounds>
     </sounds>
   </sounds>
@@ -269,6 +270,15 @@
         <sprite>sprites\sprKurodamaPrinceDead</sprite>
         <sprite>sprites\sprKurodamaSpikeBlock</sprite>
       </sprites>
+      <sprites name="Shiratama">
+        <sprite>sprites\sprShiratamaBossMain</sprite>
+        <sprite>sprites\sprShiratamaBlue</sprite>
+        <sprite>sprites\sprShiratamaPurple</sprite>
+        <sprite>sprites\sprShiratamaYellow</sprite>
+        <sprite>sprites\sprShiratamaRed</sprite>
+        <sprite>sprites\sprShiratamaSpike</sprite>
+        <sprite>sprites\sprShiratamaAqua</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -286,6 +296,7 @@
     <background>background\bColorTiles</background>
     <background>background\bBossBigKid</background>
     <background>background\bBossKurodama</background>
+    <background>background\bTilesDestination</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\pathExample</path>
@@ -398,6 +409,7 @@
         <script>scripts\bossColonel.gml</script>
         <script>scripts\bossBigKid.gml</script>
         <script>scripts\bossKurodama.gml</script>
+        <script>scripts\bossShiratama.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -597,6 +609,17 @@
         <object>objects\objKurodamaSpike</object>
         <object>objects\objKurodamaBigBomb</object>
         <object>objects\objKurodamaTail</object>
+      </objects>
+      <objects name="Shiratama">
+        <object>objects\objShiratamaBossMain</object>
+        <object>objects\objShiratamaPhase</object>
+        <object>objects\objShiratamaBlock</object>
+        <object>objects\objShiratamaBackground</object>
+        <object>objects\objShiratamaSpike</object>
+        <object>objects\objShiratamaDamage</object>
+        <object>objects\objShiratamaCherry</object>
+        <object>objects\objShiratamaCherryLine</object>
+        <object>objects\objShiratamaCherryYellow</object>
       </objects>
     </objects>
   </objects>

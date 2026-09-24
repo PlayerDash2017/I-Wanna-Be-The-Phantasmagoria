@@ -6,7 +6,7 @@
   <depth>-50</depth>
   <persistent>0</persistent>
   <parentName>objWater2</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>&lt;undefined></maskName>
   <events>
     <event eventtype="4" ename="objPlayer">
       <action>
@@ -17,8 +17,8 @@
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>event_inherited();
 
-objPlayer.djump = 1;
+other.djump = 1;
 </string>
           </argument>
         </arguments>

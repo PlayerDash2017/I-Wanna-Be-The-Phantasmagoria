@@ -1,0 +1,94 @@
+<object>
+  <spriteName>sprShiratamaAqua</spriteName>
+  <parentName>&lt;undefined></parentName>
+  <maskName>&lt;undefined></maskName>
+  <solid>0</solid>
+  <visible>-1</visible>
+  <depth>4</depth>
+  <persistent>0</persistent>
+  <PhysicsObject>0</PhysicsObject>
+  <PhysicsObjectSensor>0</PhysicsObjectSensor>
+  <PhysicsObjectShape>0</PhysicsObjectShape>
+  <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
+  <PhysicsObjectRestitution>0.1</PhysicsObjectRestitution>
+  <PhysicsObjectGroup>0</PhysicsObjectGroup>
+  <PhysicsObjectLinearDamping>0.1</PhysicsObjectLinearDamping>
+  <PhysicsObjectAngularDamping>0.1</PhysicsObjectAngularDamping>
+  <PhysicsObjectFriction>0.2</PhysicsObjectFriction>
+  <PhysicsObjectAwake>-1</PhysicsObjectAwake>
+  <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
+  <events>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (image_alpha == 1){
+    image_alpha = 0.5;
+    audio_play_sound(sndBossHit,0,false);
+    
+    alarm[0] = 100;
+    
+    if (sprite_index == sprShiratamaAqua){
+        var A = scrGetPlayerID();
+        with(objShiratamaBossMain){
+            if (A == scrGetPlayerID()){
+                extraHP --;
+            }
+        }
+    }
+    
+    var enemyRepeat = 1;
+    var Color = "";
+    switch (sprite_index)
+    {
+        case sprShiratamaBlue: Color = "Blue"; enemyRepeat = 2; break;
+        case sprShiratamaPurple: Color = "Purple"; break;
+        case sprShiratamaYellow: Color = "Yellow"; enemyRepeat = 2; break;
+        case sprShiratamaRed: Color = "Red"; break;
+        case sprShiratamaAqua: Color = "Aqua";break;
+    }
+    
+    scrEnemyBullet("Shiratama"+string(Color), enemyRepeat);
+}</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_alpha = 1;</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
+  <PhysicsShapePoints/>
+</object>

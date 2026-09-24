@@ -6,7 +6,7 @@
   <depth>50</depth>
   <persistent>0</persistent>
   <parentName>objBossParent</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <maskName>&lt;undefined></maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -18,7 +18,7 @@
         <useapplyto>0</useapplyto>
         <exetype>1</exetype>
         <functionname>action_inherited</functionname>
-        <codestring></codestring>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
@@ -31,23 +31,23 @@
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>BossType = "Colonel";
-enemyRepeat = 3;
-iframeMax = 40;
-
-for (var i = 0; i &lt;= 1; i ++)
-    { Dir[i] = 0; }
-
-Plat = noone;
-image_speed = 0;
+            <string>BossType = "Colonel";&#xd;
+enemyRepeat = 3;&#xd;
+iframeMax = 40;&#xd;
+&#xd;
+for (var i = 0; i &lt;= 1; i ++)&#xd;
+    { Dir[i] = 0; }&#xd;
+&#xd;
+Plat = noone;&#xd;
+image_speed = 0;&#xd;
 alarm[0] = 75;</string>
           </argument>
         </arguments>
@@ -62,21 +62,21 @@ alarm[0] = 75;</string>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>switch (HP) {
-    case 3:
-        for (var i = 0; i &lt;= 1; i ++)
-            { Dir[i] = -irandom(180); }
-
-        alarm[1] = 15;
-    break;
+            <string>switch (HP) {&#xd;
+    case 3:&#xd;
+        for (var i = 0; i &lt;= 1; i ++)&#xd;
+            { Dir[i] = -irandom(180); }&#xd;
+&#xd;
+        alarm[1] = 15;&#xd;
+    break;&#xd;
 }</string>
           </argument>
         </arguments>
@@ -91,78 +91,78 @@ alarm[0] = 75;</string>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!instance_exists(Plat)){
-    Plat = instance_create(x,y,objPlatform);
-    Plat.speed = 3;
-    Plat.direction = 270 + choose(-1,1) * 30;
-}
-
-if (extraPhase){
-    var a = instance_create_battle(irandom(battle_width), 0, objColonelBulletMargot);
-    a.speed = random_range(2,3);
-    a.direction = 270 + irandom_range(-10,10);
-    a.image_index = irandom(2);
-
-    alarm[0] = 8;
-    exit;
-}
-
-switch (HP) {
-    case 5:
-        var a = instance_create(x + irandom(sprite_width/2)*choose(-1,1), y + irandom(sprite_height/2)*choose(-1,1), objColonelBullet);
-        a.speed = random_range(2,4);
-        a.direction = irandom(360);
-        a.sprite_index = sprBulletDot;
-        a.image_blend = make_color_hsv(random(255), 255, 255);
-
-        alarm[0] = 4;
-    break;
-    case 4:
-        var a = instance_create_battle(battle_width/2, battle_height/2, objColonelBulletCenter);
-        a.speed = 7;
-        a.direction = irandom(360);
-
-        alarm[0] = 4;
-    break;
-    case 3:
-        for (var i = 0; i &lt;= 1; i ++){
-            var a = instance_create(x, y, objColonelBullet);
-            a.speed = 6 + i;
-            a.direction = Dir[i];
-        }
-
-        alarm[0] = 3;
-    break;
-    case 2:
-        var a = instance_create(x + (sprite_width/2) * choose(-1,1), y - sprite_height/2, objColonelBulletWrap);
-        a.speed = random_range(3,5);
-        a.direction = 270 + irandom_range(-80,80);
-
-        alarm[0] = 12;
-    break;
-    case 1:
-        repeat(2){
-            var a = instance_create(x + irandom(sprite_width/2)*choose(-1,1), y + irandom(sprite_height/2)*choose(-1,1), objColonelBullet);
-            a.speed = random_range(0.5,5);
-            a.direction = irandom(360);
-            a.sprite_index = choose(sprBulletKunai,sprBulletArrowhead,sprPCircle,sprBulletDot,sprPBigArrowhead);
-            a.image_index = irandom(a.image_number-1);
-
-            if (a.sprite_index == sprBulletDot){
-                a.image_blend = make_color_hsv(random(255), 255, 255);
-            }
-        }
-
-        alarm[0] = 4;
-    break;
+            <string>if (!instance_exists(Plat)){&#xd;
+    Plat = instance_create(x,y,objPlatform);&#xd;
+    Plat.speed = 3;&#xd;
+    Plat.direction = 270 + choose(-1,1) * 30;&#xd;
+}&#xd;
+&#xd;
+if (extraPhase){&#xd;
+    var a = instance_create_battle(irandom(battle_width), 0, objColonelBulletMargot);&#xd;
+    a.speed = random_range(2,3);&#xd;
+    a.direction = 270 + irandom_range(-10,10);&#xd;
+    a.image_index = irandom(2);&#xd;
+&#xd;
+    alarm[0] = 8;&#xd;
+    exit;&#xd;
+}&#xd;
+&#xd;
+switch (HP) {&#xd;
+    case 5:&#xd;
+        var a = instance_create(x + irandom(sprite_width/2)*choose(-1,1), y + irandom(sprite_height/2)*choose(-1,1), objColonelBullet);&#xd;
+        a.speed = random_range(2,4);&#xd;
+        a.direction = irandom(360);&#xd;
+        a.sprite_index = sprBulletDot;&#xd;
+        a.image_blend = make_color_hsv(random(255), 255, 255);&#xd;
+&#xd;
+        alarm[0] = 4;&#xd;
+    break;&#xd;
+    case 4:&#xd;
+        var a = instance_create_battle(battle_width/2, battle_height/2, objColonelBulletCenter);&#xd;
+        a.speed = 7;&#xd;
+        a.direction = irandom(360);&#xd;
+&#xd;
+        alarm[0] = 4;&#xd;
+    break;&#xd;
+    case 3:&#xd;
+        for (var i = 0; i &lt;= 1; i ++){&#xd;
+            var a = instance_create(x, y, objColonelBullet);&#xd;
+            a.speed = 6 + i;&#xd;
+            a.direction = Dir[i];&#xd;
+        }&#xd;
+&#xd;
+        alarm[0] = 3;&#xd;
+    break;&#xd;
+    case 2:&#xd;
+        var a = instance_create(x + (sprite_width/2) * choose(-1,1), y - sprite_height/2, objColonelBulletWrap);&#xd;
+        a.speed = random_range(3,5);&#xd;
+        a.direction = 270 + irandom_range(-80,80);&#xd;
+&#xd;
+        alarm[0] = 12;&#xd;
+    break;&#xd;
+    case 1:&#xd;
+        repeat(2){&#xd;
+            var a = instance_create(x + irandom(sprite_width/2)*choose(-1,1), y + irandom(sprite_height/2)*choose(-1,1), objColonelBullet);&#xd;
+            a.speed = random_range(0.5,5);&#xd;
+            a.direction = irandom(360);&#xd;
+            a.sprite_index = choose(sprBulletKunai,sprBulletArrowhead,sprPCircle,sprBulletDot,sprPBigArrowhead);&#xd;
+            a.image_index = irandom(a.image_number-1);&#xd;
+&#xd;
+            if (a.sprite_index == sprBulletDot){&#xd;
+                a.image_blend = make_color_hsv(random(255), 255, 255);&#xd;
+            }&#xd;
+        }&#xd;
+&#xd;
+        alarm[0] = 4;&#xd;
+    break;&#xd;
 }</string>
           </argument>
         </arguments>
@@ -177,8 +177,8 @@ switch (HP) {
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
@@ -208,6 +208,7 @@ switch (HP) {
             image_xscale = 0;
             image_angle = 360 * choose(-1,1);
 
+            event_user(4);
             event_user(0);
         }
     } else {
@@ -230,23 +231,23 @@ image_angle = lerp(image_angle,0,0.2);</string>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Level 3
-
-extraHP = 5;
-extraPhase = true;
-
-if (sprite_index == sprColonelBossMain){
-    alarm[0] = -1;
-    alarm[1] = -1;
-    image_angle = 360 * choose(-1,1);
+            <string>/// Level 3&#xd;
+&#xd;
+extraHP = 5;&#xd;
+extraPhase = true;&#xd;
+&#xd;
+if (sprite_index == sprColonelBossMain){&#xd;
+    alarm[0] = -1;&#xd;
+    alarm[1] = -1;&#xd;
+    image_angle = 360 * choose(-1,1);&#xd;
 }</string>
           </argument>
         </arguments>
@@ -261,17 +262,17 @@ if (sprite_index == sprColonelBossMain){
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Level 2
-
-var a = instance_create_battle(709,68,objColonelLastTis);
+            <string>/// Level 2&#xd;
+&#xd;
+var a = instance_create_battle(709,68,objColonelLastTis);&#xd;
 a.hspeed = -random_range(0.5,1.2);</string>
           </argument>
         </arguments>
@@ -286,26 +287,15 @@ a.hspeed = -random_range(0.5,1.2);</string>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (extraPhase){
-    alarm[0] = -1;
-    alarm[1] = -1;
-    image_angle = 360 * choose(-1,1);
-
-    var A = scrGetPlayerID();
-    with(objColonelBulletMargot){
-        if (A == scrGetPlayerID()){
-            instance_destroy();
-        }
-    }
-}
+            <string>///Next Attack
 
 switch (HP) {
     case 3: // Red Colonel
@@ -340,6 +330,37 @@ switch (HP) {
 }
 
 alarm[0] = 50;</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="14">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>alarm[0] = -1;
+alarm[1] = -1;
+image_angle = 360 * choose(-1,1);
+
+var A = scrGetPlayerID();
+with(objColonelBulletMargot){
+    if (A == scrGetPlayerID()){
+        instance_destroy();
+    }
+}</string>
           </argument>
         </arguments>
       </action>

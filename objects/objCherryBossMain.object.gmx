@@ -8,7 +8,7 @@
   <parentName>objBossParent</parentName>
   <maskName>&lt;undefined></maskName>
   <events>
-    <event enumb="0" eventtype="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -42,7 +42,7 @@ Dir = 0;</string>
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="2">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -118,7 +118,7 @@ Dir = 0;</string>
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="3">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -145,7 +145,7 @@ Dir = 0;</string>
         </arguments>
       </action>
     </event>
-    <event enumb="13" eventtype="7">
+    <event eventtype="7" enumb="13">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -162,22 +162,23 @@ Dir = 0;</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited();&#xd;
-&#xd;
-extraHP = 5;&#xd;
-sprite_index = sprCherryGray;&#xd;
-vspeed = choose(-2,2);&#xd;
-&#xd;
-repeat(5){&#xd;
-    var a = instance_create(x,y,objCherryBulletBounce);&#xd;
-    a.speed = random_range(1,2);&#xd;
-    a.direction = irandom(360);&#xd;
+            <string>///Level 3
+event_inherited();
+
+extraHP = 5;
+sprite_index = sprCherryGray;
+vspeed = choose(-2,2);
+
+repeat(5){
+    var a = instance_create(x,y,objCherryBulletBounce);
+    a.speed = random_range(1,2);
+    a.direction = irandom(360);
 }</string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event enumb="12" eventtype="7">
+    <event eventtype="7" enumb="12">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -201,7 +202,7 @@ instance_create_battle(600, 0, objCherryBulletWall);</string>
         </arguments>
       </action>
     </event>
-    <event enumb="10" eventtype="7">
+    <event eventtype="7" enumb="10">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -218,46 +219,37 @@ instance_create_battle(600, 0, objCherryBulletWall);</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Next Attack&#xd;
-&#xd;
-//End&#xd;
-if (extraPhase){&#xd;
-    var A = scrGetPlayerID();&#xd;
-    with (objCherryBulletBounce) {&#xd;
-        if (A == scrGetPlayerID())&#xd;
-            { instance_destroy(); }&#xd;
-    }&#xd;
-}&#xd;
-&#xd;
-switch (HP)&#xd;
-{&#xd;
-    case 5:&#xd;
-        sprite_index = sprCherry;&#xd;
-    break;&#xd;
-    case 4:&#xd;
-        sprite_index = sprCherryGreen;&#xd;
-    break;&#xd;
-    case 3:&#xd;
-        sprite_index = sprCherryYellow;&#xd;
-    break;&#xd;
-    case 2:&#xd;
-        sprite_index = sprCherryBlue;&#xd;
-    break;&#xd;
-    case 1:&#xd;
-        sprite_index = sprCherryWhite;&#xd;
-    break;&#xd;
-    case 0:&#xd;
-        instance_destroy();&#xd;
-    break;&#xd;
-}&#xd;
-&#xd;
-alarm[0] = 40;&#xd;
+            <string>///Next Attack
+
+switch (HP)
+{
+    case 5:
+        sprite_index = sprCherry;
+    break;
+    case 4:
+        sprite_index = sprCherryGreen;
+    break;
+    case 3:
+        sprite_index = sprCherryYellow;
+    break;
+    case 2:
+        sprite_index = sprCherryBlue;
+    break;
+    case 1:
+        sprite_index = sprCherryWhite;
+    break;
+    case 0:
+        instance_destroy();
+    break;
+}
+
+alarm[0] = 40;
 audio_play_sound(sndBlockChange,0,false);</string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="8">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -275,6 +267,36 @@ audio_play_sound(sndBlockChange,0,false);</string>
           <argument>
             <kind>1</kind>
             <string>draw_sprite_ext(sprite_index,-1,x,y,image_xscale,image_yscale,0,c_white,1 - (iframes != 0) * 0.5);</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="14">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///End extra attack
+
+var A = scrGetPlayerID();
+with (objCherryBulletBounce) {
+    if (A == scrGetPlayerID())
+        { instance_destroy(); }
+}
+
+event_user(0);</string>
           </argument>
         </arguments>
       </action>

@@ -5,8 +5,8 @@
   <visible>0</visible>
   <depth>-10</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <parentName>&lt;undefined></parentName>
+  <maskName>&lt;undefined></maskName>
   <events>
     <event eventtype="0" enumb="0">
       <action>
@@ -17,8 +17,8 @@
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
@@ -39,8 +39,8 @@
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
@@ -54,6 +54,7 @@ global.noDeath = false;
 global.playerHP[PlayerID] = 5;
 global.playerMagic[PlayerID] = 0;
 global.infJump[PlayerID] = false;
+global.playerCharge[PlayerID] = 0;
 
 var a = instance_create(x+17,y+23,objPlayer);
 a.PlayerID = PlayerID;
