@@ -145,6 +145,12 @@
         <sprite>sprites\sprKurodamaJump</sprite>
         <sprite>sprites\sprKurodamaRun</sprite>
       </sprites>
+      <sprites name="Shiratama">
+        <sprite>sprites\sprShiratamaIdle</sprite>
+        <sprite>sprites\sprShiratamaRun</sprite>
+        <sprite>sprites\sprShiratamaJump</sprite>
+        <sprite>sprites\sprShiratamaFall</sprite>
+      </sprites>
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\sprBlockMask</sprite>
@@ -244,6 +250,7 @@
         <sprite>sprites\sprLeek</sprite>
         <sprite>sprites\sprMikuHachume</sprite>
         <sprite>sprites\sprCherryGlow</sprite>
+        <sprite>sprites\sprMikuSpell</sprite>
       </sprites>
       <sprites name="Colonel">
         <sprite>sprites\sprColonelBossMain</sprite>
@@ -262,6 +269,7 @@
         <sprite>sprites\sprBigKidWater</sprite>
         <sprite>sprites\sprBigKidBigBullet</sprite>
         <sprite>sprites\sprBigKidMiniBullet</sprite>
+        <sprite>sprites\sprBigKidSpell</sprite>
       </sprites>
       <sprites name="Kurodama">
         <sprite>sprites\sprKurodamaBossMain</sprite>
@@ -271,6 +279,7 @@
         <sprite>sprites\sprKurodamaFireBlock</sprite>
         <sprite>sprites\sprKurodamaPrinceDead</sprite>
         <sprite>sprites\sprKurodamaSpikeBlock</sprite>
+        <sprite>sprites\sprKurodamaSpell</sprite>
       </sprites>
       <sprites name="Shiratama">
         <sprite>sprites\sprShiratamaBossMain</sprite>
@@ -281,6 +290,7 @@
         <sprite>sprites\sprShiratamaSpike</sprite>
         <sprite>sprites\sprShiratamaAqua</sprite>
         <sprite>sprites\sprShiratamaBanana</sprite>
+        <sprite>sprites\sprShiratamaSpell</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -554,6 +564,7 @@
       <object>objects\objHudPlayerIndicator</object>
       <object>objects\objHudFinalScreen</object>
       <object>objects\objDestroyEff</object>
+      <object>objects\objMagicCharSpell</object>
       <objects name="Big Cherry">
         <object>objects\objCherryBossMain</object>
         <object>objects\objCherryBullet</object>
@@ -624,8 +635,8 @@
         <object>objects\objShiratamaCherry</object>
         <object>objects\objShiratamaCherryLine</object>
         <object>objects\objShiratamaCherryYellow</object>
-        <object>objects\objShiratamaBanana</object>
-        <object>objects\objShiratamaBananaTail</object>
+        <object>objects\objMagicShiratama</object>
+        <object>objects\objMagicShiratamaTail</object>
       </objects>
     </objects>
   </objects>

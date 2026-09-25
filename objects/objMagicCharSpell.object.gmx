@@ -1,0 +1,170 @@
+<object>
+  <spriteName>sprMikuSpell</spriteName>
+  <parentName>&lt;undefined></parentName>
+  <maskName>&lt;undefined></maskName>
+  <solid>0</solid>
+  <visible>0</visible>
+  <depth>1</depth>
+  <persistent>0</persistent>
+  <PhysicsObject>0</PhysicsObject>
+  <PhysicsObjectSensor>0</PhysicsObjectSensor>
+  <PhysicsObjectShape>0</PhysicsObjectShape>
+  <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
+  <PhysicsObjectRestitution>0.1</PhysicsObjectRestitution>
+  <PhysicsObjectGroup>0</PhysicsObjectGroup>
+  <PhysicsObjectLinearDamping>0.1</PhysicsObjectLinearDamping>
+  <PhysicsObjectAngularDamping>0.1</PhysicsObjectAngularDamping>
+  <PhysicsObjectFriction>0.2</PhysicsObjectFriction>
+  <PhysicsObjectAwake>-1</PhysicsObjectAwake>
+  <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
+  <events>
+    <event eventtype="8" enumb="73">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var Surf = surface_create(battle_width,battle_height);
+
+//Star surface
+surface_set_target(Surf);
+
+draw_clear_alpha(c_black,0);
+
+draw_set_colour(c_white);
+draw_sprite_ext(sprite_index,0,xDraw,350,Scale,Scale,0,c_white,image_alpha * 0.8);
+
+/*draw_set_blend_mode(bm_add);
+draw_set_colour(c_black);
+draw_rectangle(0,0,battle_width,battle_height,false);
+draw_set_blend_mode(bm_normal);*/
+
+surface_reset_target();
+
+//Draw spell
+draw_surface(Surf,x,y);
+surface_free(Surf);</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Scale = 1;
+
+xDraw = battle_width;
+//XX = 500 + (scrGetPlayerID() * 1280);
+//xDraw = 0;
+Bye = false;
+mainScale = 0;
+
+alarm[0] = 70;</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <exetype>0</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string/>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//x = lerp(x,XX,0.2);
+xDraw = lerp(xDraw,500,0.2);
+
+if (Bye){
+    Scale += mainScale * 0.1;
+    image_alpha -= 1/15;
+    if (image_alpha &lt;= 0) instance_destroy();
+}
+
+visible = true;</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>mainScale = Scale;
+Bye = true;</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
+  <PhysicsShapePoints/>
+</object>

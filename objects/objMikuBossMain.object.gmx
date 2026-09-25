@@ -162,35 +162,39 @@ switch (HP) {&#xd;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Level 3&#xd;
-event_inherited();&#xd;
-&#xd;
-extraHP = 8;&#xd;
-&#xd;
-with(Negative) instance_destroy();&#xd;
-Negative = instance_create_battle(0, 0, objMikuNegativeEff);&#xd;
-image_index = 1;&#xd;
-&#xd;
-var A = scrGetPlayerID();&#xd;
-with(objMikuBullet){&#xd;
-    if (scrGetPlayerID() == A)&#xd;
-        { Dis = true; }&#xd;
-}&#xd;
-with(objMikuBulletCircle){&#xd;
-    if (scrGetPlayerID() == A)&#xd;
-        { Dis = true; }&#xd;
-}&#xd;
-with(objMikuBulletLeek){&#xd;
-    if (scrGetPlayerID() == A)&#xd;
-        { Dis = true; }&#xd;
-}&#xd;
-with(objMikuBulletWave){&#xd;
-    if (scrGetPlayerID() == A)&#xd;
-        { instance_destroy(); }&#xd;
-}&#xd;
-&#xd;
-alarm[0] = 5;&#xd;
-alarm[1] = -1;</string>
+            <string>///Level 3
+event_inherited();
+
+extraHP = 8;
+
+with(Negative) instance_destroy();
+Negative = instance_create_battle(0, 0, objMikuNegativeEff);
+image_index = 1;
+
+var A = scrGetPlayerID();
+with(objMikuBullet){
+    if (scrGetPlayerID() == A)
+        { Dis = true; }
+}
+with(objMikuBulletCircle){
+    if (scrGetPlayerID() == A)
+        { Dis = true; }
+}
+with(objMikuBulletLeek){
+    if (scrGetPlayerID() == A)
+        { Dis = true; }
+}
+with(objMikuBulletWave){
+    if (scrGetPlayerID() == A)
+        { instance_destroy(); }
+}
+
+alarm[0] = 5;
+alarm[1] = -1;
+
+var a = instance_create_battle(0,0,objMagicCharSpell);
+a.sprite_index = sprMikuSpell;
+a.Scale = 2;</string>
           </argument>
         </arguments>
       </action>
@@ -351,8 +355,8 @@ switch (HP) {
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>

@@ -27,12 +27,12 @@ switch (global.charSelect[playerID]) {
     break;
     case 4: // Kurodama
         a = instance_create(x, y, objMagicKurodama);
-        a.image_xscale = 1.2;
+        a.image_xscale = 1.3;
         a.image_yscale = a.image_xscale;
     break;
     case 5: // Shiratama
         repeat(5){
-            instance_create_battle(irandom(battle_width),irandom(1) * battle_height,objShiratamaBanana);
+            instance_create_battle(irandom(battle_width),irandom(1) * battle_height,objMagicShiratama);
         }
     break;
 }

@@ -37,7 +37,7 @@ bossSkin[1] = sprMikuIdle;
 bossSkin[2] = sprColonelIdle;
 bossSkin[3] = sprPlayerIdle;
 bossSkin[4] = sprKurodamaIdle;
-bossSkin[5] = sprPlayerIdle;
+bossSkin[5] = sprShiratamaIdle;
 
 bossTotal = 6;</string>
           </argument>

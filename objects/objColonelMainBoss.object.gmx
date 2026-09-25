@@ -239,16 +239,20 @@ image_angle = lerp(image_angle,0,0.2);</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Level 3&#xd;
-&#xd;
-extraHP = 5;&#xd;
-extraPhase = true;&#xd;
-&#xd;
-if (sprite_index == sprColonelBossMain){&#xd;
-    alarm[0] = -1;&#xd;
-    alarm[1] = -1;&#xd;
-    image_angle = 360 * choose(-1,1);&#xd;
-}</string>
+            <string>/// Level 3
+
+extraHP = 5;
+extraPhase = true;
+
+if (sprite_index == sprColonelBossMain){
+    alarm[0] = -1;
+    alarm[1] = -1;
+    image_angle = 360 * choose(-1,1);
+}
+
+var a = instance_create_battle(0,0,objMagicCharSpell);
+a.sprite_index = sprColonelBossMain;
+a.Scale = 1.2;</string>
           </argument>
         </arguments>
       </action>
@@ -343,8 +347,8 @@ alarm[0] = 50;</string>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>

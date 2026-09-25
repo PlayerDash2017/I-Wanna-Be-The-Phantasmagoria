@@ -8,7 +8,7 @@
   <parentName>&lt;undefined></parentName>
   <maskName>sprPlayerMask</maskName>
   <events>
-    <event enumb="0" eventtype="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -75,7 +75,7 @@ scrDynamicCollision(true);
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="1">
+    <event eventtype="1" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -100,7 +100,7 @@ with (objBow)&#xd;
         </arguments>
       </action>
     </event>
-    <event enumb="2" eventtype="3">
+    <event eventtype="3" enumb="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -250,7 +250,7 @@ else    //Touching a vine
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="3">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -526,7 +526,7 @@ if (!frozen)
         scrPlayerShoot();
     if (scrTernary(!botMode,scrButtonCheckPressed(KEY.JUMP,PlayerID),botKey[KEY.JUMP]))
         scrPlayerJump();
-    if (scrButtonCheckReleased(KEY.JUMP,PlayerID) || botReleaseJump)
+    if (scrTernary(!botMode,scrButtonCheckReleased(KEY.JUMP,PlayerID),botReleaseJump))
         scrPlayerReleaseJump();
     
     // Magic
@@ -920,7 +920,7 @@ else    //Flipped&#xd;
         </arguments>
       </action>
     </event>
-    <event enumb="4" eventtype="7">
+    <event eventtype="7" enumb="4">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -956,7 +956,7 @@ botMode = global.playerBotMode[PlayerID];
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="8">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>

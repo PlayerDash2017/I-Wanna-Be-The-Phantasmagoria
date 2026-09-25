@@ -8,7 +8,7 @@
   <parentName>&lt;undefined></parentName>
   <maskName>&lt;undefined></maskName>
   <events>
-    <event enumb="0" eventtype="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -30,7 +30,7 @@
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="2">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>605</id>
@@ -52,7 +52,7 @@
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="3">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -75,7 +75,7 @@ if (image_alpha &lt;= 0) instance_destroy();</string>
         </arguments>
       </action>
     </event>
-    <event enumb="73" eventtype="8">
+    <event eventtype="8" enumb="73">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -95,7 +95,7 @@ if (image_alpha &lt;= 0) instance_destroy();</string>
             <string>var drawAlpha = image_alpha;
 
 with(objPlayer){
-    var Color = scrTernary(!botMode, merge_colour(c_red, c_aqua, PlayerID), c_gray);
+    var Color = scrTernary(!botMode, merge_colour(c_red, c_aqua, PlayerID), c_ltgray);
     draw_sprite_ext(sprArrowPlayer, 0, x, y-32, 1, 1, 0, Color, drawAlpha);
 
     draw_set_valign(fa_bottom);

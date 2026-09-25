@@ -41,7 +41,7 @@
             <kind>1</kind>
             <string>BossType = "BigKid";
 enemyRepeat = 2;
-iframeMax = 20;
+iframeMax = 40;
 
 spikeStart = false;
 Bounce[0] = noone;
@@ -177,28 +177,32 @@ alarm[0] = 60;</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Level 3&#xd;
-&#xd;
-extraHP = 10;&#xd;
-extraPhase = true;&#xd;
-&#xd;
-audio_play_sound(sndBlockChange, 0, false);&#xd;
-with(instance_place(x, y+5, objBigKidBody))&#xd;
-    { Spd = 3; }&#xd;
-&#xd;
-var A = scrGetPlayerID();&#xd;
-with(objBigKidWater){&#xd;
-    if (A == scrGetPlayerID()){&#xd;
-        hspeed = -3;&#xd;
-    }&#xd;
-}&#xd;
-with(objBigKidBigBullet){&#xd;
-    if (A == scrGetPlayerID()){&#xd;
-        hspeed = -3;&#xd;
-    }&#xd;
-}&#xd;
-&#xd;
-alarm[2] = 1;</string>
+            <string>/// Level 3
+
+extraHP = 10;
+extraPhase = true;
+
+audio_play_sound(sndBlockChange, 0, false);
+with(instance_place(x, y+5, objBigKidBody))
+    { Spd = 3; }
+
+var A = scrGetPlayerID();
+with(objBigKidWater){
+    if (A == scrGetPlayerID()){
+        hspeed = -3;
+    }
+}
+with(objBigKidBigBullet){
+    if (A == scrGetPlayerID()){
+        hspeed = -3;
+    }
+}
+
+alarm[2] = 1;
+
+var a = instance_create_battle(0,0,objMagicCharSpell);
+a.sprite_index = sprBigKidSpell;
+a.Scale = 14;</string>
           </argument>
         </arguments>
       </action>
@@ -368,8 +372,8 @@ with(objPlayer){
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>

@@ -15,6 +15,9 @@ switch (global.charSelect[PlayerID])
     case 4:
         charName = "Kurodama";
     break;
+    case 5:
+        charName = "Shiratama";
+    break;
     default:
         charName = "Player";
 }
