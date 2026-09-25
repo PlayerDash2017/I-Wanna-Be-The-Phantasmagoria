@@ -299,6 +299,8 @@ audio_play_sound(sndBlockChange,0,false);</string>
             <kind>1</kind>
             <string>///End extra attack
 
+extraPhase = false;
+
 var A = scrGetPlayerID();
 with (objCherryBulletBounce) {
     if (A == scrGetPlayerID())

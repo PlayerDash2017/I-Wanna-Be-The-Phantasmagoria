@@ -1,5 +1,7 @@
+/// bossNue()
+
 // Music
-global.bossMusic[scrGetPlayerID()] = musBossCherry;
+global.bossMusic[scrGetPlayerID()] = musBossNue;
 
 // Objects
 var a;
@@ -35,4 +37,4 @@ a.image_yscale = 1;
 
 // Tilesets
 
-tile_add_battle(bColorTiles, 0, 224, 32, 32, 0, 0, 1000000);
+tile_add_battle(bBossColonel, 0, 0, 640, 480, 0, 0, 2000000);

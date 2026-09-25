@@ -49,6 +49,8 @@
             <kind>1</kind>
             <string>///Create player if it doesn't exist
 
+PlayerID = scrGetPlayerID();
+
 global.noDeath = false;
 
 global.playerHP[PlayerID] = 5;

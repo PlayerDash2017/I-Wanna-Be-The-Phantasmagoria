@@ -170,6 +170,10 @@ Boss = "BigCherry";</string>
         a.sprite_index = sprCherryWhite;
         a.image_blend = make_colour_hsv(random(255),255,255);
     break;
+    
+    case "Nue":
+        instance_create(x,y,objNueCircleSpawn);
+    break;
 }
 
 instance_destroy();</string>
@@ -284,6 +288,11 @@ y = lerp(y,YY + ySpawn,0.1);</string>
     case "Shiratama": case "Magic_Shiratama":
         xSpawn = irandom(battle_width);
         ySpawn = irandom(100);
+    break;
+    
+    case "Nue":
+        xSpawn = battle_width/2 + irandom_range(-100,100);
+        ySpawn = 0;
     break;
 
     default:

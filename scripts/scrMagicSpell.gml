@@ -35,6 +35,14 @@ switch (global.charSelect[playerID]) {
             instance_create_battle(irandom(battle_width),irandom(1) * battle_height,objMagicShiratama);
         }
     break;
+    case 6: // Nue
+        var Ran = irandom(360);
+        for (var i = 0; i < 360; i += 360/4)
+        {
+            var a = instance_create(x,y,objMagicNue);
+            a.Angle = i + Ran;
+        }
+    break;
 }
 
 audio_play_sound(sndMagicSpell,0,false);

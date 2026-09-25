@@ -6,6 +6,10 @@ global.bossMusic[scrGetPlayerID()] = musBossCherry;
 // Objects
 var a;
 
+a = instance_create_battle(64, 384, objPlayerStart);
+a.image_xscale = 1;
+a.image_yscale = 1;
+
 a = instance_create_battle(0, 0, objBlock);
 a.image_xscale = 1;
 a.image_yscale = 15;

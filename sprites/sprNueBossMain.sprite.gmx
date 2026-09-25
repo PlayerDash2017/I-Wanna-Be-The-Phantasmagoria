@@ -1,0 +1,30 @@
+<sprite>
+  <type>0</type>
+  <xorig>63</xorig>
+  <yorigin>55</yorigin>
+  <colkind>0</colkind>
+  <coltolerance>0</coltolerance>
+  <bboxmode>0</bboxmode>
+  <bbox_left>0</bbox_left>
+  <bbox_right>112</bbox_right>
+  <bbox_top>0</bbox_top>
+  <bbox_bottom>106</bbox_bottom>
+  <HTile>0</HTile>
+  <VTile>0</VTile>
+  <For3D>0</For3D>
+  <width>113</width>
+  <height>107</height>
+  <sepmasks>-1</sepmasks>
+  <TextureGroups>
+    <TextureGroup0>0</TextureGroup0>
+  </TextureGroups>
+  <frames>
+    <frame index="0">images\sprNueBossMain_0.png</frame>
+    <frame index="1">images\sprNueBossMain_1.png</frame>
+    <frame index="2">images\sprNueBossMain_2.png</frame>
+    <frame index="3">images\sprNueBossMain_3.png</frame>
+    <frame index="4">images\sprNueBossMain_4.png</frame>
+    <frame index="5">images\sprNueBossMain_5.png</frame>
+    <frame index="6">images\sprNueBossMain_6.png</frame>
+  </frames>
+</sprite>

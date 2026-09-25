@@ -31,6 +31,7 @@ bossName[2] = "The Colonel";
 bossName[3] = "Big Kid";
 bossName[4] = "Kurodama";
 bossName[5] = "Shiratama";
+bossName[6] = "Nue";
 
 bossSkin[0] = sprCherryIdle;
 bossSkin[1] = sprMikuIdle;
@@ -38,8 +39,9 @@ bossSkin[2] = sprColonelIdle;
 bossSkin[3] = sprPlayerIdle;
 bossSkin[4] = sprKurodamaIdle;
 bossSkin[5] = sprShiratamaIdle;
+bossSkin[6] = sprPlayerIdle;
 
-bossTotal = 6;</string>
+bossTotal = 7;</string>
           </argument>
         </arguments>
       </action>

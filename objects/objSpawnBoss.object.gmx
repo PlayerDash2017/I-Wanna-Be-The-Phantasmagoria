@@ -48,6 +48,9 @@ switch (global.charSelect[!scrGetPlayerID()]) {
     case 5:
         bossScr = bossShiratama;
     break;
+    case 6:
+        bossScr = bossNue;
+    break;
 }
 
 script_execute(bossScr);

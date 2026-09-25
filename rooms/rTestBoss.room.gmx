@@ -3,8 +3,8 @@
   <caption/>
   <width>640</width>
   <height>480</height>
-  <vsnap>8</vsnap>
-  <hsnap>16</hsnap>
+  <vsnap>32</vsnap>
+  <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>50</speed>
   <persistent>0</persistent>
@@ -31,40 +31,37 @@
     <yoffset>11010215</yoffset>
   </makerSettings>
   <backgrounds>
-    <background x="0" stretch="0" foreground="0" vtiled="-1" y="0" hspeed="0" vspeed="0" htiled="-1" visible="-1" name=""/>
-    <background x="0" stretch="-1" foreground="0" vtiled="-1" y="0" hspeed="0" vspeed="0" htiled="-1" visible="0" name=""/>
-    <background x="0" stretch="0" foreground="0" vtiled="-1" y="0" hspeed="0" vspeed="0" htiled="-1" visible="0" name=""/>
-    <background x="0" stretch="0" foreground="0" vtiled="-1" y="0" hspeed="0" vspeed="0" htiled="-1" visible="0" name=""/>
-    <background x="0" stretch="0" foreground="0" vtiled="-1" y="0" hspeed="0" vspeed="0" htiled="-1" visible="0" name=""/>
-    <background x="0" stretch="0" foreground="0" vtiled="-1" y="0" hspeed="0" vspeed="0" htiled="-1" visible="0" name=""/>
-    <background x="0" stretch="0" foreground="0" vtiled="-1" y="0" hspeed="0" vspeed="0" htiled="-1" visible="0" name=""/>
-    <background x="0" stretch="0" foreground="0" vtiled="-1" y="0" hspeed="0" vspeed="0" htiled="-1" visible="0" name=""/>
+    <background x="0" name="" foreground="0" stretch="0" vtiled="-1" y="0" htiled="-1" visible="-1" hspeed="0" vspeed="0"/>
+    <background x="0" name="" foreground="0" stretch="-1" vtiled="-1" y="0" htiled="-1" visible="0" hspeed="0" vspeed="0"/>
+    <background x="0" name="" foreground="0" stretch="0" vtiled="-1" y="0" htiled="-1" visible="0" hspeed="0" vspeed="0"/>
+    <background x="0" name="" foreground="0" stretch="0" vtiled="-1" y="0" htiled="-1" visible="0" hspeed="0" vspeed="0"/>
+    <background x="0" name="" foreground="0" stretch="0" vtiled="-1" y="0" htiled="-1" visible="0" hspeed="0" vspeed="0"/>
+    <background x="0" name="" foreground="0" stretch="0" vtiled="-1" y="0" htiled="-1" visible="0" hspeed="0" vspeed="0"/>
+    <background x="0" name="" foreground="0" stretch="0" vtiled="-1" y="0" htiled="-1" visible="0" hspeed="0" vspeed="0"/>
+    <background x="0" name="" foreground="0" stretch="0" vtiled="-1" y="0" htiled="-1" visible="0" hspeed="0" vspeed="0"/>
   </backgrounds>
   <views>
-    <view hport="480" wview="640" wport="640" hspeed="-1" vspeed="-1" xview="0" yview="0" hborder="400" hview="480" xport="0" visible="-1" objName="&lt;undefined>" yport="0" vborder="304"/>
-    <view hport="480" wview="640" wport="640" hspeed="-1" vspeed="-1" xview="0" yview="0" hborder="32" hview="480" xport="0" visible="0" objName="&lt;undefined>" yport="0" vborder="32"/>
-    <view hport="480" wview="640" wport="640" hspeed="-1" vspeed="-1" xview="0" yview="0" hborder="32" hview="480" xport="0" visible="0" objName="&lt;undefined>" yport="0" vborder="32"/>
-    <view hport="480" wview="640" wport="640" hspeed="-1" vspeed="-1" xview="0" yview="0" hborder="32" hview="480" xport="0" visible="0" objName="&lt;undefined>" yport="0" vborder="32"/>
-    <view hport="480" wview="640" wport="640" hspeed="-1" vspeed="-1" xview="0" yview="0" hborder="32" hview="480" xport="0" visible="0" objName="&lt;undefined>" yport="0" vborder="32"/>
-    <view hport="480" wview="640" wport="640" hspeed="-1" vspeed="-1" xview="0" yview="0" hborder="32" hview="480" xport="0" visible="0" objName="&lt;undefined>" yport="0" vborder="32"/>
-    <view hport="480" wview="640" wport="640" hspeed="-1" vspeed="-1" xview="0" yview="0" hborder="32" hview="480" xport="0" visible="0" objName="&lt;undefined>" yport="0" vborder="32"/>
-    <view hport="480" wview="640" wport="640" hspeed="-1" vspeed="-1" xview="0" yview="0" hborder="32" hview="480" xport="0" visible="0" objName="&lt;undefined>" yport="0" vborder="32"/>
+    <view yview="0" vborder="304" hport="480" xview="0" yport="0" objName="&lt;undefined>" hborder="400" visible="-1" hspeed="-1" wview="640" wport="640" vspeed="-1" hview="480" xport="0"/>
+    <view yview="0" vborder="32" hport="480" xview="0" yport="0" objName="&lt;undefined>" hborder="32" visible="0" hspeed="-1" wview="640" wport="640" vspeed="-1" hview="480" xport="0"/>
+    <view yview="0" vborder="32" hport="480" xview="0" yport="0" objName="&lt;undefined>" hborder="32" visible="0" hspeed="-1" wview="640" wport="640" vspeed="-1" hview="480" xport="0"/>
+    <view yview="0" vborder="32" hport="480" xview="0" yport="0" objName="&lt;undefined>" hborder="32" visible="0" hspeed="-1" wview="640" wport="640" vspeed="-1" hview="480" xport="0"/>
+    <view yview="0" vborder="32" hport="480" xview="0" yport="0" objName="&lt;undefined>" hborder="32" visible="0" hspeed="-1" wview="640" wport="640" vspeed="-1" hview="480" xport="0"/>
+    <view yview="0" vborder="32" hport="480" xview="0" yport="0" objName="&lt;undefined>" hborder="32" visible="0" hspeed="-1" wview="640" wport="640" vspeed="-1" hview="480" xport="0"/>
+    <view yview="0" vborder="32" hport="480" xview="0" yport="0" objName="&lt;undefined>" hborder="32" visible="0" hspeed="-1" wview="640" wport="640" vspeed="-1" hview="480" xport="0"/>
+    <view yview="0" vborder="32" hport="480" xview="0" yport="0" objName="&lt;undefined>" hborder="32" visible="0" hspeed="-1" wview="640" wport="640" vspeed="-1" hview="480" xport="0"/>
   </views>
   <instances>
-    <instance x="64" scaleX="1" rotation="0" locked="0" y="384" scaleY="1" objName="objPlayerStart" code="" name="inst_13D9482A" colour="4294967295"/>
-    <instance scaleX="1" x="0" rotation="0" locked="0" y="0" scaleY="1" objName="objShiratamaBlock" code="" name="inst_F1173FBE" colour="4294967295"/>
-    <instance scaleX="1" x="608" rotation="0" locked="0" y="0" scaleY="1" objName="objShiratamaBlock" code="" name="inst_74B34B1F" colour="4294967295"/>
-    <instance scaleX="1" x="608" rotation="0" locked="0" y="448" scaleY="1" objName="objShiratamaBlock" code="" name="inst_52EAB355" colour="4294967295"/>
-    <instance scaleX="1" x="0" rotation="0" locked="0" y="448" scaleY="1" objName="objShiratamaBlock" code="" name="inst_3B1CD48B" colour="4294967295"/>
-    <instance scaleX="1" x="0" rotation="0" locked="0" y="32" scaleY="13" objName="objShiratamaBlock" code="" name="inst_079F32D4" colour="4294967295"/>
-    <instance scaleX="18" x="32" rotation="0" locked="0" y="448" scaleY="1" objName="objShiratamaBlock" code="" name="inst_0B50D887" colour="4294967295"/>
-    <instance scaleX="1" x="608" rotation="0" locked="0" y="32" scaleY="13" objName="objShiratamaBlock" code="" name="inst_7B3CCA57" colour="4294967295"/>
-    <instance scaleX="18" x="32" rotation="0" locked="0" y="0" scaleY="1" objName="objShiratamaBlock" code="" name="inst_DA96BF2F" colour="4294967295"/>
-    <instance scaleX="18" x="32" rotation="0" locked="0" y="32" scaleY="13" objName="objShiratamaBackground" code="" name="inst_182E7985" colour="4294967295"/>
-    <instance scaleX="1" x="324" rotation="0" locked="0" y="194" scaleY="1" objName="objShiratamaBossMain" code="" name="inst_76DBDAB3" colour="4294967295"/>
-    <instance scaleX="1" x="320" rotation="0" locked="0" y="88" scaleY="1" objName="objShiratamaPhase" code="" name="inst_4BA58235" colour="4294967295"/>
+    <instance code="" scaleY="1" x="512" name="inst_13D9482A" colour="4294967295" scaleX="1" objName="objPlayerStart" locked="0" y="224" rotation="0"/>
+    <instance code="" scaleY="15" name="inst_76B2A300" colour="4294967295" x="0" scaleX="1" objName="objBlock" locked="0" y="0" rotation="0"/>
+    <instance code="" scaleY="1" name="inst_7A3FC057" colour="4294967295" x="32" scaleX="18" objName="objBlock" locked="0" y="0" rotation="0"/>
+    <instance code="" scaleY="1" name="inst_09FD3564" colour="4294967295" x="32" scaleX="18" objName="objBlock" locked="0" y="448" rotation="0"/>
+    <instance code="" scaleY="15" name="inst_48489866" colour="4294967295" x="608" scaleX="1" objName="objBlock" locked="0" y="0" rotation="0"/>
+    <instance code="" scaleY="1" name="inst_CEC306FD" colour="4294967295" x="480" scaleX="3" objName="objNueBlockStart" locked="0" y="256" rotation="0"/>
+    <instance code="" scaleY="1" name="inst_4CBD3696" colour="4294967295" x="96" scaleX="1" objName="objNueBossMain" locked="0" y="240" rotation="0"/>
   </instances>
-  <tiles/>
+  <tiles>
+    <tile depth="1000000" xo="0" yo="224" bgName="bColorTiles" scaleY="15" name="inst_C023792F" colour="4294967295" x="0" w="32" scaleX="20" locked="0" id="936045491" h="32" y="0"/>
+  </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
   <PhysicsWorldLeft>0</PhysicsWorldLeft>
