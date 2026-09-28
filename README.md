@@ -54,3 +54,8 @@ Prince Shiratama (Destination)
 De: I Wanna Be The Destination
 Otras inspiraciones:
 	I Wanna Be The Flamestination
+
+Nue Houjuu
+De: I Wanna Make It Breaking Out
+Otras inspiraciones:
+	I Wanna Kill The Kamilia 3

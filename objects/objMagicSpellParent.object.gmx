@@ -48,6 +48,9 @@ if (Bullet != noone){
         case 5: // Shiratama
             BossType = "Shiratama";
         break;
+        case 6: // Nue
+            BossType = "Nue";
+        break;
     }
 
     scrEnemyBullet("Magic_"+BossType, 1);

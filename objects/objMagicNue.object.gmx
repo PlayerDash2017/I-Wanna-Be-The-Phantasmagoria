@@ -18,7 +18,7 @@
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <events>
-    <event eventtype="0" enumb="0">
+    <event enumb="0" eventtype="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -45,7 +45,7 @@ alarm[0] = 60;</string>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event enumb="0" eventtype="3">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -78,7 +78,7 @@ if (Dis &lt;= 0.1 &amp;&amp; Scale == 0){
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
+    <event enumb="0" eventtype="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -98,6 +98,23 @@ if (Dis &lt;= 0.1 &amp;&amp; Scale == 0){
             <string>Scale = 0;</string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event ename="objBullet" eventtype="4">
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <exetype>1</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments/>
       </action>
     </event>
   </events>

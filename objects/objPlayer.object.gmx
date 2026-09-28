@@ -8,7 +8,7 @@
   <parentName>&lt;undefined></parentName>
   <maskName>sprPlayerMask</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event enumb="0" eventtype="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -54,6 +54,7 @@ for (var i = 0; i &lt; KEY.NUMBER; i ++) {
     botKey[i] = false;
 }
 botState = "";
+botIframes = 0;
 
 scrSetPlayerMask();
 
@@ -75,7 +76,7 @@ scrDynamicCollision(true);
         </arguments>
       </action>
     </event>
-    <event eventtype="1" enumb="0">
+    <event enumb="0" eventtype="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -100,7 +101,7 @@ with (objBow)&#xd;
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="2">
+    <event enumb="2" eventtype="3">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -250,7 +251,7 @@ else    //Touching a vine
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event enumb="0" eventtype="3">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -280,9 +281,10 @@ if (botMode &amp;&amp; !frozen &amp;&amp; instance_number(objBossParent) >= 2){
     var bulletParent = instance_nearest(x, y, objPlayerKiller);
     var yPlayer = y - 800;
     var xPlayer = x - PlayerID*1280;
-
+    
     botReleaseShoot = false;
     botJumpTime = max(botJumpTime - 1,0);
+    botIframes = max(botIframes - (1 + place_meeting(x,y,objPlayerKiller)),0);
     
     //BigKid
     if (botState == "BigKid_Init"){
@@ -849,7 +851,7 @@ vspeed -= gravity;&#xd;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="objPlatform">
+    <event ename="objPlatform" eventtype="4">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -920,7 +922,7 @@ else    //Flipped&#xd;
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="4">
+    <event enumb="4" eventtype="7">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -950,13 +952,14 @@ Field.playerID = PlayerID;
 Field.followID = id;
 
 botMode = global.playerBotMode[PlayerID];
+botIframes = botMode * (50*60);
 //botMode = true;
 //if (PlayerID == 1) botMode = true;</string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event enumb="0" eventtype="8">
       <action>
         <libid>1</libid>
         <id>603</id>

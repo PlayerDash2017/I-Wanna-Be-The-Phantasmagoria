@@ -1,6 +1,7 @@
 /// scrHitPlayer()
 
 iframes = 150;
+botIframes = botMode * (50*60);
 audio_play_sound(sndDeath,0,0);
 
 if (global.playerHP[PlayerID] == 1){

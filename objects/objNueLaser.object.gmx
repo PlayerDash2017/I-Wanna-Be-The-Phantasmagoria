@@ -1,10 +1,10 @@
 <object>
-  <spriteName>sprNueBulletC</spriteName>
-  <parentName>objNueBullet</parentName>
+  <spriteName>sprNueLaser</spriteName>
+  <parentName>&lt;undefined></parentName>
   <maskName>&lt;undefined></maskName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
@@ -18,22 +18,7 @@
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <events>
-    <event eventtype="3" enumb="2">
-      <action>
-        <libid>1</libid>
-        <id>604</id>
-        <kind>0</kind>
-        <exetype>1</exetype>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <functionname>action_inherited</functionname>
-        <codestring/>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments/>
-      </action>
+    <event enumb="1" eventtype="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -50,27 +35,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle = direction;</string>
+            <string>for (var i = 16; i &lt; battle_height; i += 32)
+{
+    a = instance_create(x,800+i,objNueBulletLaser);
+    a.Type = floor(i/32) mod 4;//(Type * 2 + floor(i/32)) mod 4;//Type * 2 + (floor(i/32) mod 2);
+}
+
+visible = false;
+alarm[2] = 125;</string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>604</id>
-        <kind>0</kind>
-        <exetype>1</exetype>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <functionname>action_inherited</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments/>
-      </action>
+    <event enumb="0" eventtype="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -87,33 +64,128 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var XX = (scrGetPlayerID() * 1280) + battle_width;
-if (x > XX &amp;&amp; A){
-    A = false;
-    speed ++;
+            <string>Kill = false;
+Dis = false;
+image_alpha = 0;
+
+alarm[0] = 100;
+bossMain = objBossParent;
+
+image_yscale = battle_height/32;</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event enumb="0" eventtype="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (Dis){
+    mask_index = sprEmpty;
+    Kill = false;
+    alarm[0] = 0;
+    alarm[1] = 0;
+    alarm[2] = 0;
+    image_alpha -= 0.01;
+    if (image_alpha &lt;= 0) instance_destroy();
     
-    x -= battle_width;
+    exit;
+}
+
+image_alpha = min(image_alpha + 1/30,1);
+image_xscale = min(image_xscale + 1/30,1);</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event enumb="0" eventtype="8">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_sprite_ext(sprite_index,0,x,y,image_xscale,image_yscale,0,c_white,image_alpha - 0.5 * !Kill)</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event enumb="0" eventtype="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Kill = true;
+image_xscale = 0;
+alarm[1] = 50;</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event enumb="2" eventtype="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>visible = true;
+
+alarm[1] = 50;
+
+with(bossMain){
+    extraHP --;
 }</string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="0" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>604</id>
-        <kind>0</kind>
-        <exetype>1</exetype>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <functionname>action_inherited</functionname>
-        <codestring/>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments/>
-      </action>
+    <event ename="objPlayer" eventtype="4">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -130,7 +202,9 @@ if (x > XX &amp;&amp; A){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>A = true;</string>
+            <string>if (Kill &amp;&amp; visible){
+    with(other){ scrKillPlayer(); }
+}</string>
           </argument>
         </arguments>
       </action>

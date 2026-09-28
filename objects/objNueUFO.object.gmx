@@ -18,7 +18,7 @@
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <events>
-    <event eventtype="0" enumb="0">
+    <event enumb="0" eventtype="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -43,7 +43,7 @@ Angle = irandom(360);</string>
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
+    <event enumb="0" eventtype="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -68,9 +68,9 @@ a = instance_create(x,y,objNueBullet6);
 a.direction = 270-Angle;
 a.alarm[0] = 35;
 
-Angle += 10;
+Angle += 12;//10
 
-alarm[0] = 10;</string>
+alarm[0] = 13;//10</string>
           </argument>
         </arguments>
       </action>

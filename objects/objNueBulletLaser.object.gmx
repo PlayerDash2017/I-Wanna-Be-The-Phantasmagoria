@@ -1,10 +1,10 @@
 <object>
-  <spriteName>sprNueBulletC</spriteName>
-  <parentName>objNueBullet</parentName>
+  <spriteName>sprNueBulletA</spriteName>
+  <parentName>objBossBulletParent</parentName>
   <maskName>&lt;undefined></maskName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
@@ -18,22 +18,7 @@
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <events>
-    <event eventtype="3" enumb="2">
-      <action>
-        <libid>1</libid>
-        <id>604</id>
-        <kind>0</kind>
-        <exetype>1</exetype>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <functionname>action_inherited</functionname>
-        <codestring/>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments/>
-      </action>
+    <event enumb="0" eventtype="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -50,27 +35,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle = direction;</string>
+            <string>image_speed = 0;
+alarm[0] = 50;
+
+Type = 0;</string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>604</id>
-        <kind>0</kind>
-        <exetype>1</exetype>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <functionname>action_inherited</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments/>
-      </action>
+    <event enumb="0" eventtype="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -87,33 +60,57 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var XX = (scrGetPlayerID() * 1280) + battle_width;
-if (x > XX &amp;&amp; A){
-    A = false;
-    speed ++;
-    
-    x -= battle_width;
-}</string>
+            <string>var XX = 0;
+var YY = 0;
+var W = (battle_width-32)/5;
+//scrPrint("Type:",Type);
+switch (Type)
+{
+    case 0:
+        XX = x+W;
+        YY = y+64;
+    break;
+    case 1:
+        XX = x+W;
+        YY = y-64;
+    break;
+    case 2:
+        XX = x-W;
+        YY = y+64;
+    break;
+    case 3:
+        XX = x-W;
+        YY = y-64;
+    break;
+    default:
+        scrPrint("What?",Type);
+}
+
+direction = point_direction(x,y,XX,YY);
+speed = point_distance(x,y,XX,YY)/75;
+alarm[1] = 75;</string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="0" enumb="0">
+    <event enumb="1" eventtype="2">
       <action>
         <libid>1</libid>
-        <id>604</id>
+        <id>203</id>
         <kind>0</kind>
         <exetype>1</exetype>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <functionname>action_inherited</functionname>
+        <useapplyto>-1</useapplyto>
+        <functionname>action_kill_object</functionname>
         <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments/>
       </action>
+    </event>
+    <event enumb="0" eventtype="8">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -130,7 +127,12 @@ if (x > XX &amp;&amp; A){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>A = true;</string>
+            <string>draw_self();
+
+/*draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+draw_set_font(fDefault12);
+scrDrawTextOutline(x,y,Type,c_red,c_black);</string>
           </argument>
         </arguments>
       </action>

@@ -18,7 +18,7 @@
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <events>
-    <event eventtype="0" enumb="0">
+    <event enumb="0" eventtype="0">
       <action>
         <libid>1</libid>
         <id>604</id>
@@ -52,7 +52,7 @@
             <kind>1</kind>
             <string>BossType = "Nue";
 enemyRepeat = 1;
-iframeMax = 50;
+iframeMax = 75;
 
 image_speed = 1/5;
 alarm[0] = 75;
@@ -63,12 +63,15 @@ with(objNueBlockStart){
     if (A == scrGetPlayerID()){
         other.block = id;
     }
-}</string>
+}
+
+xNue = xstart;
+yNue = ystart;</string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event enumb="0" eventtype="8">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -90,7 +93,7 @@ with(objNueBlockStart){
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
+    <event enumb="0" eventtype="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -162,6 +165,18 @@ switch (HP)
         
         alarm[0] = 25;
     break;
+    case 1:
+        var Side = 1;
+        repeat(2){
+            var a = instance_create(x,y,objNueFinalSpawn);
+            a.direction = 85 * Side;
+            a.speed = 5;
+            
+            Side = -1;
+        }
+        
+        alarm[0] = 135;
+    break;
     /*case 2:
         instance_create(x,y,objNueCircleSpawn);
         
@@ -172,7 +187,7 @@ switch (HP)
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="10">
+    <event enumb="10" eventtype="7">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -190,6 +205,17 @@ switch (HP)
           <argument>
             <kind>1</kind>
             <string>var A = scrGetPlayerID();
+if (HP == 0){
+    instance_destroy();
+
+    with(objNueLaser){
+        if (A == scrGetPlayerID())
+            { Dis = true; }
+    }
+}
+
+if (extraPhase) exit;
+
 with(objNueBullet){
     if (A == scrGetPlayerID())
         { Dis = true; }
@@ -199,8 +225,13 @@ with(objNueSpinSpawn){
     if (ID == other.id) instance_destroy();
 }
 
-with(objNueCircleSpawn){
+with(objNueFinalSpawn){
     if (A == scrGetPlayerID()) instance_destroy();
+}
+
+with(objNueLaser){
+    if (A == scrGetPlayerID())
+        { Dis = true; }
 }
 
 iframes = 100;
@@ -209,7 +240,7 @@ alarm[0] = 100;</string>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="12">
+    <event enumb="12" eventtype="7">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -234,7 +265,7 @@ a.hspeed = 2;</string>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="13">
+    <event enumb="13" eventtype="7">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -253,7 +284,83 @@ a.hspeed = 2;</string>
             <kind>1</kind>
             <string>/// Level 3
 
-instance_create_battle(0,0,objMagicNueSpell);</string>
+event_user(0);
+
+extraHP = 4;
+instance_create_battle(0,0,objMagicNueSpell);
+
+if (!extraPhase){
+    event_inherited();
+    
+    xNue = xstart - 150;
+    yNue = ystart + random_range(-1,1) * floor(battle_height/2);
+    
+    iframes = 150;
+    
+    extraHP = 5;
+    var W = battle_width-32;
+    for (var i = 0; i &lt;= W; i += W/5)
+    {
+        a = instance_create_battle(i+16,battle_height/2,objNueLaser);
+        a.Type = floor(i/(W/5)) mod 2;
+        a.bossMain = scrTernary(i == 0,id,noone);
+        
+        //scrPrint(a.Type);
+    }
+    
+    alarm[0] = 0;
+}</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event enumb="0" eventtype="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>x = lerp(x,xNue,0.1);
+y = lerp(y,yNue,0.1); </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event enumb="14" eventtype="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///End laser attack
+
+extraPhase = false;
+event_user(0);
+
+xNue = xstart;
+yNue = ystart;</string>
           </argument>
         </arguments>
       </action>

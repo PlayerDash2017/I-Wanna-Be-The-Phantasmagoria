@@ -1,7 +1,7 @@
 ///scrKillPlayer()
 //kills the player
 
-if (instance_exists(objPlayer) && (!global.noDeath && !global.debugNoDeath) && iframes <= 0)
+if (instance_exists(objPlayer) && (!global.noDeath && !global.debugNoDeath) && iframes <= 0 && botIframes <= 0)
 {
     global.playerHP[PlayerID] --;
     if (global.playerHP[PlayerID] > 0)

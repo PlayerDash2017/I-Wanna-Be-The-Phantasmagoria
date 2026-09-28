@@ -21,21 +21,6 @@
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
-        <id>604</id>
-        <kind>0</kind>
-        <exetype>1</exetype>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <functionname>action_inherited</functionname>
-        <codestring/>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments/>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <exetype>2</exetype>
@@ -105,7 +90,7 @@ A = 0;</string>
         <isquestion>0</isquestion>
         <useapplyto>0</useapplyto>
         <functionname>action_inherited</functionname>
-        <codestring></codestring>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
@@ -119,8 +104,8 @@ A = 0;</string>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <functionname></functionname>
-        <codestring></codestring>
+        <functionname/>
+        <codestring/>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>

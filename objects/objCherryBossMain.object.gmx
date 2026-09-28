@@ -8,7 +8,7 @@
   <parentName>objBossParent</parentName>
   <maskName>&lt;undefined></maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event enumb="0" eventtype="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -42,7 +42,7 @@ Dir = 0;</string>
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
+    <event enumb="0" eventtype="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -100,7 +100,7 @@ Dir = 0;</string>
             a.sprite_index = sprite_index;
         }
         
-        alarm[0] = 8;
+        alarm[0] = 9;
     break;
     case 1:
         repeat (2){
@@ -118,7 +118,7 @@ Dir = 0;</string>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event enumb="0" eventtype="3">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -145,7 +145,7 @@ Dir = 0;</string>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="13">
+    <event enumb="13" eventtype="7">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -183,7 +183,7 @@ a.Scale = 12;</string>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="12">
+    <event enumb="12" eventtype="7">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -207,7 +207,7 @@ instance_create_battle(600, 0, objCherryBulletWall);</string>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="10">
+    <event enumb="10" eventtype="7">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -258,7 +258,7 @@ audio_play_sound(sndBlockChange,0,false);</string>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event enumb="0" eventtype="8">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -280,7 +280,7 @@ audio_play_sound(sndBlockChange,0,false);</string>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="14">
+    <event enumb="14" eventtype="7">
       <action>
         <libid>1</libid>
         <id>603</id>

@@ -3,8 +3,8 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="3" name="datafiles">
-    <datafiles number="3" name="Music">
+  <datafiles name="datafiles" number="3">
+    <datafiles name="Music" number="3">
       <datafile>
         <name>GuyRock.ogg</name>
         <exists>-1</exists>
@@ -299,8 +299,10 @@
         <sprite>sprites\sprNueBulletB</sprite>
         <sprite>sprites\sprNueBulletC</sprite>
         <sprite>sprites\sprNueBulletD</sprite>
+        <sprite>sprites\sprNueBulletE</sprite>
         <sprite>sprites\sprNueUFO</sprite>
         <sprite>sprites\sprNueSpell</sprite>
+        <sprite>sprites\sprNueLaser</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -663,6 +665,9 @@
         <object>objects\objNueBullet6</object>
         <object>objects\objMagicNueSpell</object>
         <object>objects\objMagicNue</object>
+        <object>objects\objNueFinalSpawn</object>
+        <object>objects\objNueBulletLaser</object>
+        <object>objects\objNueLaser</object>
       </objects>
     </objects>
   </objects>
