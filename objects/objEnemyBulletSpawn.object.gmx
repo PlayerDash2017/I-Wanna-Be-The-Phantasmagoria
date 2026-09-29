@@ -71,7 +71,7 @@ Boss = "BigCherry";</string>
 
     case "Miku":
         var Ran = irandom(360);
-        for (var i = 0; i &lt; 360; i += 360/15) {
+        for (var i = 0; i &lt; 360; i += 360/10) {
             var a = instance_create(x, y, objMikuBulletGlow);
             a.speed = 7;
             a.direction = i + Ran;

@@ -141,7 +141,7 @@ alarm[0] = 170;</string>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="objKurodamaExplosion">
+    <event ename="objKurodamaExplosion" eventtype="4">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -171,7 +171,7 @@ alarm[0] = 170;</string>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="objBullet">
+    <event ename="objBullet" eventtype="4">
       <action>
         <libid>1</libid>
         <id>605</id>
@@ -255,6 +255,21 @@ a.direction = 90 + irandom_range(10,40)*choose(-1,1);</string>
     <event eventtype="7" enumb="13">
       <action>
         <libid>1</libid>
+        <id>604</id>
+        <kind>0</kind>
+        <exetype>1</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <functionname>action_inherited</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments/>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <exetype>2</exetype>
@@ -273,7 +288,45 @@ a.direction = 90 + irandom_range(10,40)*choose(-1,1);</string>
 
 var a = instance_create_battle(0,0,objMagicCharSpell);
 a.sprite_index = sprKurodamaSpell;
-a.Scale = 2;</string>
+a.Scale = 2;
+
+for (var i = 1; i &lt;= 2; i += 0.5)
+{
+    a = instance_create(x+sprite_width/2,y+sprite_height/2,objKurodamaBlockSpike);
+    a.vspeed = i;
+    a.hspeed = random_range(-4,4);
+}
+
+extraHP = 5;</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="14">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var A = scrGetPlayerID();
+with(objKurodamaBlockSpike){
+    if (A == scrGetPlayerID()){
+        mask_index = sprEmpty;
+        image_alpha = 0.5;
+        depth = 1200000;
+    }
+}</string>
           </argument>
         </arguments>
       </action>

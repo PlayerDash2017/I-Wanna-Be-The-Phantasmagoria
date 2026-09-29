@@ -18,7 +18,7 @@
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <events>
-    <event enumb="0" eventtype="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>604</id>
@@ -55,7 +55,7 @@ enemyRepeat = 1;
 iframeMax = 75;
 
 image_speed = 1/5;
-alarm[0] = 75;
+alarm[0] = 100;
 
 block = id;
 var A = scrGetPlayerID();
@@ -71,7 +71,7 @@ yNue = ystart;</string>
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="8">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -93,7 +93,7 @@ yNue = ystart;</string>
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="2">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -156,11 +156,11 @@ switch (HP)
     break;
     case 2:
         var Ran = irandom_range(-30,30);
-        for (var i = 0; i &lt;= 180; i += 180/8)
+        for (var i = 0; i &lt;= 180; i += 180/7)
         {
             a = instance_create(x,y,objNueBullet5);
             a.speed = 4;
-            a.direction = -90 + i + Ran
+            a.direction = -90 + i + Ran;
         }
         
         alarm[0] = 25;
@@ -187,7 +187,7 @@ switch (HP)
         </arguments>
       </action>
     </event>
-    <event enumb="10" eventtype="7">
+    <event eventtype="7" enumb="10">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -240,7 +240,7 @@ alarm[0] = 100;</string>
         </arguments>
       </action>
     </event>
-    <event enumb="12" eventtype="7">
+    <event eventtype="7" enumb="12">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -265,7 +265,7 @@ a.hspeed = 2;</string>
         </arguments>
       </action>
     </event>
-    <event enumb="13" eventtype="7">
+    <event eventtype="7" enumb="13">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -314,7 +314,7 @@ if (!extraPhase){
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="3">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -337,7 +337,7 @@ y = lerp(y,yNue,0.1); </string>
         </arguments>
       </action>
     </event>
-    <event enumb="14" eventtype="7">
+    <event eventtype="7" enumb="14">
       <action>
         <libid>1</libid>
         <id>603</id>

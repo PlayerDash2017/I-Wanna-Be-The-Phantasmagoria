@@ -18,7 +18,7 @@
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <events>
-    <event enumb="0" eventtype="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -43,7 +43,7 @@ Angle = irandom(360);</string>
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="2">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -71,6 +71,37 @@ a.alarm[0] = 35;
 Angle += 12;//10
 
 alarm[0] = 13;//10</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event ename="objBullet" eventtype="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_destroy(other);
+instance_destroy();
+
+var Ran = irandom(360);
+for (var i = 0; i &lt; 360; i += 360/10)
+{
+    var a = instance_create(x,y,objNueBullet6);
+    a.direction = i + Ran;
+    a.alarm[0] = 35;
+}</string>
           </argument>
         </arguments>
       </action>

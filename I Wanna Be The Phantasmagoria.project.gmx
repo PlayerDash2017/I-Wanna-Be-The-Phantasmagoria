@@ -3,8 +3,8 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles name="datafiles" number="3">
-    <datafiles name="Music" number="3">
+  <datafiles number="3" name="datafiles">
+    <datafiles number="3" name="Music">
       <datafile>
         <name>GuyRock.ogg</name>
         <exists>-1</exists>
@@ -637,6 +637,7 @@
         <object>objects\objKurodamaSpike</object>
         <object>objects\objKurodamaBigBomb</object>
         <object>objects\objKurodamaTail</object>
+        <object>objects\objKurodamaBlockSpike</object>
       </objects>
       <objects name="Shiratama">
         <object>objects\objShiratamaBossMain</object>

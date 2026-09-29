@@ -27,7 +27,7 @@ switch (global.charSelect[playerID]) {
     break;
     case 4: // Kurodama
         a = instance_create(x, y, objMagicKurodama);
-        a.image_xscale = 1.3;
+        a.image_xscale = 1.7;
         a.image_yscale = a.image_xscale;
     break;
     case 5: // Shiratama

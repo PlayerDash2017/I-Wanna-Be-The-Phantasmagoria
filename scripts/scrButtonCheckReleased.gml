@@ -5,11 +5,26 @@ var button = argument[0];
 var playerControl = 0;
 if (argument_count > 1) playerControl = argument[1];
 
-    if (global.controllerIndex[playerControl] == -1)
+if (global.controllerIndex[playerControl] == -1)
+{
+    return (keyboard_check_released(global.controls[button, playerControl]));
+}
+else
+{
+    var controlIndex = global.controllerIndex[playerControl];
+    var prev_x = global.stick_prev_x;
+    var prev_y = global.stick_prev_y;
+    var axis_x = gamepad_axis_value(controlIndex, gp_axislh);
+    var axis_y = gamepad_axis_value(controlIndex, gp_axislv);
+    var threshold = 0.3;
+    
+    switch (button)
     {
-        return (keyboard_check_released(global.controls[button, playerControl]));
+        case KEY.LEFT:  return (prev_x < -threshold) && (axis_x > -threshold) || gamepad_button_check_released(controlIndex, global.controls[button, playerControl]);
+        case KEY.RIGHT: return (prev_x > threshold) && (axis_x < threshold) || gamepad_button_check_released(controlIndex, global.controls[button, playerControl]);
+        case KEY.UP:    return (prev_y < -threshold) && (axis_y > -threshold) || gamepad_button_check_released(controlIndex, global.controls[button, playerControl]);
+        case KEY.DOWN:  return (prev_y > threshold) && (axis_y < threshold) || gamepad_button_check_released(controlIndex, global.controls[button, playerControl]);
     }
-    else
-    {
-        return (gamepad_button_check_released(global.controllerIndex[playerControl], global.controls[button, playerControl]));
-    }
+    
+    return gamepad_button_check_released(controlIndex, global.controls[button, playerControl]);
+}

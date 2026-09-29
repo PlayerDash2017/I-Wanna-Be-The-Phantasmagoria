@@ -8,7 +8,7 @@
   <parentName>&lt;undefined></parentName>
   <maskName>&lt;undefined></maskName>
   <events>
-    <event enumb="0" eventtype="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -37,7 +37,7 @@ if (instance_number(object_index) > 1)&#xd;
         </arguments>
       </action>
     </event>
-    <event enumb="1" eventtype="2">
+    <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -66,7 +66,7 @@ if (!window_get_fullscreen())&#xd;
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="2">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -91,7 +91,7 @@ audio_pause_sound(global.currentMusic);&#xd;
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="3">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -365,7 +365,7 @@ if (keyboard_check(vk_control) &amp;&amp; keyboard_check_pressed(ord("M")) &amp;
         </arguments>
       </action>
     </event>
-    <event enumb="62" eventtype="7">
+    <event eventtype="7" enumb="62">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -408,7 +408,7 @@ if (Id == global.httpUpdateCheck)&#xd;
         </arguments>
       </action>
     </event>
-    <event enumb="10" eventtype="7">
+    <event eventtype="7" enumb="10">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -436,7 +436,7 @@ alarm[0] = 50;  //Pause music when it's done fading&#xd;
         </arguments>
       </action>
     </event>
-    <event enumb="4" eventtype="7">
+    <event eventtype="7" enumb="4">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -467,7 +467,7 @@ global.count = 0;</string>
         </arguments>
       </action>
     </event>
-    <event enumb="2" eventtype="7">
+    <event eventtype="7" enumb="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -504,7 +504,7 @@ room_goto_next();&#xd;
         </arguments>
       </action>
     </event>
-    <event enumb="73" eventtype="8">
+    <event eventtype="8" enumb="73">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -529,7 +529,7 @@ texture_set_interpolation(global.smoothingMode);&#xd;
         </arguments>
       </action>
     </event>
-    <event enumb="72" eventtype="8">
+    <event eventtype="8" enumb="72">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -554,7 +554,7 @@ texture_set_interpolation(false);&#xd;
         </arguments>
       </action>
     </event>
-    <event enumb="64" eventtype="8">
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -706,6 +706,37 @@ if (global.gamePaused)&#xd;
     }&#xd;
 }&#xd;
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Update stick prev
+
+for (var i = 0; i &lt;= 1; ++i)
+{
+    if (global.controllerIndex[i] != -1)
+    {
+        global.stick_prev_x[i] = gamepad_axis_value(global.controllerIndex[i], gp_axislh);
+        global.stick_prev_y[i] = gamepad_axis_value(global.controllerIndex[i], gp_axislv);
+    }
+}</string>
           </argument>
         </arguments>
       </action>

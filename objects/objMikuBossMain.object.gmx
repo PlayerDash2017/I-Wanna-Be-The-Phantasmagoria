@@ -317,7 +317,8 @@ switch (HP) {
                 { Dis = true; }
         }
         
-        if (extraPhase) event_user(4);
+        if (extraPhase &amp;&amp; image_index == 1)
+            { event_user(4); }
     break;
 }</string>
           </argument>

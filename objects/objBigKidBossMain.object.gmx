@@ -70,9 +70,9 @@ alarm[3] = 50;</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var a = instance_create_battle(32 * irandom_range(1,8), 0, objBigKidSpikeFall);&#xd;
-a.vspeed = 4;&#xd;
-&#xd;
+            <string>/*var a = instance_create_battle(32 * irandom_range(1,8), 0, objBigKidSpikeFall);
+a.vspeed = 4;*/
+
 alarm[2] = 60;</string>
           </argument>
         </arguments>
