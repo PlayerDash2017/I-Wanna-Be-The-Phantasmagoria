@@ -92,7 +92,9 @@ alarm[0] = 13;//10</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy(other);
+            <string>instance_create(x,y,objNueExplosion);
+
+instance_destroy(other);
 instance_destroy();
 
 var Ran = irandom(360);

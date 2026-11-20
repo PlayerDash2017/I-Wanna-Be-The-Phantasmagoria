@@ -43,6 +43,8 @@ for (var i = 0; i < 2; i ++) {
     global.playerBotMode[i] = false;
     global.stick_prev_x[i] = 0;
     global.stick_prev_y[i] = 0;
+    global.playerTextHold[i] = true;
+    global.playerTotalWin[i] = 0;
 }
 global.pX = 0;
 global.pY = 0;

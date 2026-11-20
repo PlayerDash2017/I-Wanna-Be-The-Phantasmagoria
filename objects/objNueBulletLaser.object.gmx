@@ -18,7 +18,7 @@
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <events>
-    <event enumb="0" eventtype="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -43,7 +43,7 @@ Type = 0;</string>
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="2">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -93,7 +93,7 @@ alarm[1] = 75;</string>
         </arguments>
       </action>
     </event>
-    <event enumb="1" eventtype="2">
+    <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
         <id>203</id>
@@ -110,7 +110,7 @@ alarm[1] = 75;</string>
         <arguments/>
       </action>
     </event>
-    <event enumb="0" eventtype="8">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -129,10 +129,64 @@ alarm[1] = 75;</string>
             <kind>1</kind>
             <string>draw_self();
 
+/*draw_sprite(sprite_index,image_index,x+battle_width,y);
+draw_sprite(sprite_index,image_index,x-battle_width,y);
+draw_sprite(sprite_index,image_index,x,y+battle_height);
+draw_sprite(sprite_index,image_index,x,y-battle_height);
+
 /*draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_set_font(fDefault12);
 scrDrawTextOutline(x,y,Type,c_red,c_black);</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var XX = scrGetPlayerID() * 1280;
+var YY = 800;
+var W = (battle_width-32)/5;
+
+x = scrWrapInRange(x,XX,XX+battle_width+W-32);
+y = scrWrapInRange(y,YY,YY+battle_height+32);</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <exetype>0</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>do nothing</string>
           </argument>
         </arguments>
       </action>

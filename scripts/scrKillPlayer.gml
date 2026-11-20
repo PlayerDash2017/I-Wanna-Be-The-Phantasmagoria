@@ -15,6 +15,7 @@ if (instance_exists(objPlayer) && (!global.noDeath && !global.debugNoDeath) && i
     instance_create(x, y, objBloodEmitter);
     instance_destroy();
 
+    global.playerTotalWin[!PlayerID] ++;
     global.noDeath = true;
 
     /*global.deathSound = audio_play_sound(sndDeath, 0, false);

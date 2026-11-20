@@ -57,6 +57,7 @@ global.playerHP[PlayerID] = 5;
 global.playerMagic[PlayerID] = 0;
 global.infJump[PlayerID] = false;
 global.playerCharge[PlayerID] = 0;
+global.playerTextHold[PlayerID] = true;
 
 var a = instance_create(x+17,y+23,objPlayer);
 a.PlayerID = PlayerID;

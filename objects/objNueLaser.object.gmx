@@ -18,7 +18,7 @@
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <events>
-    <event enumb="1" eventtype="2">
+    <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -35,7 +35,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>for (var i = 16; i &lt; battle_height; i += 32)
+            <string>for (var i = 16; i &lt; battle_height+32; i += 32)
 {
     a = instance_create(x,800+i,objNueBulletLaser);
     a.Type = floor(i/32) mod 4;//(Type * 2 + floor(i/32)) mod 4;//Type * 2 + (floor(i/32) mod 2);
@@ -47,7 +47,7 @@ alarm[2] = 125;</string>
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -76,7 +76,7 @@ image_yscale = battle_height/32;</string>
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="3">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -111,7 +111,7 @@ image_xscale = min(image_xscale + 1/30,1);</string>
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="8">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -133,7 +133,7 @@ image_xscale = min(image_xscale + 1/30,1);</string>
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="2">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -157,7 +157,7 @@ alarm[1] = 50;</string>
         </arguments>
       </action>
     </event>
-    <event enumb="2" eventtype="2">
+    <event eventtype="2" enumb="2">
       <action>
         <libid>1</libid>
         <id>603</id>

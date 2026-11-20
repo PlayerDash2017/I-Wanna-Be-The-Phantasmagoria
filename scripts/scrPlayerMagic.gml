@@ -11,6 +11,7 @@ if (global.playerCharge[PlayerID] != 0)
 
         scrMagicSpell(PlayerID);
         global.playerMagic[PlayerID] = 0;
+        global.playerTextHold[PlayerID] = false;
         iframes += 100;
         
         audio_play_sound(sndExtraSpell,0,false);
@@ -24,12 +25,14 @@ if (global.playerCharge[PlayerID] != 0)
 
         scrMagicSpell(PlayerID);
         global.playerMagic[PlayerID] -= 50;
+        global.playerTextHold[PlayerID] = false;
         iframes += 50;
     }
     else if (global.playerCharge[PlayerID] >= 50)//Level 1
     {
         scrMagicSpell(PlayerID);
         global.playerMagic[PlayerID] -= 25;
+        global.playerTextHold[PlayerID] = false;
         iframes += 25;
     }
 }

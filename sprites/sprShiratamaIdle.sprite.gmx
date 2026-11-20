@@ -19,9 +19,9 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <frames>
-    <frame index="0">images\sprShiratamaIdle_f5d5020bdd23403082814a09e53bba25_0.png</frame>
-    <frame index="1">images\sprShiratamaIdle_85231be2c610493bb0e96d95f13934cc_1.png</frame>
-    <frame index="2">images\sprShiratamaIdle_6813798e5f474dada09c67a9fffca046_2.png</frame>
-    <frame index="3">images\sprShiratamaIdle_edfd3dd5d6d349e1808fff4a77668132_3.png</frame>
+    <frame index="0">images\sprShiratamaIdle_0.png</frame>
+    <frame index="1">images\sprShiratamaIdle_1.png</frame>
+    <frame index="2">images\sprShiratamaIdle_2.png</frame>
+    <frame index="3">images\sprShiratamaIdle_3.png</frame>
   </frames>
 </sprite>

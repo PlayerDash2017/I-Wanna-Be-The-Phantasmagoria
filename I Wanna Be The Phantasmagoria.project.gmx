@@ -3,8 +3,8 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="3" name="datafiles">
-    <datafiles number="3" name="Music">
+  <datafiles name="datafiles" number="3">
+    <datafiles name="Music" number="3">
       <datafile>
         <name>GuyRock.ogg</name>
         <exists>-1</exists>
@@ -247,6 +247,7 @@
       <sprite>sprites\sprArrowPlayer</sprite>
       <sprite>sprites\sprDestroyEff</sprite>
       <sprite>sprites\sprMenuBotMode</sprite>
+      <sprite>sprites\sprGlow</sprite>
       <sprites name="Miku">
         <sprite>sprites\sprLeek</sprite>
         <sprite>sprites\sprMikuHachume</sprite>
@@ -303,6 +304,7 @@
         <sprite>sprites\sprNueUFO</sprite>
         <sprite>sprites\sprNueSpell</sprite>
         <sprite>sprites\sprNueLaser</sprite>
+        <sprite>sprites\sprNueExplosion</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -337,7 +339,7 @@
       <script>scripts\scrCheckAndPause.gml</script>
       <script>scripts\scrDynamicCollision.gml</script>
     </scripts>
-    <scripts name="Save/Load">
+    <scripts name="Save - Load">
       <script>scripts\scrSaveConfig.gml</script>
       <script>scripts\scrLoadConfig.gml</script>
       <script>scripts\scrSaveGame.gml</script>
@@ -444,6 +446,7 @@
     <font>fonts\fDefault24</font>
     <font>fonts\fDefault18</font>
     <font>fonts\fDefault12</font>
+    <font>fonts\fDefault8</font>
   </fonts>
   <objects name="objects">
     <objects name="World">
@@ -669,6 +672,7 @@
         <object>objects\objNueFinalSpawn</object>
         <object>objects\objNueBulletLaser</object>
         <object>objects\objNueLaser</object>
+        <object>objects\objNueExplosion</object>
       </objects>
     </objects>
   </objects>

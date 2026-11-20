@@ -124,6 +124,15 @@ repeat(2)
     draw_set_halign(fa_left);
     draw_set_valign(fa_top);
     scrDrawTextOutline(640 * i + 110,5,string(floor(Magic))+"%",c_white,c_black);
+    
+    if (floor(Magic) >= 50 &amp;&amp; global.playerTextHold[i]){
+        draw_set_font(fDefault8);
+        draw_set_font(c_yellow);
+        
+        draw_set_alpha(0.8 + lengthdir_x(0.2,current_time/10));
+        draw_text(640 * i,25,'Hold "Shoot Key" to charge special attack');
+        draw_set_alpha(1);
+    }
 
     i = 1;
 }</string>

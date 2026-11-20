@@ -331,9 +331,11 @@ y = lerp(y,YY + ySpawn,0.1);</string>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_blend_mode(bm_add);&#xd;
-draw_circle_colour(x, y, 20, make_color_hsv(Color, 255, 255), c_black, false);&#xd;
-draw_set_blend_mode(bm_normal);</string>
+            <string>draw_set_blend_mode(bm_add);
+draw_circle_colour(x, y, 20, make_color_hsv(Color, 255, 255), c_black, false);
+draw_set_blend_mode(bm_normal);
+
+draw_sprite_ext(sprGlow, 0, x, y, 0.3, 0.3, 0, c_black, 0.5);</string>
           </argument>
         </arguments>
       </action>

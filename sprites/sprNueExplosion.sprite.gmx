@@ -1,0 +1,39 @@
+<sprite>
+  <type>0</type>
+  <xorig>43</xorig>
+  <yorigin>45</yorigin>
+  <colkind>0</colkind>
+  <coltolerance>0</coltolerance>
+  <bboxmode>0</bboxmode>
+  <bbox_left>0</bbox_left>
+  <bbox_right>85</bbox_right>
+  <bbox_top>0</bbox_top>
+  <bbox_bottom>89</bbox_bottom>
+  <HTile>0</HTile>
+  <VTile>0</VTile>
+  <For3D>0</For3D>
+  <width>86</width>
+  <height>90</height>
+  <sepmasks>-1</sepmasks>
+  <TextureGroups>
+    <TextureGroup0>0</TextureGroup0>
+  </TextureGroups>
+  <frames>
+    <frame index="0">images\sprNueExplosion_0.png</frame>
+    <frame index="1">images\sprNueExplosion_1.png</frame>
+    <frame index="2">images\sprNueExplosion_2.png</frame>
+    <frame index="3">images\sprNueExplosion_3.png</frame>
+    <frame index="4">images\sprNueExplosion_4.png</frame>
+    <frame index="5">images\sprNueExplosion_5.png</frame>
+    <frame index="6">images\sprNueExplosion_6.png</frame>
+    <frame index="7">images\sprNueExplosion_7.png</frame>
+    <frame index="8">images\sprNueExplosion_8.png</frame>
+    <frame index="9">images\sprNueExplosion_9.png</frame>
+    <frame index="10">images\sprNueExplosion_10.png</frame>
+    <frame index="11">images\sprNueExplosion_11.png</frame>
+    <frame index="12">images\sprNueExplosion_12.png</frame>
+    <frame index="13">images\sprNueExplosion_13.png</frame>
+    <frame index="14">images\sprNueExplosion_14.png</frame>
+    <frame index="15">images\sprNueExplosion_15.png</frame>
+  </frames>
+</sprite>

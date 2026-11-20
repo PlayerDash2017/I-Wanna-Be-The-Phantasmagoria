@@ -8,7 +8,7 @@
   <parentName>&lt;undefined></parentName>
   <maskName>&lt;undefined></maskName>
   <events>
-    <event enumb="0" eventtype="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -46,7 +46,7 @@ bossTotal = 7;</string>
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="3">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -75,7 +75,7 @@ bossTotal = 7;</string>
         </arguments>
       </action>
     </event>
-    <event enumb="0" eventtype="8">
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -136,7 +136,37 @@ for (var i = 0; i &lt; 2; i ++) {
     var XX = -W * (1 - 2 * i);
 
     draw_sprite(sprArrowSelect,i,floor(room_width/2 + XX), 100 + global.charSelect[i] * 30);
-}</string>
+}
+
+draw_set_font(fDefault24);
+
+draw_set_halign(fa_left);
+scrDrawTextOutline(32,32,"Wins: "+string(global.playerTotalWin[0]),c_red,c_black);
+
+draw_set_halign(fa_right);
+scrDrawTextOutline(room_width-32,32,"Wins: "+string(global.playerTotalWin[1]),c_aqua,c_black);</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <exetype>2</exetype>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <functionname/>
+        <codestring/>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>with(objPlayer) visible = false;</string>
           </argument>
         </arguments>
       </action>
